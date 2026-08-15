@@ -1,0 +1,145 @@
+HR SELF-CORRECTING RAG ASSISTANT
+================================
+
+PROJECT OVERVIEW
+----------------
+A retrieval-augmented HR policy assistant with:
+1. Semantic retrieval using SentenceTransformers.
+2. ChromaDB vector storage.
+3. Local retrieval critic.
+4. Query rewriting for self-correction.
+5. Learned STOP/CONTINUE halting policy.
+6. FastAPI backend.
+7. Browser-based frontend.
+8. Gemini-based answer generation with local fallback.
+
+MODEL / RETRIEVAL
+-----------------
+Embedding model:
+all-MiniLM-L6-v2
+
+Vector database:
+ChromaDB
+
+HALTING POLICY
+--------------
+Classifier:
+Logistic Regression
+
+Features:
+- attempt
+- score
+- best_score
+- score_delta
+- chunk_overlap
+
+Question-level 5-fold cross-validation:
+Average Accuracy: 0.704
+Average Macro Precision: 0.637
+Average Macro Recall: 0.836
+Average Macro F1: 0.610
+
+FINAL POLICY COMPARISON
+-----------------------
+Evaluation questions: 23
+
+Fixed-3 average attempts:
+1.217
+
+Learned-policy average attempts:
+1.217
+
+Average attempts saved:
+0.0
+
+Fixed successful retrievals:
+19/23 (82.6%)
+
+Learned successful retrievals:
+19/23 (82.6%)
+
+Fixed proxy calls:
+37
+
+Learned proxy calls:
+34
+
+Proxy calls saved:
+3
+
+Proxy call reduction:
+8.11%
+
+LEARNED POLICY RUNTIME AUDIT
+-----------------------------
+CONTINUE decisions:
+6
+
+CONTINUE decisions with successful query rewrite:
+5
+
+CONTINUE decisions with failed rewrite:
+1
+
+Useful CONTINUE rate:
+83.3%
+
+DEMO EXAMPLE
+------------
+Question:
+leave after joining
+
+Attempt 1:
+Critic score: 0.57
+Critic decision: INSUFFICIENT
+Halting decision: CONTINUE
+STOP probability: 0.37
+
+Rewritten query:
+What is the leave eligibility and approval process
+for employees during probation?
+
+Attempt 2:
+Critic score: 0.78
+Critic decision: SUFFICIENT
+Halting decision: STOP
+
+RESULT
+------
+The system demonstrates:
+weak retrieval
+-> learned CONTINUE
+-> query rewriting
+-> improved retrieval
+-> learned STOP
+
+IMPORTANT LIMITATIONS
+---------------------
+1. The halting dataset is relatively small.
+2. STOP and CONTINUE classes are imbalanced.
+3. The learned policy has only preliminary generalization performance.
+4. Current efficiency measurements use local critic/rewriter proxy calls.
+5. Gemini answer generation may be limited by free-tier quota.
+6. The 8.11% reduction is a proxy workload reduction, not a measured
+   billing-cost reduction.
+
+DEPLOYMENT
+----------
+Backend:
+FastAPI + Uvicorn
+
+Frontend:
+static/index.html
+
+Main API:
+POST /ask
+
+Health endpoint:
+GET /health
+
+Swagger:
+GET /docs
+
+RESULT FILE
+-----------
+final_results.csv

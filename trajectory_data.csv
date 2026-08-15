@@ -1,0 +1,3 @@
+attempt,query,score,best_score,score_delta,chunk_overlap,decision
+1,leave after joining,0.57,0.57,0.0,0.0,INSUFFICIENT
+2,What is the leave eligibility and approval process for employees during probation?,0.78,0.78,0.21000000000000008,0.0,SUFFICIENT
