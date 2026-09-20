@@ -1,0 +1,61 @@
+CORRECTED ADVANCED VIT HR RAG EVALUATION
+
+Questions: 100
+Latency repetitions: 3
+
+IMPORTANT METRIC DEFINITION
+Both Fixed-3 and Learned use BEST OBSERVED critic score for
+critic-defined retrieval success. This makes the two methods symmetric.
+
+PRIMARY RETRIEVAL EFFICIENCY
+Fixed-3 average attempts: 1.7600
+Learned average attempts: 1.3500
+Attempt reduction: 23.30%
+
+CRITIC-DEFINED SUCCESS
+Fixed-3 success rate: 75.00%
+Learned success rate: 75.00%
+Difference: 0.00 percentage points
+
+LATENCY - LOCAL RAG LOOP ONLY
+Fixed mean wall-clock: 0.1923 s
+Learned mean wall-clock: 0.1463 s
+Fixed median wall-clock: 0.2134 s
+Learned median wall-clock: 0.1147 s
+Fixed p95 wall-clock: 0.2386 s
+Learned p95 wall-clock: 0.2312 s
+Measured local-loop wall-clock reduction: 23.92%
+
+CPU TIME
+Fixed mean CPU time: 1.0897 s
+Learned mean CPU time: 0.8344 s
+Measured CPU-time reduction: 23.43%
+
+OPERATIONAL COST PROXY
+Average attempts are used as a retrieval/critic work proxy.
+This is NOT a monetary cost estimate.
+Attempt-based reduction: 23.30%
+
+PARETO ANALYSIS
+A TRUE threshold sweep was rerun for each stop-probability threshold.
+Results: pareto_results_v2.csv
+Frontier: pareto_frontier_v2.csv
+Axes: average attempts vs critic-defined success rate.
+
+METHODOLOGY NOTE
+The local loop is timed after embedding-model warm-up and excludes the
+final Gemini generation call. Therefore these timings are not end-to-end
+user-visible latency and should be reported as local retrieval-loop latency.
+
+TASR NOTE
+TASR is a distinct training-free stopping rule that uses repeated normalized
+answers plus a calibrated logit-margin condition. The current VIT system uses
+SentenceTransformer retrieval + local critic + learned LogisticRegression
+halting and does not expose the required calibrated LLM logit signal. A faithful
+TASR reproduction is therefore NOT claimed here.
+
+FILES CREATED
+- advanced_question_results_v2.csv
+- pareto_results_v2.csv
+- pareto_frontier_v2.csv
+- advanced_summary_v2.txt

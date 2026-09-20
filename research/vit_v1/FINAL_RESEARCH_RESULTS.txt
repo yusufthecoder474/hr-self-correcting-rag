@@ -1,0 +1,96 @@
+ENTERPRISE HR KNOWLEDGE ASSISTANT
+SELF-CORRECTING RAG WITH LEARNED HALTING
+
+FINAL VIT EVALUATION RESULTS
+
+1. DATASET
+
+Corpus:
+VIT HR Conditions of Service, HR Manual 2019 Ver-005
+
+Evaluation questions:
+23
+
+2. METHODS COMPARED
+
+Baseline:
+Fixed-3 retrieval policy
+
+Proposed:
+Learned halting policy
+
+3. RETRIEVAL EFFICIENCY
+
+Fixed-3 average attempts:
+1.957
+
+Learned-policy average attempts:
+1.565
+
+Average attempts saved:
+0.391 per question
+
+Approximate reduction:
+20.0%
+
+4. CRITIC-DEFINED RETRIEVAL SUCCESS
+
+Fixed-3:
+17/23
+
+Learned:
+17/23
+
+Success rate:
+73.9% for both methods
+
+5. HUMAN VALIDATION
+
+Manually reviewed flagged cases:
+6
+
+Correct:
+4
+
+Incorrect:
+2
+
+Human-validated correctness among flagged cases:
+66.7%
+
+Incorrect cases:
+Q11 - Maternity Leave child-number restriction
+Q12 - Maternity Leave documentation
+
+6. KEY FINDING
+
+The learned halting policy reduced the average number of
+retrieval attempts compared with the Fixed-3 baseline while
+maintaining the same critic-defined retrieval success rate
+on the 23-question VIT evaluation set.
+
+7. LIMITATIONS
+
+The evaluation set contains only 23 questions.
+
+Critic-defined success is based on the local critic threshold
+and is not equivalent to answer-level accuracy.
+
+Only six flagged cases were manually validated.
+
+Some retrieved contexts contain unrelated neighboring policy
+text, particularly for some maternity and multi-section queries.
+
+The Gemini answer-generation service was not consistently
+available during testing, so local policy fallback was used
+for some responses.
+
+8. CONCLUSION
+
+The current implementation demonstrates adaptive retrieval
+with learned halting on a real VIT HR policy corpus. The
+learned policy reduced retrieval effort while preserving the
+same critic-defined success rate as the Fixed-3 baseline.
+Further evaluation with a larger question set and independent
+human ground truth is required for stronger claims about
+answer accuracy.

@@ -1,10 +1,21 @@
 import os
 import json
 import re
+
+from dotenv import load_dotenv
 from google import genai
 
+load_dotenv()
+
+api_key = os.getenv("GEMINI_API_KEY")
+
+if not api_key:
+    raise RuntimeError(
+        "GEMINI_API_KEY is missing from the .env file."
+    )
+
 gemini = genai.Client(
-    api_key=os.environ["GEMINI_API_KEY"]
+    api_key=api_key
 )
 
 
@@ -40,7 +51,7 @@ Retrieved Context:
 """
 
     response = gemini.interactions.create(
-        model="gemini-3.7-flash",
+        model="gemini-3.6-flash",
         input=prompt
     )
 

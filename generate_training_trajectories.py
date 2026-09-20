@@ -9,13 +9,13 @@ from local_query_rewriter import rewrite_query
 
 
 INPUT_FILES = [
-    "test_questions.txt",
-    "challenging_questions.txt",
-    "hard_questions.txt",
-    "correction_questions.txt"
+    "research/vit_v1/questions/test_questions_vit.txt",
+    "research/vit_v1/questions/challenging_questions_vit.txt",
+    "research/vit_v1/questions/hard_questions_vit.txt",
+    "research/vit_v1/questions/correction_questions_vit.txt",
 ]
 
-OUTPUT_FILE = "training_trajectory_dataset.csv"
+OUTPUT_FILE = "research/vit_v1/training_trajectory_dataset_vit.csv"
 
 MAX_ATTEMPTS = 3
 TOP_K = 3

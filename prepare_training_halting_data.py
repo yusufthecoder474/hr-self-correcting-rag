@@ -1,8 +1,8 @@
 import csv
 
 
-INPUT_FILE = "training_trajectory_dataset.csv"
-OUTPUT_FILE = "training_halting_dataset.csv"
+INPUT_FILE = "research/vit_v1/training_trajectory_dataset_vit.csv"
+OUTPUT_FILE = "research/vit_v1/training_halting_dataset_vit.csv"
 
 
 def main():

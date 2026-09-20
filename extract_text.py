@@ -1,6 +1,6 @@
 import pymupdf
 
-pdf_path = "documents/NexaCore_HR_Policy_Handbook.pdf"
+pdf_path = "documents/vit/VIT_HR_Conditions_of_Service.pdf"
 
 doc = pymupdf.open(pdf_path)
 

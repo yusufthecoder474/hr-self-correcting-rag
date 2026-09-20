@@ -1,5 +1,4 @@
 import chromadb
-
 from sentence_transformers import SentenceTransformer
 
 from local_critic import evaluate_retrieval
@@ -7,47 +6,57 @@ from local_query_rewriter import rewrite_query
 from halting_policy import HaltingPolicy
 
 
-# -------------------------------------------------
-# Configuration
-# -------------------------------------------------
+# ============================================================
+# CONFIGURATION
+# ============================================================
 
 TOP_K = 3
 MAX_ATTEMPTS = 3
+SUFFICIENT_THRESHOLD = 0.75
+
+
+# ============================================================
+# VIT EVALUATION QUESTIONS
+# ============================================================
 
 QUESTIONS = [
-    "How many annual leave days do permanent employees get?",
-    "Can employees on probation take leave?",
-    "How many sick leave days are available?",
-    "How many personal leave days are available?",
-    "How many days can annual leave be carried forward?",
-    "How many remote working days are allowed per week?",
-    "What is the home internet reimbursement amount?",
-    "What is the standard probation period?",
-    "What is the standard notice period?",
-    "What is the maternity leave entitlement?",
-    "What leave can a probation employee request and what approval is needed?",
-    "What are the rules for taking leave during probation?",
-    "What is the leave policy for a newly joined employee?",
-    "Can an employee work from home during probation?",
-    "What is the difference between remote work and leave?",
-    "How much can an employee claim for home internet?",
-    "What is the learning reimbursement after probation?",
-    "What happens if probation is extended?",
-    "What are the requirements for employee confirmation after probation?",
-    "What should an employee do during an emergency absence?",
-    "What is the difference between annual leave and personal leave?",
-    "Can sick leave be carried forward?",
-    "What are the hybrid work eligibility requirements?"
+    "How many days of Casual Leave can an employee avail in an academic year?",
+    "Can unused Casual Leave be carried forward?",
+    "What is the maximum number of Casual Leave days that can be taken at one time?",
+    "What are the eligibility conditions for Medical Leave at VIT?",
+    "What is the maximum accumulation limit for Medical Leave?",
+    "What medical certificate is required for Medical Leave?",
+    "What are the requirements when Medical Leave treatment is taken outside the VIT Health Centre?",
+    "What is the deadline for submitting documents for a long period of Medical Leave?",
+    "What are the rules for extending Medical Leave beyond one month?",
+    "What are the eligibility requirements for Maternity Leave?",
+    "What restrictions apply to Maternity Leave based on the number of children?",
+    "What documents are required for Maternity Leave?",
+    "What are the conditions for claiming vacation salary?",
+    "Can vacation be combined with another type of leave?",
+    "What are the requirements for Leave on Duty?",
+    "How many days of Leave on Duty are permitted in an academic year?",
+    "What approval is required before proceeding on Leave on Duty?",
+    "What are the eligibility and duration requirements for Sabbatical Leave?",
+    "What are the conditions for Compensatory Off or Compensatory Leave?",
+    "What is the purpose of the Exit Interview?",
+    "When can a resigning employee attend the Exit Interview?",
+    "What are the requirements for obtaining a Service Certificate?",
+    "What are the notice and relieving requirements when an employee resigns from VIT?"
 ]
 
-
-# -------------------------------------------------
-# Models and database
-# -------------------------------------------------
+# ============================================================
+# MODELS
+# ============================================================
 
 embedding_model = SentenceTransformer(
     "all-MiniLM-L6-v2"
 )
+
+
+# ============================================================
+# CHROMADB
+# ============================================================
 
 client = chromadb.PersistentClient(
     path="./chroma_db"
@@ -57,44 +66,47 @@ collection = client.get_collection(
     "hr_policies"
 )
 
+
+# ============================================================
+# LEARNED POLICY
+# ============================================================
+
 halting_policy = HaltingPolicy()
 
 
-# -------------------------------------------------
-# Retrieval
-# -------------------------------------------------
+# ============================================================
+# RETRIEVAL
+# ============================================================
 
 def retrieve(question):
 
-    query_embedding = embedding_model.encode(
-        question
-    ).tolist()
+    query_embedding = (
+        embedding_model
+        .encode(question)
+        .tolist()
+    )
 
     results = collection.query(
         query_embeddings=[query_embedding],
-        n_results=TOP_K,
-        include=[
-            "documents",
-            "metadatas"
-        ]
+        n_results=TOP_K
     )
 
-    chunks = results["documents"][0]
+    return "\n\n".join(
+        results["documents"][0]
+    )
 
-    return "\n\n".join(chunks)
 
-
-# -------------------------------------------------
-# Fixed-3-attempt policy
-# -------------------------------------------------
+# ============================================================
+# FIXED-3 BASELINE
+# ============================================================
 
 def run_fixed_policy(question):
 
     current_query = question
 
     attempts = 0
-    final_score = 0.0
-    final_decision = "INSUFFICIENT"
+    best_score = 0.0
+    best_decision = "INSUFFICIENT"
 
     for attempt in range(
         1,
@@ -112,12 +124,23 @@ def run_fixed_policy(question):
             context
         )
 
-        final_score = score
-        final_decision = decision
+        score = float(score)
 
-        if decision == "SUFFICIENT":
+        print(
+            f"    Fixed attempt {attempt}: "
+            f"score={score:.2f}, "
+            f"decision={decision}"
+        )
 
-            break
+        # Keep the best retrieval observed
+        if score > best_score:
+
+            best_score = score
+            best_decision = decision
+
+        # IMPORTANT:
+        # Fixed-3 does NOT stop early.
+        # It always gets up to 3 retrieval attempts.
 
         if attempt < MAX_ATTEMPTS:
 
@@ -126,21 +149,24 @@ def run_fixed_policy(question):
             )
 
             if new_query == current_query:
-
                 break
 
             current_query = new_query
 
+    success = (
+        best_score >= SUFFICIENT_THRESHOLD
+    )
+
     return (
         attempts,
-        final_score,
-        final_decision
+        best_score,
+        success
     )
 
 
-# -------------------------------------------------
-# Learned Halting Policy
-# -------------------------------------------------
+# ============================================================
+# LEARNED HALTING POLICY
+# ============================================================
 
 def run_learned_policy(question):
 
@@ -153,8 +179,6 @@ def run_learned_policy(question):
     final_score = 0.0
     final_decision = "INSUFFICIENT"
 
-    previous_chunk_ids = set()
-
     for attempt in range(
         1,
         MAX_ATTEMPTS + 1
@@ -162,56 +186,8 @@ def run_learned_policy(question):
 
         attempts = attempt
 
-        query_embedding = embedding_model.encode(
+        context = retrieve(
             current_query
-        ).tolist()
-
-        results = collection.query(
-            query_embeddings=[query_embedding],
-            n_results=TOP_K,
-            include=[
-                "documents",
-                "metadatas"
-            ]
-        )
-
-        chunks = results["documents"][0]
-
-        metadatas = results["metadatas"][0]
-
-        current_chunk_ids = {
-            metadata["chunk_id"]
-            for metadata in metadatas
-        }
-
-        if previous_chunk_ids:
-
-            intersection = (
-                current_chunk_ids.intersection(
-                    previous_chunk_ids
-                )
-            )
-
-            union = (
-                current_chunk_ids.union(
-                    previous_chunk_ids
-                )
-            )
-
-            if union:
-                chunk_overlap = (
-                    len(intersection)
-                    / len(union)
-                )
-            else:
-                chunk_overlap = 0.0
-
-        else:
-
-            chunk_overlap = 0.0
-
-        context = "\n\n".join(
-            chunks
         )
 
         score, critic_decision = (
@@ -221,6 +197,12 @@ def run_learned_policy(question):
             )
         )
 
+        score = float(score)
+
+        # ----------------------------------------------------
+        # score delta
+        # ----------------------------------------------------
+
         if attempt == 1:
 
             score_delta = 0.0
@@ -228,7 +210,7 @@ def run_learned_policy(question):
         else:
 
             score_delta = (
-                score - best_score
+                score - previous_score
             )
 
         best_score = max(
@@ -236,34 +218,43 @@ def run_learned_policy(question):
             score
         )
 
-        final_score = score
-        final_decision = critic_decision
+        previous_score = score
 
-        previous_chunk_ids = (
-            current_chunk_ids
-        )
+        # ----------------------------------------------------
+        # learned halting decision
+        # ----------------------------------------------------
 
-        # If critic is already satisfied,
-        # stop immediately.
-        if critic_decision == "SUFFICIENT":
-
-            break
-
-        # Learned policy decides whether
-        # another search is worthwhile.
-        halting_decision, _ = (
+        halting_decision, stop_probability = (
             halting_policy.predict(
                 attempt=attempt,
                 score=score,
                 best_score=best_score,
-                score_delta=score_delta,
-                chunk_overlap=chunk_overlap
+                score_delta=score_delta
             )
         )
+
+        final_score = score
+        final_decision = critic_decision
+
+        print(
+            f"    Learned attempt {attempt}: "
+            f"score={score:.2f}, "
+            f"critic={critic_decision}, "
+            f"halting={halting_decision}, "
+            f"stop_prob={stop_probability:.3f}"
+        )
+
+        # ----------------------------------------------------
+        # Learned policy decides whether to STOP
+        # ----------------------------------------------------
 
         if halting_decision == "STOP":
 
             break
+
+        # ----------------------------------------------------
+        # CONTINUE
+        # ----------------------------------------------------
 
         if attempt < MAX_ATTEMPTS:
 
@@ -272,21 +263,26 @@ def run_learned_policy(question):
             )
 
             if new_query == current_query:
-
                 break
 
             current_query = new_query
 
+    # Success means the retrieval at which the learned
+    # policy stopped was actually sufficient.
+    success = (
+        final_score >= SUFFICIENT_THRESHOLD
+    )
+
     return (
         attempts,
         final_score,
-        final_decision
+        success
     )
 
 
-# -------------------------------------------------
-# Main comparison
-# -------------------------------------------------
+# ============================================================
+# MAIN
+# ============================================================
 
 def main():
 
@@ -296,28 +292,63 @@ def main():
     fixed_success = 0
     learned_success = 0
 
-    print("\n===== POLICY COMPARISON =====")
+    print(
+        "\n===== FIXED-3 VS LEARNED HALTING ====="
+    )
+
+    print(
+        "Questions tested:",
+        len(QUESTIONS)
+    )
 
     for index, question in enumerate(
         QUESTIONS,
         start=1
     ):
 
-        fixed = run_fixed_policy(
+        print(
+            "\n" + "=" * 70
+        )
+
+        print(
+            f"QUESTION {index}/{len(QUESTIONS)}"
+        )
+
+        print(
             question
         )
 
-        learned = run_learned_policy(
+        print(
+            "=" * 70
+        )
+
+        # ----------------------------------------------------
+        # Fixed 3
+        # ----------------------------------------------------
+
+        fixed = run_fixed_policy(
             question
         )
 
         fixed_attempt = fixed[0]
         fixed_score = fixed[1]
-        fixed_decision = fixed[2]
+        fixed_ok = fixed[2]
+
+        # ----------------------------------------------------
+        # Learned
+        # ----------------------------------------------------
+
+        learned = run_learned_policy(
+            question
+        )
 
         learned_attempt = learned[0]
         learned_score = learned[1]
-        learned_decision = learned[2]
+        learned_ok = learned[2]
+
+        # ----------------------------------------------------
+        # Store
+        # ----------------------------------------------------
 
         fixed_attempts.append(
             fixed_attempt
@@ -327,33 +358,37 @@ def main():
             learned_attempt
         )
 
-        if fixed_decision == "SUFFICIENT":
+        if fixed_ok:
             fixed_success += 1
 
-        if learned_decision == "SUFFICIENT":
+        if learned_ok:
             learned_success += 1
 
+        # ----------------------------------------------------
+        # Result
+        # ----------------------------------------------------
+
         print(
-            f"\nQuestion {index}: {question}"
+            "\nRESULT"
         )
 
         print(
             f"Fixed-3: "
             f"attempts={fixed_attempt}, "
-            f"score={fixed_score:.2f}, "
-            f"decision={fixed_decision}"
+            f"best_score={fixed_score:.2f}, "
+            f"success={fixed_ok}"
         )
 
         print(
             f"Learned: "
             f"attempts={learned_attempt}, "
-            f"score={learned_score:.2f}, "
-            f"decision={learned_decision}"
+            f"final_score={learned_score:.2f}, "
+            f"success={learned_ok}"
         )
 
-    print(
-        "\n===== SUMMARY ====="
-    )
+    # ========================================================
+    # SUMMARY
+    # ========================================================
 
     fixed_avg = (
         sum(fixed_attempts)
@@ -365,6 +400,33 @@ def main():
         / len(learned_attempts)
     )
 
+    attempts_saved = (
+        fixed_avg - learned_avg
+    )
+
+    fixed_success_rate = (
+        fixed_success
+        / len(QUESTIONS)
+    )
+
+    learned_success_rate = (
+        learned_success
+        / len(QUESTIONS)
+    )
+
+    print(
+        "\n"
+        + "=" * 70
+    )
+
+    print(
+        "FINAL SUMMARY"
+    )
+
+    print(
+        "=" * 70
+    )
+
     print(
         "Questions tested:",
         len(QUESTIONS)
@@ -372,32 +434,43 @@ def main():
 
     print(
         "Fixed-3 average attempts:",
-        round(fixed_avg, 2)
+        round(fixed_avg, 3)
     )
 
     print(
         "Learned-policy average attempts:",
-        round(learned_avg, 2)
-    )
-
-    print(
-        "Fixed-3 sufficient:",
-        fixed_success
-    )
-
-    print(
-        "Learned-policy sufficient:",
-        learned_success
+        round(learned_avg, 3)
     )
 
     print(
         "Average attempts saved:",
-        round(
-            fixed_avg - learned_avg,
-            2
-        )
+        round(attempts_saved, 3)
     )
 
+    print(
+        "Fixed-3 successful retrievals:",
+        fixed_success
+    )
+
+    print(
+        "Learned-policy successful retrievals:",
+        learned_success
+    )
+
+    print(
+        "Fixed-3 success rate:",
+        round(fixed_success_rate, 3)
+    )
+
+    print(
+        "Learned-policy success rate:",
+        round(learned_success_rate, 3)
+    )
+
+
+# ============================================================
+# ENTRY POINT
+# ============================================================
 
 if __name__ == "__main__":
     main()

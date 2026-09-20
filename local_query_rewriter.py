@@ -1,64 +1,148 @@
-def rewrite_query(question):
+# local_query_rewriter.py
 
-    query = question.lower().strip()
+def rewrite_query(question: str) -> str:
+    """
+    Rewrite the user's question into a more retrieval-friendly
+    VIT HR policy query.
+    """
 
-    rewrite_rules = {
+    q = question.lower().strip()
 
-        "leave after joining":
-            "What is the leave eligibility and approval process for employees during probation?",
+    # --------------------------------------------------
+    # Leave on Duty
+    # --------------------------------------------------
 
-        "leave eligibility for newly joined employees":
-            "What is the leave policy for employees during probation, including approval requirements?",
+    if (
+        "leave on duty" in q
+        or "on duty" in q
+        or "od leave" in q
+    ):
+        return (
+            "What are the eligibility, 15-day entitlement, "
+            "prior written permission, approving authority, "
+            "and conditions for Leave on Duty (OD) at VIT?"
+        )
 
-        "what leave can a probation employee request":
-            "What leave can employees on probation request and what approval is required?",
+    # --------------------------------------------------
+    # Casual Leave
+    # --------------------------------------------------
 
-        "rules for taking leave during probation":
-            "What are the leave rules and manager approval requirements during probation?",
+    if "casual leave" in q:
+        return (
+            "What are the entitlement, annual limit, "
+            "sanction, usage, and conditions for Casual Leave "
+            "(C.L.) at VIT?"
+        )
 
-        "leave policy for a newly joined employee":
-            "What is the leave policy for newly joined employees during probation?",
+    # --------------------------------------------------
+    # Earned Leave
+    # --------------------------------------------------
 
-        "annual leave and personal leave":
-            "What are the annual leave and personal leave entitlements and rules?",
+    if "earned leave" in q:
+        return (
+            "What are the entitlement, calculation, sanction, "
+            "usage, and conditions for Earned Leave (E.L.) at VIT?"
+        )
 
-        "difference between annual leave and personal leave":
-            "What are the entitlements and carry-forward rules for annual leave and personal leave?",
+    # --------------------------------------------------
+    # Medical Leave
+    # --------------------------------------------------
 
-        "work from home during probation":
-            "What are the remote and hybrid work eligibility rules during probation?",
+    if "medical leave" in q:
+        return (
+            "What are the eligibility, duration, medical certificate, "
+            "approval, extension, and conditions for Medical Leave at VIT?"
+        )
 
-        "difference between remote work and leave":
-            "What is the difference between approved remote work and employee leave?",
+    # --------------------------------------------------
+    # Maternity Leave
+    # --------------------------------------------------
 
-        "home internet":
-            "What is the monthly home internet reimbursement for approved long-term remote work?",
+    if "maternity leave" in q:
+        return (
+            "What are the eligibility, duration, service requirements, "
+            "documentation, and conditions for Maternity Leave at VIT?"
+        )
 
-        "learning reimbursement after probation":
-            "What is the learning budget and eligibility after completing probation?",
+    # --------------------------------------------------
+    # Sabbatical Leave
+    # --------------------------------------------------
 
-        "probation is extended":
-            "What are the rules for probation extension and its maximum duration?",
+    if "sabbatical" in q:
+        return (
+            "What are the eligibility, duration, approval, "
+            "academic purpose, and conditions for Sabbatical Leave at VIT?"
+        )
 
-        "employee confirmation after probation":
-            "What are the requirements for employee confirmation after probation?",
+    # --------------------------------------------------
+    # Long Leave on Loss of Pay
+    # --------------------------------------------------
 
-        "emergency absence":
-            "What should an employee do when advance notice is not reasonably possible for an absence?",
+    if (
+        "long leave" in q
+        or "loss of pay" in q
+        or "lllp" in q
+    ):
+        return (
+            "What are the eligibility, duration, bond, "
+            "and conditions for Long Leave on Loss of Pay (LLLP) at VIT?"
+        )
 
-        "sick leave be carried forward":
-            "Can sick leave be carried forward to the next calendar year?",
+    # --------------------------------------------------
+    # Compensatory Off
+    # --------------------------------------------------
 
-        "hybrid work eligibility":
-            "What are the eligibility requirements for remote and hybrid work?",
+    if (
+        "compensatory" in q
+        or "comp off" in q
+    ):
+        return (
+            "What are the eligibility, approval, entitlement, "
+            "and conditions for Compensatory Off or Leave at VIT?"
+        )
 
-        "notice period":
-            "What is the standard notice period for permanent employees?"
-    }
+    # --------------------------------------------------
+    # Service Certificate
+    # --------------------------------------------------
 
-    for phrase, rewritten_query in rewrite_rules.items():
+    if "service certificate" in q:
+        return (
+            "What is the procedure and requirements for obtaining "
+            "a Service Certificate from VIT?"
+        )
 
-        if phrase in query:
-            return rewritten_query
+    # --------------------------------------------------
+    # Exit Interview
+    # --------------------------------------------------
+
+    if "exit interview" in q:
+        return (
+            "What is the procedure and requirement for the "
+            "Exit Interview at VIT?"
+        )
+
+    # --------------------------------------------------
+    # Resignation
+    # --------------------------------------------------
+
+    if "resignation" in q:
+        return (
+            "What are the resignation, notice period, relieving, "
+            "and termination procedures at VIT?"
+        )
+
+    # --------------------------------------------------
+    # Vacation
+    # --------------------------------------------------
+
+    if "vacation" in q:
+        return (
+            "What are the eligibility, duration, vacation period, "
+            "and conditions for vacation at VIT?"
+        )
+
+    # --------------------------------------------------
+    # Default
+    # --------------------------------------------------
 
     return question

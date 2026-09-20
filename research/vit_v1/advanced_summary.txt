@@ -1,0 +1,50 @@
+ADVANCED VIT HR RAG EVALUATION
+
+Questions: 23
+
+MEASURED RETRIEVAL EFFICIENCY
+Fixed-3 average attempts: 1.9565
+Learned average attempts: 1.5652
+Attempt reduction: 20.00%
+
+CRITIC-DEFINED SUCCESS
+Fixed-3 success rate: 60.87%
+Learned success rate: 73.91%
+
+LATENCY (WARMED-UP LOCAL RAG LOOP)
+Fixed mean wall-clock: 0.1511 s
+Learned mean wall-clock: 0.1160 s
+Fixed median wall-clock: 0.1515 s
+Learned median wall-clock: 0.1367 s
+Fixed p95 wall-clock: 0.1652 s
+Learned p95 wall-clock: 0.1636 s
+Measured wall-clock reduction: 23.21%
+
+CPU TIME
+Fixed mean CPU time: 0.8702 s
+Learned mean CPU time: 0.6569 s
+Measured CPU-time reduction: 24.51%
+
+OPERATIONAL COST PROXY
+Average retrieval/critic cycles are represented by average attempts.
+This is a compute/work proxy, NOT a monetary cost estimate.
+Attempt-based operational reduction: 20.00%
+
+PARETO ANALYSIS
+A stop-probability threshold sweep is stored in pareto_results.csv.
+Non-dominated operating points are stored in pareto_frontier.csv.
+Axes: average attempts vs critic-defined success rate.
+
+HUMAN VALIDATION
+A 23-question independent-review template was created at:
+C:\Users\Mohamed Yakoob\hr-rag-assistant\research\vit_v1\human_validation_23.csv
+It must be completed by a separate evaluator who independently checks
+answers against the VIT source. Do not claim independent validation
+until those fields are completed by that evaluator.
+
+FILES CREATED
+- advanced_question_results.csv
+- pareto_results.csv
+- pareto_frontier.csv
+- human_validation_23.csv
+- advanced_summary.txt

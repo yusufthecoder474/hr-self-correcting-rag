@@ -1,4 +1,3 @@
-from auth_api import router as auth_router
 from pathlib import Path
 
 from fastapi import FastAPI
@@ -6,32 +5,46 @@ from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 
+from auth_api import router as auth_router
 from local_self_correcting_rag import local_self_correcting_rag
 from gemini_answer import generate_answer
 
+
+# ============================================================
+# Application
+# ============================================================
 
 app = FastAPI(
     title="HR Self-Correcting RAG API",
     version="1.0"
 )
 
+
+# ============================================================
+# Authentication
+# ============================================================
+
 app.include_router(
     auth_router,
     prefix="/auth",
-    tags=["Authentication"],
+    tags=["Authentication"]
 )
 
-# --------------------------------------------------
-# Paths
-# --------------------------------------------------
 
-BASE_DIR = Path(__file__).resolve().parent
+# ============================================================
+# Paths
+# ============================================================
+
+BASE_DIR = Path(
+    __file__
+).resolve().parent
+
 STATIC_DIR = BASE_DIR / "static"
 
 
-# --------------------------------------------------
-# Serve frontend files
-# --------------------------------------------------
+# ============================================================
+# Static frontend
+# ============================================================
 
 app.mount(
     "/static",
@@ -42,18 +55,17 @@ app.mount(
 )
 
 
-# --------------------------------------------------
+# ============================================================
 # Request model
-# --------------------------------------------------
+# ============================================================
 
 class QuestionRequest(BaseModel):
-
     question: str
 
 
-# --------------------------------------------------
+# ============================================================
 # Response model
-# --------------------------------------------------
+# ============================================================
 
 class QuestionResponse(BaseModel):
 
@@ -63,9 +75,9 @@ class QuestionResponse(BaseModel):
     trajectory: list
 
 
-# --------------------------------------------------
-# Frontend
-# --------------------------------------------------
+# ============================================================
+# Home
+# ============================================================
 
 @app.get("/")
 def home():
@@ -75,9 +87,9 @@ def home():
     )
 
 
-# --------------------------------------------------
-# Health check
-# --------------------------------------------------
+# ============================================================
+# Health
+# ============================================================
 
 @app.get("/health")
 def health():
@@ -87,9 +99,9 @@ def health():
     }
 
 
-# --------------------------------------------------
+# ============================================================
 # Ask question
-# --------------------------------------------------
+# ============================================================
 
 @app.post(
     "/ask",
@@ -110,9 +122,9 @@ def ask_question(
             trajectory=[]
         )
 
-    # --------------------------------------------------
-    # Run self-correcting RAG
-    # --------------------------------------------------
+    # --------------------------------------------------------
+    # Self-correcting RAG
+    # --------------------------------------------------------
 
     context, trajectory = (
         local_self_correcting_rag(
@@ -120,27 +132,54 @@ def ask_question(
         )
     )
 
-    # --------------------------------------------------
-    # No sufficient information
-    # --------------------------------------------------
+    # --------------------------------------------------------
+    # No context
+    # --------------------------------------------------------
 
-    if context is None:
+    if not context:
 
         return QuestionResponse(
             question=question,
             answer=(
-                "Information not found "
-                "in the HR policy."
+                "Information was not found "
+                "in the VIT HR policy."
             ),
             source=(
-                "NexaCore_HR_Policy_Handbook.pdf"
+                "VIT_HR_Conditions_of_Service.pdf"
             ),
             trajectory=trajectory
         )
 
-    # --------------------------------------------------
-    # Generate final answer
-    # --------------------------------------------------
+    # --------------------------------------------------------
+    # Debug context
+    # --------------------------------------------------------
+
+    print()
+    print(
+        "=" * 70
+    )
+
+    print(
+        "CONTEXT SENT TO ANSWER GENERATOR"
+    )
+
+    print(
+        "=" * 70
+    )
+
+    print(
+        context
+    )
+
+    print(
+        "=" * 70
+    )
+
+    print()
+
+    # --------------------------------------------------------
+    # Generate answer
+    # --------------------------------------------------------
 
     try:
 
@@ -151,30 +190,24 @@ def ask_question(
 
     except Exception as error:
 
-        error_text = str(error)
+        print(
+            f"Answer generation error: {error}"
+        )
 
-        if (
-            "429" in error_text
-            or "quota" in error_text.lower()
-            or "rate" in error_text.lower()
-        ):
+        answer = (
+            "The relevant VIT HR policy was retrieved, "
+            "but the final answer could not be generated."
+        )
 
-            answer = (
-                "Gemini API quota is currently "
-                "unavailable. The relevant HR "
-                "policy context was successfully "
-                "retrieved."
-            )
-
-        else:
-
-            raise
+    # --------------------------------------------------------
+    # Response
+    # --------------------------------------------------------
 
     return QuestionResponse(
         question=question,
         answer=answer,
         source=(
-            "NexaCore_HR_Policy_Handbook.pdf"
+            "VIT_HR_Conditions_of_Service.pdf"
         ),
         trajectory=trajectory
     )

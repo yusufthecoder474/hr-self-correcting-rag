@@ -4,7 +4,7 @@ from sentence_transformers import SentenceTransformer
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
 # 1. Read PDF
-pdf_path = "documents/NexaCore_HR_Policy_Handbook.pdf"
+pdf_path = "documents/vit/VIT_HR_Conditions_of_Service.pdf"
 
 doc = pymupdf.open(pdf_path)
 
@@ -43,7 +43,7 @@ ids = [f"chunk_{i}" for i in range(len(chunks))]
 
 metadatas = [
     {
-        "source": "NexaCore_HR_Policy_Handbook.pdf",
+        "source": "VIT_HR_Conditions_of_Service.pdf",
         "chunk_id": i
     }
     for i in range(len(chunks))

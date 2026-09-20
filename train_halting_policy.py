@@ -10,18 +10,30 @@ from sklearn.metrics import (
 )
 
 
-DATASET = "training_halting_dataset.csv"
-MODEL_FILE = "halting_policy.pkl"
+# ============================================================
+# VIT DATASET / MODEL
+# ============================================================
 
+DATASET = "research/vit_v1/training_halting_dataset_vit.csv"
+MODEL_FILE = "research/vit_v1/halting_policy_vit_v3.pkl"
+
+
+# ============================================================
+# FEATURES
+# chunk_overlap intentionally removed for ablation experiment
+# ============================================================
 
 FEATURE_NAMES = [
     "attempt",
     "score",
     "best_score",
-    "score_delta",
-    "chunk_overlap"
+    "score_delta"
 ]
 
+
+# ============================================================
+# LOAD DATA
+# ============================================================
 
 def load_data():
 
@@ -39,20 +51,29 @@ def load_data():
 
         for row in rows:
 
+            # ---------------------------------------------
+            # 4 features ONLY
+            # chunk_overlap is intentionally excluded
+            # ---------------------------------------------
+
             features = [
                 float(row["attempt"]),
                 float(row["score"]),
                 float(row["best_score"]),
-                float(row["score_delta"]),
-                float(row["chunk_overlap"])
+                float(row["score_delta"])
             ]
 
             X.append(features)
 
+            # halt:
+            # 0 = CONTINUE
+            # 1 = STOP
             y.append(
                 int(row["halt"])
             )
 
+            # Keep all trajectory rows from the same
+            # question in the same train/test group.
             groups.append(
                 row["original_question"]
             )
@@ -60,9 +81,19 @@ def load_data():
     return X, y, groups
 
 
+# ============================================================
+# MAIN
+# ============================================================
+
 def main():
 
     X, y, groups = load_data()
+
+    # ========================================================
+    # DATASET SUMMARY
+    # ========================================================
+
+    print("\n===== VIT HALTING DATASET =====")
 
     print(
         "Total samples:",
@@ -84,9 +115,9 @@ def main():
         sum(label == 0 for label in y)
     )
 
-    # -----------------------------------------
-    # Question-level train/test split
-    # -----------------------------------------
+    # ========================================================
+    # GROUPED TRAIN / TEST SPLIT
+    # ========================================================
 
     splitter = GroupShuffleSplit(
         n_splits=1,
@@ -102,14 +133,13 @@ def main():
         )
     )
 
+    # --------------------------------------------------------
+    # Training data
+    # --------------------------------------------------------
+
     X_train = [
         X[i]
         for i in train_indices
-    ]
-
-    X_test = [
-        X[i]
-        for i in test_indices
     ]
 
     y_train = [
@@ -117,10 +147,23 @@ def main():
         for i in train_indices
     ]
 
+    # --------------------------------------------------------
+    # Testing data
+    # --------------------------------------------------------
+
+    X_test = [
+        X[i]
+        for i in test_indices
+    ]
+
     y_test = [
         y[i]
         for i in test_indices
     ]
+
+    # --------------------------------------------------------
+    # Question groups
+    # --------------------------------------------------------
 
     train_questions = {
         groups[i]
@@ -142,9 +185,11 @@ def main():
         len(test_questions)
     )
 
-    # -----------------------------------------
-    # Train model
-    # -----------------------------------------
+    # ========================================================
+    # TRAIN V3 MODEL
+    # ========================================================
+
+    print("\n===== TRAINING VIT HALTING POLICY V3 =====")
 
     model = LogisticRegression(
         class_weight="balanced",
@@ -157,9 +202,9 @@ def main():
         y_train
     )
 
-    # -----------------------------------------
-    # Evaluate
-    # -----------------------------------------
+    # ========================================================
+    # TEST MODEL
+    # ========================================================
 
     predictions = model.predict(
         X_test
@@ -183,6 +228,10 @@ def main():
         classification_report(
             y_test,
             predictions,
+            target_names=[
+                "CONTINUE",
+                "STOP"
+            ],
             zero_division=0
         )
     )
@@ -198,12 +247,12 @@ def main():
         )
     )
 
-    # -----------------------------------------
-    # Feature weights
-    # -----------------------------------------
+    # ========================================================
+    # FEATURE WEIGHTS
+    # ========================================================
 
     print(
-        "\nLearned Feature Weights:"
+        "\n===== LEARNED FEATURE WEIGHTS ====="
     )
 
     for name, weight in zip(
@@ -215,9 +264,13 @@ def main():
             f"{name}: {weight:.4f}"
         )
 
-    # -----------------------------------------
-    # Train final model on ALL questions
-    # -----------------------------------------
+    # ========================================================
+    # TRAIN FINAL MODEL ON ALL VIT QUESTIONS
+    # ========================================================
+
+    print(
+        "\n===== TRAINING FINAL MODEL ON ALL VIT DATA ====="
+    )
 
     final_model = LogisticRegression(
         class_weight="balanced",
@@ -230,9 +283,9 @@ def main():
         y
     )
 
-    # -----------------------------------------
-    # Save final model
-    # -----------------------------------------
+    # ========================================================
+    # SAVE FINAL MODEL
+    # ========================================================
 
     joblib.dump(
         final_model,
@@ -244,6 +297,19 @@ def main():
         MODEL_FILE
     )
 
+    print(
+        "\nFeatures used:",
+        FEATURE_NAMES
+    )
+
+    print(
+        "\nTraining completed successfully."
+    )
+
+
+# ============================================================
+# ENTRY POINT
+# ============================================================
 
 if __name__ == "__main__":
     main()

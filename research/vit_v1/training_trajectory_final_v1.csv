@@ -1,0 +1,114 @@
+original_question,attempt,query,score,best_score,score_delta,chunk_overlap,decision
+How many days of Casual Leave can an employee avail in an academic year?,1,How many days of Casual Leave can an employee avail in an academic year?,0.9,0.9,0.0,0.0,SUFFICIENT
+Who is eligible for Casual Leave at VIT?,1,Who is eligible for Casual Leave at VIT?,0.84,0.84,0.0,0.0,SUFFICIENT
+Can unused Casual Leave be carried forward?,1,Can unused Casual Leave be carried forward?,0.74,0.74,0.0,0.0,INSUFFICIENT
+Can unused Casual Leave be carried forward?,2,"What are the eligibility, entitlement, limits, and approval requirements for Casual Leave at VIT?",0.68,0.74,-0.05999999999999994,0.0,INSUFFICIENT
+What is the maximum number of Casual Leave days that can be taken at one time?,1,What is the maximum number of Casual Leave days that can be taken at one time?,0.82,0.82,0.0,0.0,SUFFICIENT
+What is the procedure for applying for leave at VIT?,1,What is the procedure for applying for leave at VIT?,0.68,0.68,0.0,0.0,INSUFFICIENT
+Who can sanction leave for an employee?,1,Who can sanction leave for an employee?,0.75,0.75,0.0,0.0,SUFFICIENT
+What is Medical Leave at VIT?,1,What is Medical Leave at VIT?,0.93,0.93,0.0,0.0,SUFFICIENT
+How many days of Medical Leave can be accumulated?,1,How many days of Medical Leave can be accumulated?,0.93,0.93,0.0,0.0,SUFFICIENT
+What certificate is required for Medical Leave?,1,What certificate is required for Medical Leave?,0.79,0.79,0.0,0.0,SUFFICIENT
+What is the maternity leave entitlement?,1,What is the maternity leave entitlement?,0.91,0.91,0.0,0.0,SUFFICIENT
+What is the purpose of the Exit Interview System?,1,What is the purpose of the Exit Interview System?,0.77,0.77,0.0,0.0,SUFFICIENT
+When is a service certificate issued?,1,When is a service certificate issued?,0.78,0.78,0.0,0.0,SUFFICIENT
+What are the rules for VIT holidays?,1,What are the rules for VIT holidays?,0.93,0.93,0.0,0.0,SUFFICIENT
+Who is eligible for Earned Leave?,1,Who is eligible for Earned Leave?,0.9,0.9,0.0,0.0,SUFFICIENT
+How is Earned Leave calculated for staff?,1,How is Earned Leave calculated for staff?,0.79,0.79,0.0,0.0,SUFFICIENT
+How is Earned Leave calculated for faculty?,1,How is Earned Leave calculated for faculty?,0.79,0.79,0.0,0.0,SUFFICIENT
+What is Compensatory Off?,1,What is Compensatory Off?,0.84,0.84,0.0,0.0,SUFFICIENT
+What is the purpose of the Exit Interview?,1,What is the purpose of the Exit Interview?,0.74,0.74,0.0,0.0,INSUFFICIENT
+What is the purpose of the Exit Interview?,2,What is the Exit Interview System and when can a resigning employee attend it at VIT?,0.84,0.84,0.09999999999999998,0.5,SUFFICIENT
+What happens when an employee resigns?,1,What happens when an employee resigns?,0.76,0.76,0.0,0.0,SUFFICIENT
+What is the notice period for resignation?,1,What is the notice period for resignation?,0.91,0.91,0.0,0.0,SUFFICIENT
+What is Sabbatical Leave?,1,What is Sabbatical Leave?,0.92,0.92,0.0,0.0,SUFFICIENT
+What is Long Leave on Loss of Pay?,1,What is Long Leave on Loss of Pay?,0.89,0.89,0.0,0.0,SUFFICIENT
+What is Leave on Duty?,1,What is Leave on Duty?,0.88,0.88,0.0,0.0,SUFFICIENT
+Can employees avail vacation?,1,Can employees avail vacation?,0.69,0.69,0.0,0.0,INSUFFICIENT
+Can employees avail vacation?,2,"What are the eligibility, conditions, and salary rules for vacation at VIT?",0.75,0.75,0.06000000000000005,0.5,SUFFICIENT
+What is vacation salary?,1,What is vacation salary?,0.87,0.87,0.0,0.0,SUFFICIENT
+"What are the eligibility conditions, duration, and documentation requirements for Medical Leave?",1,"What are the eligibility conditions, duration, and documentation requirements for Medical Leave?",0.62,0.62,0.0,0.0,INSUFFICIENT
+"What are the eligibility conditions, duration, and documentation requirements for Medical Leave?",2,"What are the eligibility, duration, medical certificate, approval, and extension requirements for Medical Leave at VIT?",0.82,0.82,0.19999999999999996,0.5,SUFFICIENT
+What are the rules for extending Medical Leave for more than one month?,1,What are the rules for extending Medical Leave for more than one month?,0.75,0.75,0.0,0.0,SUFFICIENT
+How does the Casual Leave policy differ from the Earned Leave policy?,1,How does the Casual Leave policy differ from the Earned Leave policy?,0.74,0.74,0.0,0.0,INSUFFICIENT
+How does the Casual Leave policy differ from the Earned Leave policy?,2,"What are the eligibility, entitlement, limits, and approval requirements for Casual Leave at VIT?",0.68,0.74,-0.05999999999999994,0.2,INSUFFICIENT
+What are the eligibility conditions and duration for maternity leave?,1,What are the eligibility conditions and duration for maternity leave?,0.74,0.74,0.0,0.0,INSUFFICIENT
+What are the eligibility conditions and duration for maternity leave?,2,"What are the eligibility, duration, service requirements, and documentation requirements for Maternity Leave at VIT?",0.71,0.74,-0.030000000000000027,0.5,INSUFFICIENT
+What are the rules governing vacation and vacation salary?,1,What are the rules governing vacation and vacation salary?,0.8,0.8,0.0,0.0,SUFFICIENT
+What is the procedure for applying for leave and obtaining approval?,1,What is the procedure for applying for leave and obtaining approval?,0.63,0.63,0.0,0.0,INSUFFICIENT
+What are the requirements for obtaining a service certificate?,1,What are the requirements for obtaining a service certificate?,0.65,0.65,0.0,0.0,INSUFFICIENT
+What are the requirements for obtaining a service certificate?,2,When is a Service Certificate issued and what is the procedure for obtaining it from VIT?,0.77,0.77,0.12,0.5,SUFFICIENT
+What are the conditions associated with resignation and relieving an employee?,1,What are the conditions associated with resignation and relieving an employee?,0.82,0.82,0.0,0.0,SUFFICIENT
+What are the rules for Compensatory Off for faculty and staff?,1,What are the rules for Compensatory Off for faculty and staff?,0.8,0.8,0.0,0.0,SUFFICIENT
+What conditions apply when an employee is unable to resume work after leave?,1,What conditions apply when an employee is unable to resume work after leave?,0.8,0.8,0.0,0.0,SUFFICIENT
+What are the rules for Leave on Duty?,1,What are the rules for Leave on Duty?,0.75,0.75,0.0,0.0,SUFFICIENT
+What are the conditions for Sabbatical Leave?,1,What are the conditions for Sabbatical Leave?,0.92,0.92,0.0,0.0,SUFFICIENT
+What are the eligibility requirements for Earned Leave?,1,What are the eligibility requirements for Earned Leave?,0.79,0.79,0.0,0.0,SUFFICIENT
+What happens when leave is taken without prior sanction?,1,What happens when leave is taken without prior sanction?,0.66,0.66,0.0,0.0,INSUFFICIENT
+What are the rules governing leave during the first year of service?,1,What are the rules governing leave during the first year of service?,0.71,0.71,0.0,0.0,INSUFFICIENT
+What are the documentation requirements for Medical Leave taken outside the VIT Health Centre?,1,What are the documentation requirements for Medical Leave taken outside the VIT Health Centre?,0.79,0.79,0.0,0.0,SUFFICIENT
+What are the rules for extending a Medical Leave?,1,What are the rules for extending a Medical Leave?,0.7,0.7,0.0,0.0,INSUFFICIENT
+What are the rules for extending a Medical Leave?,2,"What are the eligibility, duration, medical certificate, approval, and extension requirements for Medical Leave at VIT?",0.82,0.82,0.12,0.2,SUFFICIENT
+What are the conditions for maternity leave and what documentation is required?,1,What are the conditions for maternity leave and what documentation is required?,0.82,0.82,0.0,0.0,SUFFICIENT
+What are the rules for resignation and the Exit Interview System?,1,What are the rules for resignation and the Exit Interview System?,0.93,0.93,0.0,0.0,SUFFICIENT
+How do leave approval and medical certification requirements interact?,1,How do leave approval and medical certification requirements interact?,0.61,0.61,0.0,0.0,INSUFFICIENT
+Can an employee take Casual Leave and combine it with another type of leave?,1,Can an employee take Casual Leave and combine it with another type of leave?,0.67,0.67,0.0,0.0,INSUFFICIENT
+Can an employee take Casual Leave and combine it with another type of leave?,2,"What are the eligibility, entitlement, limits, and approval requirements for Casual Leave at VIT?",0.68,0.68,0.010000000000000009,0.2,INSUFFICIENT
+What happens if an employee applies for leave without obtaining prior sanction?,1,What happens if an employee applies for leave without obtaining prior sanction?,0.65,0.65,0.0,0.0,INSUFFICIENT
+Can unused Casual Leave be carried forward to the next academic year?,1,Can unused Casual Leave be carried forward to the next academic year?,0.76,0.76,0.0,0.0,SUFFICIENT
+What happens if Medical Leave continues for more than one month?,1,What happens if Medical Leave continues for more than one month?,0.65,0.65,0.0,0.0,INSUFFICIENT
+What happens if Medical Leave continues for more than one month?,2,"What are the eligibility, duration, medical certificate, approval, and extension requirements for Medical Leave at VIT?",0.82,0.82,0.16999999999999993,0.5,SUFFICIENT
+Can Medical Leave be taken without the required medical certificate?,1,Can Medical Leave be taken without the required medical certificate?,0.72,0.72,0.0,0.0,INSUFFICIENT
+Can Medical Leave be taken without the required medical certificate?,2,"What are the eligibility, duration, medical certificate, approval, and extension requirements for Medical Leave at VIT?",0.82,0.82,0.09999999999999998,0.5,SUFFICIENT
+What conditions apply when Medical Leave is taken outside the VIT Health Centre?,1,What conditions apply when Medical Leave is taken outside the VIT Health Centre?,0.76,0.76,0.0,0.0,SUFFICIENT
+Can an employee claim Medical Leave during the first year of service?,1,Can an employee claim Medical Leave during the first year of service?,0.84,0.84,0.0,0.0,SUFFICIENT
+What happens if an employee does not submit the required medical certificate within the prescribed time?,1,What happens if an employee does not submit the required medical certificate within the prescribed time?,0.73,0.73,0.0,0.0,INSUFFICIENT
+What are the differences between faculty and staff for Compensatory Off?,1,What are the differences between faculty and staff for Compensatory Off?,0.73,0.73,0.0,0.0,INSUFFICIENT
+What are the differences between faculty and staff for Compensatory Off?,2,What are the eligibility and conditions for Compensatory Off for faculty and staff at VIT?,0.65,0.73,-0.07999999999999996,0.0,INSUFFICIENT
+Can an employee resume work after a leave period without following the prescribed procedure?,1,Can an employee resume work after a leave period without following the prescribed procedure?,0.66,0.66,0.0,0.0,INSUFFICIENT
+What happens when an employee resigns voluntarily from VIT?,1,What happens when an employee resigns voluntarily from VIT?,0.79,0.79,0.0,0.0,SUFFICIENT
+What are the conditions for obtaining a service certificate after resignation?,1,What are the conditions for obtaining a service certificate after resignation?,0.78,0.78,0.0,0.0,SUFFICIENT
+What is the relationship between resignation notice and the Exit Interview?,1,What is the relationship between resignation notice and the Exit Interview?,0.77,0.77,0.0,0.0,SUFFICIENT
+Can an employee avail vacation without satisfying the required conditions?,1,Can an employee avail vacation without satisfying the required conditions?,0.55,0.55,0.0,0.0,INSUFFICIENT
+Can an employee avail vacation without satisfying the required conditions?,2,"What are the eligibility, conditions, and salary rules for vacation at VIT?",0.75,0.75,0.19999999999999996,0.2,SUFFICIENT
+What happens when an employee is laid off during a stoppage of work?,1,What happens when an employee is laid off during a stoppage of work?,0.87,0.87,0.0,0.0,SUFFICIENT
+What are the conditions for reinstatement after lay-off?,1,What are the conditions for reinstatement after lay-off?,0.79,0.79,0.0,0.0,SUFFICIENT
+What are the rules for combining different types of leave?,1,What are the rules for combining different types of leave?,0.56,0.56,0.0,0.0,INSUFFICIENT
+What are the restrictions on maternity leave?,1,What are the restrictions on maternity leave?,0.79,0.79,0.0,0.0,SUFFICIENT
+What documentation is required for maternity leave?,1,What documentation is required for maternity leave?,0.76,0.76,0.0,0.0,SUFFICIENT
+What are the conditions for Sabbatical Leave and its extension?,1,What are the conditions for Sabbatical Leave and its extension?,0.77,0.77,0.0,0.0,SUFFICIENT
+"What are all the conditions, approvals, and documents required for Medical Leave beyond one month?",1,"What are all the conditions, approvals, and documents required for Medical Leave beyond one month?",0.57,0.57,0.0,0.0,INSUFFICIENT
+"What are all the conditions, approvals, and documents required for Medical Leave beyond one month?",2,"What are the eligibility, duration, medical certificate, approval, and extension requirements for Medical Leave at VIT?",0.82,0.82,0.25,0.5,SUFFICIENT
+What are the rules for Medical Leave when treatment is taken outside the VIT Health Centre?,1,What are the rules for Medical Leave when treatment is taken outside the VIT Health Centre?,0.81,0.81,0.0,0.0,SUFFICIENT
+What service requirement must an employee satisfy before becoming eligible for Medical Leave?,1,What service requirement must an employee satisfy before becoming eligible for Medical Leave?,0.67,0.67,0.0,0.0,INSUFFICIENT
+What service requirement must an employee satisfy before becoming eligible for Medical Leave?,2,"What are the eligibility, duration, medical certificate, approval, and extension requirements for Medical Leave at VIT?",0.82,0.82,0.1499999999999999,0.2,SUFFICIENT
+What are the Medical Leave accumulation limits and the conditions for using accumulated leave?,1,What are the Medical Leave accumulation limits and the conditions for using accumulated leave?,0.73,0.73,0.0,0.0,INSUFFICIENT
+What are the Medical Leave accumulation limits and the conditions for using accumulated leave?,2,"What are the eligibility, duration, medical certificate, approval, and extension requirements for Medical Leave at VIT?",0.82,0.82,0.08999999999999997,0.2,SUFFICIENT
+What is the complete procedure for extending Medical Leave and rejoining duty?,1,What is the complete procedure for extending Medical Leave and rejoining duty?,0.62,0.62,0.0,0.0,INSUFFICIENT
+What is the complete procedure for extending Medical Leave and rejoining duty?,2,"What are the eligibility, duration, medical certificate, approval, and extension requirements for Medical Leave at VIT?",0.82,0.82,0.19999999999999996,1.0,SUFFICIENT
+"What are the eligibility, duration, and documentation requirements for Maternity Leave?",1,"What are the eligibility, duration, and documentation requirements for Maternity Leave?",0.62,0.62,0.0,0.0,INSUFFICIENT
+"What are the eligibility, duration, and documentation requirements for Maternity Leave?",2,"What are the eligibility, duration, service requirements, and documentation requirements for Maternity Leave at VIT?",0.71,0.71,0.08999999999999997,0.5,INSUFFICIENT
+What restrictions apply to Maternity Leave based on the number of living children?,1,What restrictions apply to Maternity Leave based on the number of living children?,0.7,0.7,0.0,0.0,INSUFFICIENT
+What restrictions apply to Maternity Leave based on the number of living children?,2,"What are the eligibility, duration, service requirements, and documentation requirements for Maternity Leave at VIT?",0.71,0.71,0.010000000000000009,0.5,INSUFFICIENT
+What service requirement applies to Maternity Leave eligibility?,1,What service requirement applies to Maternity Leave eligibility?,0.69,0.69,0.0,0.0,INSUFFICIENT
+What service requirement applies to Maternity Leave eligibility?,2,"What are the eligibility, duration, service requirements, and documentation requirements for Maternity Leave at VIT?",0.71,0.71,0.020000000000000018,0.5,INSUFFICIENT
+What are the conditions for claiming vacation salary and who is eligible?,1,What are the conditions for claiming vacation salary and who is eligible?,0.77,0.77,0.0,0.0,SUFFICIENT
+What restrictions apply when vacation is combined with other leave?,1,What restrictions apply when vacation is combined with other leave?,0.75,0.75,0.0,0.0,SUFFICIENT
+What are the rules for taking vacation and the conditions for remaining eligible for vacation salary?,1,What are the rules for taking vacation and the conditions for remaining eligible for vacation salary?,0.68,0.68,0.0,0.0,INSUFFICIENT
+What are the rules for taking vacation and the conditions for remaining eligible for vacation salary?,2,"What are the eligibility, conditions, and salary rules for vacation at VIT?",0.75,0.75,0.06999999999999995,0.2,SUFFICIENT
+What is the complete process for obtaining a Service Certificate after resignation or retirement?,1,What is the complete process for obtaining a Service Certificate after resignation or retirement?,0.75,0.75,0.0,0.0,SUFFICIENT
+When can a resigning employee attend an Exit Interview and what is its purpose?,1,When can a resigning employee attend an Exit Interview and what is its purpose?,0.75,0.75,0.0,0.0,SUFFICIENT
+What notice and relieving requirements apply when an employee resigns from VIT?,1,What notice and relieving requirements apply when an employee resigns from VIT?,0.82,0.82,0.0,0.0,SUFFICIENT
+What are the eligibility and approval conditions for Leave on Duty?,1,What are the eligibility and approval conditions for Leave on Duty?,0.74,0.74,0.0,0.0,INSUFFICIENT
+What are the eligibility and approval conditions for Leave on Duty?,2,What are the eligibility and conditions for Leave on Duty at VIT?,0.84,0.84,0.09999999999999998,0.0,SUFFICIENT
+What are the eligibility and duration conditions for Sabbatical Leave?,1,What are the eligibility and duration conditions for Sabbatical Leave?,0.77,0.77,0.0,0.0,SUFFICIENT
+What are the differences between Compensatory Off rules for faculty and staff?,1,What are the differences between Compensatory Off rules for faculty and staff?,0.69,0.69,0.0,0.0,INSUFFICIENT
+What are the differences between Compensatory Off rules for faculty and staff?,2,What are the eligibility and conditions for Compensatory Off for faculty and staff at VIT?,0.65,0.69,-0.039999999999999925,0.0,INSUFFICIENT
+What conditions must be satisfied before Compensatory Off can be granted?,1,What conditions must be satisfied before Compensatory Off can be granted?,0.66,0.66,0.0,0.0,INSUFFICIENT
+What conditions must be satisfied before Compensatory Off can be granted?,2,What are the eligibility and conditions for Compensatory Off for faculty and staff at VIT?,0.65,0.66,-0.010000000000000009,0.0,INSUFFICIENT
+What are the rules for combining different forms of leave at VIT?,1,What are the rules for combining different forms of leave at VIT?,0.68,0.68,0.0,0.0,INSUFFICIENT
+What happens when an employee is absent without proper leave approval?,1,What happens when an employee is absent without proper leave approval?,0.59,0.59,0.0,0.0,INSUFFICIENT
+What are the conditions for resuming work after an extended leave?,1,What are the conditions for resuming work after an extended leave?,0.77,0.77,0.0,0.0,SUFFICIENT
+"What are the conditions for resignation, relieving, and obtaining a Service Certificate?",1,"What are the conditions for resignation, relieving, and obtaining a Service Certificate?",0.78,0.78,0.0,0.0,SUFFICIENT
+"What are the complete rules governing leave approval, medical certification, and leave extension?",1,"What are the complete rules governing leave approval, medical certification, and leave extension?",0.6,0.6,0.0,0.0,INSUFFICIENT
+"What are the conditions governing holidays, leave, and employee eligibility at VIT?",1,"What are the conditions governing holidays, leave, and employee eligibility at VIT?",0.82,0.82,0.0,0.0,SUFFICIENT

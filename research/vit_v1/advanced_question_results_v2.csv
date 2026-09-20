@@ -1,0 +1,101 @@
+﻿question_id,question,fixed_mean_attempts,learned_mean_attempts,fixed_best_score_mean,learned_best_score_mean,fixed_success_rate,learned_success_rate,fixed_mean_wall_seconds,learned_mean_wall_seconds,fixed_mean_cpu_seconds,learned_mean_cpu_seconds
+1,"What are the eligibility conditions, duration, and documentation requirements for Medical Leave?",2,2,0.82,0.82,1,1,0.244007,0.194836,1.328125,1.15625
+2,What are the rules for extending Medical Leave for more than one month?,2,2,0.82,0.82,1,1,0.18326,0.180487,1.083333,0.989583
+3,How does the Casual Leave policy differ from the Earned Leave policy?,2,2,0.74,0.74,0,0,0.170836,0.171726,0.963542,1.015625
+4,What are the eligibility conditions and duration for maternity leave?,2,2,0.74,0.74,0,0,0.160501,0.170094,0.9375,0.921875
+5,What are the rules governing vacation and vacation salary?,2,1,0.81,0.8,1,1,0.167344,0.085486,0.901042,0.515625
+6,What is the procedure for applying for leave and obtaining approval?,1,1,0.63,0.63,0,0,0.085361,0.086757,0.46875,0.494792
+7,What are the requirements for obtaining a service certificate?,2,2,0.73,0.73,0,0,0.172052,0.179008,0.994792,0.9375
+8,What are the conditions associated with resignation and relieving an employee?,2,1,0.82,0.82,1,1,0.179696,0.084078,1.010417,0.46875
+9,What are the rules for Compensatory Off for faculty and staff?,2,1,0.8,0.8,1,1,0.201944,0.102849,1.130208,0.588542
+10,What conditions apply when an employee is unable to resume work after leave?,1,1,0.8,0.8,1,1,0.115594,0.114139,0.645833,0.619792
+11,What are the rules for Leave on Duty?,2,2,0.75,0.75,1,1,0.226365,0.223022,1.208333,1.291667
+12,What are the conditions for Sabbatical Leave?,2,1,0.92,0.92,1,1,0.219123,0.106848,1.21875,0.625
+13,What are the eligibility requirements for Earned Leave?,2,1,0.79,0.79,1,1,0.21713,0.10521,1.21875,0.614583
+14,What happens when leave is taken without prior sanction?,1,1,0.66,0.66,0,0,0.106605,0.111804,0.572917,0.682292
+15,What are the rules governing leave during the first year of service?,1,1,0.71,0.71,0,0,0.110584,0.105786,0.651042,0.604167
+16,What are the documentation requirements for Medical Leave taken outside the VIT Health Centre?,2,1,0.82,0.79,1,1,0.219999,0.112668,1.28125,0.645833
+17,What are the rules for extending a Medical Leave?,2,2,0.82,0.82,1,1,0.205068,0.314629,1.203125,1.291667
+18,What are the conditions for maternity leave and what documentation is required?,2,1,0.82,0.82,1,1,0.215393,0.108641,1.1875,0.677083
+19,What are the rules for resignation and the Exit Interview System?,2,1,0.93,0.93,1,1,0.219859,0.105963,1.203125,0.609375
+20,How do leave approval and medical certification requirements interact?,1,1,0.61,0.61,0,0,0.10757,0.108181,0.635417,0.619792
+21,"What are all the conditions, approvals, and documents required for Medical Leave beyond one month?",2,2,0.82,0.82,1,1,0.201437,0.220009,1.130208,1.276042
+22,What are the rules for Medical Leave when treatment is taken outside the VIT Health Centre?,2,1,0.82,0.81,1,1,0.224586,0.103512,1.239583,0.640625
+23,What service requirement must an employee satisfy before becoming eligible for Medical Leave?,2,2,0.82,0.82,1,1,0.201608,0.213247,1.145833,1.197917
+24,What are the Medical Leave accumulation limits and the conditions for using accumulated leave?,2,2,0.82,0.82,1,1,0.23346,0.227129,1.354167,1.296875
+25,What is the complete procedure for extending Medical Leave and rejoining duty?,2,2,0.82,0.82,1,1,0.224283,0.227268,1.28125,1.328125
+26,"What are the eligibility, duration, and documentation requirements for Maternity Leave?",2,2,0.73,0.73,0,0,0.219242,0.223568,1.28125,1.260417
+27,What restrictions apply to Maternity Leave based on the number of living children?,2,2,0.73,0.73,0,0,0.234287,0.22779,1.3125,1.322917
+28,What service requirement applies to Maternity Leave eligibility?,2,2,0.73,0.73,0,0,0.213037,0.218862,1.213542,1.28125
+29,What are the conditions for claiming vacation salary and who is eligible?,2,1,0.81,0.77,1,1,0.224871,0.109579,1.302083,0.604167
+30,What restrictions apply when vacation is combined with other leave?,2,2,0.81,0.81,1,1,0.223538,0.223036,1.234375,1.302083
+31,What are the rules for taking vacation and the conditions for remaining eligible for vacation salary?,2,2,0.81,0.81,1,1,0.209649,0.20457,1.182292,1.140625
+32,What is the complete process for obtaining a Service Certificate after resignation or retirement?,2,2,0.75,0.75,1,1,0.215834,0.196616,1.192708,1.15625
+33,When can a resigning employee attend an Exit Interview and what is its purpose?,2,2,0.78,0.78,1,1,0.205566,0.219197,1.166667,1.276042
+34,What notice and relieving requirements apply when an employee resigns from VIT?,1,1,0.82,0.82,1,1,0.105388,0.101031,0.604167,0.604167
+35,What are the eligibility and approval conditions for Leave on Duty?,2,2,0.75,0.75,1,1,0.216709,0.209759,1.302083,1.1875
+36,What are the eligibility and duration conditions for Sabbatical Leave?,2,1,0.77,0.77,1,1,0.205405,0.104389,1.192708,0.557292
+37,What are the differences between Compensatory Off rules for faculty and staff?,2,2,0.69,0.69,0,0,0.215247,0.223515,1.260417,1.302083
+38,What conditions must be satisfied before Compensatory Off can be granted?,2,2,0.69,0.69,0,0,0.225512,0.2237,1.260417,1.291667
+39,What are the rules for combining different forms of leave at VIT?,1,1,0.68,0.68,0,0,0.1011,0.108485,0.598958,0.609375
+40,What happens when an employee is absent without proper leave approval?,1,1,0.59,0.59,0,0,0.106555,0.105285,0.59375,0.583333
+41,What are the conditions for resuming work after an extended leave?,1,1,0.77,0.77,1,1,0.111844,0.105085,0.619792,0.625
+42,"What are the conditions for resignation, relieving, and obtaining a Service Certificate?",2,1,0.78,0.78,1,1,0.25525,0.109936,1.3125,0.614583
+43,"What are the complete rules governing leave approval, medical certification, and leave extension?",1,1,0.6,0.6,0,0,0.106051,0.107479,0.625,0.630208
+44,"What are the conditions governing holidays, leave, and employee eligibility at VIT?",1,1,0.82,0.82,1,1,0.11334,0.102868,0.598958,0.645833
+45,Can an employee take Casual Leave and combine it with another type of leave?,2,2,0.67,0.67,0,0,0.226021,0.225073,1.322917,1.276042
+46,What happens if an employee applies for leave without obtaining prior sanction?,1,1,0.65,0.65,0,0,0.109169,0.111386,0.635417,0.671875
+47,Can unused Casual Leave be carried forward to the next academic year?,2,2,0.76,0.76,1,1,0.223528,0.231064,1.291667,1.276042
+48,What happens if Medical Leave continues for more than one month?,2,2,0.82,0.82,1,1,0.210551,0.198453,1.229167,1.125
+49,Can Medical Leave be taken without the required medical certificate?,2,2,0.82,0.82,1,1,0.202276,0.219233,1.166667,1.276042
+50,What conditions apply when Medical Leave is taken outside the VIT Health Centre?,2,2,0.82,0.82,1,1,0.216908,0.220923,1.286458,1.192708
+51,Can an employee claim Medical Leave during the first year of service?,2,1,0.84,0.84,1,1,0.209429,0.102221,1.182292,0.614583
+52,What happens if an employee does not submit the required medical certificate within the prescribed time?,1,1,0.73,0.73,0,0,0.107148,0.114646,0.583333,0.651042
+53,What are the differences between faculty and staff for Compensatory Off?,2,2,0.73,0.73,0,0,0.234459,0.203811,1.119792,1.244792
+54,Can an employee resume work after a leave period without following the prescribed procedure?,1,1,0.66,0.66,0,0,0.110389,0.107768,0.635417,0.619792
+55,What happens when an employee resigns voluntarily from VIT?,1,1,0.79,0.79,1,1,0.109822,0.108227,0.651042,0.578125
+56,What are the conditions for obtaining a service certificate after resignation?,2,1,0.78,0.78,1,1,0.233257,0.107321,1.213542,0.59375
+57,What is the relationship between resignation notice and the Exit Interview?,2,1,0.78,0.77,1,1,0.216338,0.110798,1.177083,0.604167
+58,Can an employee avail vacation without satisfying the required conditions?,2,2,0.81,0.81,1,1,0.211376,0.21772,1.213542,1.203125
+59,What happens when an employee is laid off during a stoppage of work?,1,1,0.87,0.87,1,1,0.107158,0.112554,0.640625,0.630208
+60,What are the conditions for reinstatement after lay-off?,1,1,0.79,0.79,1,1,0.108625,0.117417,0.59375,0.682292
+61,What are the rules for combining different types of leave?,1,1,0.56,0.56,0,0,0.115826,0.110436,0.65625,0.604167
+62,What are the restrictions on maternity leave?,2,1,0.79,0.79,1,1,0.231039,0.116815,1.364583,0.619792
+63,What documentation is required for maternity leave?,2,2,0.76,0.76,1,1,0.261379,0.223926,1.411458,1.260417
+64,What are the conditions for Sabbatical Leave and its extension?,2,1,0.77,0.77,1,1,0.228484,0.114319,1.317708,0.666667
+65,How many days of Casual Leave can an employee avail in an academic year?,2,1,0.9,0.9,1,1,0.237752,0.117252,1.364583,0.708333
+66,Who is eligible for Casual Leave at VIT?,2,1,0.84,0.84,1,1,0.233296,0.11426,1.364583,0.666667
+67,Can unused Casual Leave be carried forward?,2,2,0.74,0.74,0,0,0.232112,0.239185,1.348958,1.338542
+68,What is the maximum number of Casual Leave days that can be taken at one time?,2,1,0.82,0.82,1,1,0.233302,0.117842,1.369792,0.692708
+69,What is the procedure for applying for leave at VIT?,1,1,0.68,0.68,0,0,0.11114,0.115664,0.614583,0.697917
+70,Who can sanction leave for an employee?,1,1,0.75,0.75,1,1,0.113947,0.116623,0.65625,0.651042
+71,What is Medical Leave at VIT?,2,1,0.93,0.93,1,1,0.232214,0.109868,1.364583,0.651042
+72,How many days of Medical Leave can be accumulated?,2,1,0.93,0.93,1,1,0.227856,0.112962,1.286458,0.666667
+73,What certificate is required for Medical Leave?,2,1,0.82,0.79,1,1,0.228804,0.104868,1.317708,0.619792
+74,What is the maternity leave entitlement?,2,1,0.91,0.91,1,1,0.233277,0.114392,1.364583,0.682292
+75,What is the purpose of the Exit Interview System?,2,1,0.78,0.77,1,1,0.229062,0.11251,1.338542,0.671875
+76,When is a service certificate issued?,2,1,0.78,0.78,1,1,0.230735,0.11493,1.354167,0.661458
+77,What are the rules for VIT holidays?,1,1,0.93,0.93,1,1,0.11326,0.112288,0.635417,0.692708
+78,Who is eligible for Earned Leave?,2,1,0.9,0.9,1,1,0.235983,0.114924,1.375,0.65625
+79,How is Earned Leave calculated for staff?,2,1,0.79,0.79,1,1,0.228986,0.107237,1.359375,0.625
+80,How is Earned Leave calculated for faculty?,2,1,0.79,0.79,1,1,0.232609,0.111902,1.322917,0.635417
+81,What is Compensatory Off?,2,1,0.84,0.84,1,1,0.231871,0.112137,1.328125,0.651042
+82,What is the purpose of the Exit Interview?,2,2,0.78,0.78,1,1,0.227934,0.221387,1.322917,1.260417
+83,What happens when an employee resigns?,1,1,0.76,0.76,1,1,0.10954,0.11119,0.65625,0.661458
+84,What is the notice period for resignation?,2,1,0.91,0.91,1,1,0.232499,0.113329,1.338542,0.666667
+85,What is Sabbatical Leave?,2,1,0.92,0.92,1,1,0.243469,0.103539,1.140625,0.645833
+86,What is Long Leave on Loss of Pay?,2,1,0.89,0.89,1,1,0.20532,0.102093,1.15625,0.5625
+87,What is Leave on Duty?,2,1,0.88,0.88,1,1,0.209606,0.099492,1.255208,0.5625
+88,Can employees avail vacation?,2,2,0.81,0.81,1,1,0.209384,0.214668,1.208333,1.223958
+89,What is vacation salary?,2,1,0.87,0.87,1,1,0.214493,0.103724,1.1875,0.604167
+90,What prior permission is required before an employee avails Casual Leave?,2,2,0.61,0.61,0,0,0.213091,0.211285,1.223958,1.145833
+91,What is the minimum amount of Casual Leave that can be availed at a time?,2,1,0.84,0.84,1,1,0.213172,0.110906,1.15625,0.666667
+92,How should a Medical Certificate from outside the VIT Health Centre be authenticated?,1,1,0.82,0.82,1,1,0.114486,0.113689,0.619792,0.6875
+93,How many times can a woman employee avail Maternity Leave during her entire service?,2,1,0.77,0.77,1,1,0.25111,0.135966,1.333333,0.567708
+94,Can Maternity Leave be debited against the entitlement of another type of leave?,2,1,0.79,0.79,1,1,0.208147,0.107344,1.197917,0.65625
+95,What must the Doctor's certificate state for Maternity Leave?,2,2,0.76,0.76,1,1,0.218752,0.213837,1.260417,1.234375
+96,What payment or compensatory option is available to staff who work on the seventh day after six continuous working days?,2,2,0.75,0.75,1,1,0.210816,0.214435,1.260417,1.244792
+97,Within what period must Compensatory Off or Leave be availed after entitlement?,2,1,0.82,0.82,1,1,0.216503,0.113505,1.229167,0.666667
+98,Are Faculty members eligible for Compensatory Off or Leave?,2,1,0.89,0.89,1,1,0.219628,0.109705,1.25,0.630208
+99,What document must an employee produce before applying for financial dues and the relieving order?,1,1,0.69,0.69,0,0,0.111731,0.112238,0.651042,0.651042
+100,Can accumulated leave be adjusted against the resignation notice period?,2,1,0.85,0.85,1,1,0.217485,0.105632,1.21875,0.640625

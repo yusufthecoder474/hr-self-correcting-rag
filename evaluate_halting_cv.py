@@ -9,17 +9,14 @@ from sklearn.metrics import (
 )
 
 
-DATASET = "training_halting_dataset.csv"
-
+DATASET = "research/vit_v1/training_halting_dataset_vit.csv"
 
 FEATURE_NAMES = [
     "attempt",
     "score",
     "best_score",
-    "score_delta",
-    "chunk_overlap"
+    "score_delta"
 ]
-
 
 def load_data():
 
@@ -38,12 +35,11 @@ def load_data():
         for row in rows:
 
             X.append([
-                float(row["attempt"]),
-                float(row["score"]),
-                float(row["best_score"]),
-                float(row["score_delta"]),
-                float(row["chunk_overlap"])
-            ])
+    		float(row["attempt"]),
+    		float(row["score"]),
+    		float(row["best_score"]),
+    		float(row["score_delta"])
+		])
 
             y.append(
                 int(row["halt"])
@@ -121,10 +117,10 @@ def main():
         ]
 
         model = LogisticRegression(
-            class_weight="balanced",
-            random_state=42,
-            max_iter=1000
-        )
+    		class_weight="balanced",	
+    		random_state=42,
+    		max_iter=1000
+	)
 
         model.fit(
             X_train,
