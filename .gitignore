@@ -31,5 +31,8 @@ trajectory_dataset.csv
 
 # OS files
 .DS_Store
-Thumbs.db*_backup.py
+Thumbs.db
+
+# Local backup files
+*_backup.py
 *_backup/
