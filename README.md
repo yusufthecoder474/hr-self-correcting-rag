@@ -20,6 +20,7 @@
   <img src="https://img.shields.io/badge/100--Question%20Evaluation-COMPLETED-success" alt="100 Question Evaluation">
   <img src="https://img.shields.io/badge/Learned%20Halting-23.30%25%20Less%20Retrieval%20Work-success" alt="23.30 Percent">
   <img src="https://img.shields.io/badge/Critic--Defined%20Success-75%25-blue" alt="75 Percent">
+  <img src="https://img.shields.io/badge/Pytest-5%20Passed-success" alt="Pytest">
 </p>
 
 </div>
@@ -33,22 +34,22 @@
 Unlike a conventional fixed-retrieval RAG pipeline, this system can:
 
 - 🔎 Retrieve relevant policy passages
-- 🧠 Critically evaluate the retrieved context
+- 🧠 Critically evaluate retrieved context
 - ✏️ Rewrite the query when retrieval is insufficient
 - 🔁 Re-retrieve relevant information
 - 🛑 Learn when to stop retrieving
-- 💬 Generate a final natural-language answer
+- 💬 Generate a natural-language answer
 - 🧩 Fall back to a local answer when the external generation service is unavailable
 
 The primary research corpus is based on the **VIT HR Conditions of Service / HR Manual 2019 Ver-005**.
 
 ---
 
-## 🚀 Key Features
+# 🚀 Key Features
 
-### 🔍 Semantic Retrieval
+## 🔍 Semantic Retrieval
 
-Uses:
+The retrieval layer uses:
 
 - `SentenceTransformer`
 - `all-MiniLM-L6-v2`
@@ -59,7 +60,7 @@ The system converts the user question into an embedding and retrieves semantical
 
 ---
 
-### 🧠 Local Retrieval Critic
+## 🧠 Local Retrieval Critic
 
 A lightweight local critic evaluates whether the retrieved context is sufficiently relevant.
 
@@ -74,39 +75,41 @@ Keyword Overlap
 Relevance Score
 ```
 
-Current decision threshold:
+Current decision rule:
 
 ```text
 score >= 0.75  →  SUFFICIENT
 score <  0.75  →  INSUFFICIENT
 ```
 
-This critic is used to guide the adaptive retrieval loop.
+The critic is used to guide the adaptive retrieval process.
+
+> ⚠️ Critic-defined sufficiency is a retrieval-quality proxy. It is not independent answer-level accuracy.
 
 ---
 
-### ✏️ Query Rewriting
+## ✏️ Query Rewriting
 
-When the retrieved context is insufficient, the system rewrites the original question to improve retrieval.
+When the retrieved context is insufficient, the system rewrites the query into a more retrieval-focused VIT HR query.
 
-Examples of HR topics handled by the query rewriter include:
+Topics handled by the current local query rewriter include:
 
-- Casual Leave
-- Medical Leave
-- Maternity Leave
-- Leave on Duty
-- Sabbatical
-- Compensatory Off
-- Service Certificate
-- Exit Interview
-- Resignation
-- Vacation / Long Leave
+- 📄 Casual Leave
+- 🏥 Medical Leave
+- 🤰 Maternity Leave
+- 🛂 Leave on Duty
+- 🎓 Sabbatical Leave
+- 🔄 Compensatory Off
+- 📜 Service Certificate
+- 🚪 Exit Interview
+- 📝 Resignation
+- 🌴 Vacation / Long Leave
 
 ---
 
-### 🛑 Learned Halting
+## 🛑 Learned Halting
 
-Instead of always performing a fixed number of retrieval iterations, a learned classifier predicts whether the system should:
+Instead of relying only on a fixed retrieval budget, the system uses a learned classifier to predict:
 
 ```text
 STOP
@@ -114,7 +117,7 @@ STOP
 CONTINUE
 ```
 
-The current VIT halting model uses **Logistic Regression** with:
+The current VIT halting model uses **Logistic Regression** with four features:
 
 ```text
 attempt
@@ -127,7 +130,7 @@ score_delta
 
 ---
 
-## 🏗️ System Architecture
+# 🏗️ System Architecture
 
 ```mermaid
 flowchart TD
@@ -161,9 +164,7 @@ flowchart TD
 
 ---
 
-## 🔄 Self-Correction Loop
-
-The retrieval process follows an adaptive loop:
+# 🔄 Self-Correction Loop
 
 ```text
 User Question
@@ -196,7 +197,7 @@ Learned Halting Policy
                  Query Rewriting
                        │
                        ▼
-                   Retrieval
+                    Retrieval
                        │
                        ▼
                      Critic
@@ -220,22 +221,22 @@ HR Manual 2019 Ver-005
 
 **IIMA HR Policy Manual 2023**
 
-### Preserved Baseline
+### Preserved Historical Baseline
 
 **NexaCore Synthetic HR Policy Handbook**
 
-The synthetic corpus and earlier experiments are preserved for historical comparison.
+The original synthetic corpus and earlier experiments are preserved for historical comparison and should not be interpreted as the final VIT evaluation.
 
 ---
 
-## 📚 100-Question Evaluation
+# 📚 100-Question Evaluation
 
-The main experiment evaluates:
+The primary experiment compares:
 
 | Configuration | Description |
 |---|---|
-| Fixed-3 | Fixed retrieval policy |
-| Learned Halting | Adaptive learned STOP/CONTINUE policy |
+| **3-Attempt Budget** | Baseline allowing up to 3 retrieval attempts |
+| **Learned Halting** | Adaptive STOP/CONTINUE policy |
 
 Evaluation size:
 
@@ -243,28 +244,30 @@ Evaluation size:
 100 questions
 ```
 
-The evaluation uses grouped question-level methodology so trajectory rows belonging to the same original question are kept together during halting-policy evaluation.
+The evaluation uses question-level grouping for halting-policy cross-validation so trajectory rows belonging to the same original question remain in the same fold.
 
 ---
 
-## 📈 Main Results
+# 📈 Main Results
 
-| Metric | Fixed-3 | Learned Halting |
+| Metric | 3-Attempt Budget | Learned Halting |
 |---|---:|---:|
 | Average retrieval attempts | **1.7600** | **1.3500** |
 | Critic-defined success | **75.00%** | **75.00%** |
-| Mean local-loop wall time | **0.1923 s** | **0.1463 s** |
-| Median local-loop wall time | **0.2134 s** | **0.1147 s** |
-| p95 local-loop wall time | **0.2386 s** | **0.2312 s** |
-| Mean CPU time | **1.0897 s** | **0.8344 s** |
+| Mean local-loop wall time | **0.1263 s** | **0.0958 s** |
+| Median local-loop wall time | **0.1368 s** | **0.0758 s** |
+| p95 local-loop wall time | **0.1628 s** | **0.1573 s** |
+| Mean CPU time | **0.7473 s** | **0.5695 s** |
 
-### Retrieval Work Reduction
+---
+
+## 📉 Retrieval Work Reduction
 
 ```text
-Fixed-3        : 1.7600 attempts
-Learned        : 1.3500 attempts
+3-Attempt Budget : 1.7600 attempts
+Learned Halting  : 1.3500 attempts
 
-Reduction      : 23.30%
+Reduction        : 23.30%
 ```
 
 The measured reduction is based on average retrieval attempts and is used as an **operational retrieval-work proxy**.
@@ -273,56 +276,70 @@ The measured reduction is based on average retrieval attempts and is used as an 
 
 ---
 
-## 🎯 Critic-Defined Success
+# 🎯 Critic-Defined Success
 
 ```text
-Fixed-3        : 75.00%
-Learned        : 75.00%
+3-Attempt Budget : 75.00%
+Learned Halting  : 75.00%
 
-Difference     : 0.00 percentage points
+Difference       : 0.00 percentage points
 ```
 
 Important:
 
-**Critic-defined success is not equivalent to independently verified answer-level accuracy.**
+**Critic-defined retrieval success is not equivalent to independently verified answer-level accuracy.**
 
-The critic score is a retrieval-quality proxy used by the adaptive retrieval system.
+The critic score is a retrieval-quality proxy used by the adaptive retrieval loop.
 
 ---
 
-## ⚡ Local Retrieval-Loop Latency
+# ⚡ Local Retrieval-Loop Latency
 
-Measured after embedding-model warm-up.
+Measurements were collected after embedding-model warm-up.
+
+### Mean Wall-Clock Time
 
 ```text
-Mean Wall Time
-
-Fixed-3        0.1923 s
-Learned        0.1463 s
+3-Attempt Budget : 0.1263 s
+Learned Halting  : 0.0958 s
 ```
 
 Measured reduction:
 
 ```text
-23.92%
+24.12%
 ```
 
-CPU time:
+### Median Wall-Clock Time
 
 ```text
-Fixed-3        1.0897 s
-Learned        0.8344 s
+3-Attempt Budget : 0.1368 s
+Learned Halting  : 0.0758 s
+```
+
+### p95 Wall-Clock Time
+
+```text
+3-Attempt Budget : 0.1628 s
+Learned Halting  : 0.1573 s
+```
+
+### CPU Time
+
+```text
+3-Attempt Budget : 0.7473 s
+Learned Halting  : 0.5695 s
 ```
 
 Measured CPU-time reduction:
 
 ```text
-23.43%
+23.79%
 ```
 
 ### ⚠️ Latency Scope
 
-These measurements represent the:
+These measurements cover the local:
 
 ```text
 retrieval + critic + halting loop
@@ -330,7 +347,7 @@ retrieval + critic + halting loop
 
 They **exclude final Gemini answer-generation latency**.
 
-Therefore these results should be interpreted as:
+Therefore they should be interpreted as:
 
 > **Local retrieval-loop latency**
 
@@ -348,14 +365,53 @@ Retrieval Effort
 Critic-Defined Success
 ```
 
-Generated research files:
+Generated files:
 
 ```text
 research/vit_v1/pareto_results_v2.csv
 research/vit_v1/pareto_frontier_v2.csv
 ```
 
-This allows different halting thresholds to be examined as operating points.
+The sweep allows different halting thresholds to be examined as operating points.
+
+---
+
+# 🧠 Halting Policy Cross-Validation
+
+The VIT halting-policy dataset contains:
+
+```text
+Total trajectory rows : 113
+Unique questions      : 89
+STOP samples          : 99
+CONTINUE samples      : 14
+```
+
+The current 5-fold grouped cross-validation produced:
+
+| Metric | Mean |
+|---|---:|
+| Accuracy | **0.689** |
+| Macro Precision | **0.648** |
+| Macro Recall | **0.823** |
+| Macro F1 | **0.617** |
+
+The training procedure uses:
+
+```text
+Logistic Regression
+class_weight = balanced
+```
+
+with question-level grouping.
+
+The final VIT model is saved locally as:
+
+```text
+research/vit_v1/halting_policy_vit_v3.pkl
+```
+
+> ℹ️ The model file is excluded from Git tracking through `.gitignore`.
 
 ---
 
@@ -382,7 +438,7 @@ Tracked information includes:
 - API status
 - Errors
 
-### API Cost Limitation
+## API Cost Limitation
 
 A small matched Normal-RAG vs Learned-RAG monetary-cost pilot was attempted.
 
@@ -396,7 +452,7 @@ The successful calls were therefore not sufficiently matched to support a defens
 
 ### Research Policy
 
-This project **does not claim a monetary API-cost reduction** from the pilot.
+This project **does not claim a monetary API-cost reduction** from that pilot.
 
 The API logging infrastructure is retained for future controlled experiments.
 
@@ -404,7 +460,7 @@ The API logging infrastructure is retained for future controlled experiments.
 
 # 👨‍🔬 Human Validation
 
-Human-validation materials were prepared for independent verification against the VIT source.
+Human-validation materials were prepared for independent checking against the VIT source.
 
 However:
 
@@ -413,7 +469,7 @@ Full independent 100-question human validation
 has NOT yet been completed.
 ```
 
-Therefore the project keeps the following concepts separate:
+Therefore the project keeps these concepts separate:
 
 ```text
 Critic-defined retrieval success
@@ -421,7 +477,7 @@ Critic-defined retrieval success
 Independent answer correctness
 ```
 
-This distinction is important for interpreting the reported evaluation results.
+This distinction is important when interpreting the reported evaluation results.
 
 ---
 
@@ -437,12 +493,12 @@ documents/vit/
 
 The current evaluation focuses on the VIT HR Conditions of Service document.
 
-Topics represented in the corpus include areas such as:
+Relevant policy areas include:
 
 - Casual Leave
 - Medical Leave
 - Maternity Leave
-- Sabbatical
+- Sabbatical Leave
 - Leave on Duty
 - Compensatory Off
 - Service Certificate
@@ -466,13 +522,13 @@ Used for broader testing and generalization experiments.
 
 ## Synthetic Baseline
 
-Historical synthetic corpus:
+Historical baseline:
 
 ```text
 documents/synthetic/
 ```
 
-The original synthetic dataset is preserved and should not be confused with the final VIT evaluation.
+The synthetic corpus is preserved for historical comparison and should not be confused with the primary VIT experiment.
 
 ---
 
@@ -486,11 +542,13 @@ The original synthetic dataset is preserved and should not be confused with the 
 | Embeddings | SentenceTransformers |
 | Embedding Model | `all-MiniLM-L6-v2` |
 | Vector Store | ChromaDB |
+| Retrieval | Semantic top-3 retrieval |
 | Critic | Local semantic + keyword scoring |
 | Query Rewriting | Local topic-aware rewriter |
 | Halting Model | Logistic Regression |
 | Final Answer | Gemini |
 | Frontend | HTML / CSS / JavaScript |
+| Testing | Pytest |
 | Research Analysis | Python / CSV |
 
 ---
@@ -501,11 +559,23 @@ The original synthetic dataset is preserved and should not be confused with the 
 hr-rag-assistant/
 │
 ├── 📄 app.py
+├── 📄 auth.py
+├── 📄 auth_api.py
 ├── 📄 gemini_answer.py
 ├── 📄 halting_policy.py
 ├── 📄 local_critic.py
 ├── 📄 local_query_rewriter.py
 ├── 📄 local_self_correcting_rag.py
+├── 📄 trajectory_logger.py
+│
+├── 🧪 test_critic.py
+├── 🧪 test_halting_policy.py
+├── 🧪 test_local_critic.py
+├── 🧪 test_query_rewriter.py
+├── 🧪 test_trajectory_logger.py
+│
+├── 📄 train_halting_policy.py
+├── 📄 evaluate_halting_cv.py
 │
 ├── 📁 static/
 │   └── 📄 index.html
@@ -527,12 +597,53 @@ hr-rag-assistant/
 │       ├── pareto_frontier_v2.csv
 │       ├── evaluate_halting_cv.py
 │       ├── train_halting_policy.py
-│       └── halting_policy_vit_v3.pkl
+│       └── gemini_api_usage.csv
+│
+├── 📁 legacy/
+│   ├── critic.py
+│   ├── query_rewriter.py
+│   ├── self_correcting_rag.py
+│   ├── retrieve.py
+│   ├── rag_answer.py
+│   ├── final_rag.py
+│   ├── batch_test.py
+│   ├── challenging_batch.py
+│   ├── correction_batch.py
+│   ├── hard_batch.py
+│   ├── final_policy_comparison.py
+│   └── evaluate_llm_call_savings.py
 │
 ├── 📄 PROJECT_SUMMARY.txt
 ├── 📄 README.md
+├── 📄 requirements.txt
 └── 📄 .gitignore
 ```
+
+> ℹ️ The final trained `.pkl` model is generated locally and ignored by Git.
+
+---
+
+# 🔗 Canonical Application Path
+
+The current application uses:
+
+```text
+app.py
+  ↓
+auth_api.py
+  ↓
+local_self_correcting_rag.py
+  ↓
+local_critic.py
+  ↓
+local_query_rewriter.py
+  ↓
+halting_policy.py
+  ↓
+gemini_answer.py
+```
+
+The preserved `legacy/` directory contains earlier development and experimental implementations.
 
 ---
 
@@ -547,7 +658,7 @@ cd hr-self-correcting-rag
 
 ---
 
-## 2️⃣ Create Virtual Environment
+## 2️⃣ Create a Virtual Environment
 
 ### Windows
 
@@ -564,17 +675,24 @@ venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
+For the development test suite:
+
+```cmd
+pip install pytest
+```
+
 ---
 
-## 4️⃣ Configure Environment
+## 4️⃣ Configure Environment Variables
 
-Create a `.env` file containing your Gemini configuration.
+Create a `.env` file in the repository root.
 
 ```env
 GEMINI_API_KEY=your_api_key_here
+JWT_SECRET_KEY=your_strong_secret_here
 ```
 
-> 🔐 Never commit `.env` files or API keys to GitHub.
+> 🔐 Never commit `.env` files, API keys, passwords, or JWT secrets to GitHub.
 
 ---
 
@@ -610,6 +728,12 @@ The application accepts an HR policy question and runs the self-correcting retri
 GET /health
 ```
 
+Example:
+
+```text
+http://127.0.0.1:8000/health
+```
+
 ---
 
 ## Interactive API Documentation
@@ -618,7 +742,7 @@ GET /health
 http://127.0.0.1:8000/docs
 ```
 
-FastAPI's Swagger interface can be used to test the API.
+FastAPI's Swagger UI can be used for interactive API testing.
 
 ---
 
@@ -656,13 +780,13 @@ The interface exposes the retrieval process and learned halting trajectory.
 
 # 🔬 Research Reproducibility
 
-The main analysis can be reproduced using:
+The main 100-question analysis can be reproduced using:
 
 ```cmd
 python research\vit_v1\advanced_research_analysis.py --questions-file "research\vit_v1\questions\evaluation_questions_100.txt"
 ```
 
-The main result summary is stored in:
+Main summary:
 
 ```text
 research/vit_v1/advanced_summary_v2.txt
@@ -673,6 +797,71 @@ Question-level results:
 ```text
 research/vit_v1/advanced_question_results_v2.csv
 ```
+
+Pareto results:
+
+```text
+research/vit_v1/pareto_results_v2.csv
+research/vit_v1/pareto_frontier_v2.csv
+```
+
+---
+
+## 🧪 Run Tests
+
+The repository currently contains a real pytest-based test suite.
+
+Run:
+
+```cmd
+python -m pytest -q --disable-warnings
+```
+
+Current verified result:
+
+```text
+5 passed
+```
+
+---
+
+# 🧠 Halting-Policy Training
+
+Train the current VIT halting policy using:
+
+```cmd
+python train_halting_policy.py
+```
+
+The training process reports:
+
+- Dataset size
+- Unique questions
+- STOP / CONTINUE distribution
+- Question-level train/test split
+- Classification metrics
+- Feature weights
+- Final model generation
+
+The final model is written to:
+
+```text
+research/vit_v1/halting_policy_vit_v3.pkl
+```
+
+---
+
+# 📊 Halting-Policy Cross-Validation
+
+Run:
+
+```cmd
+python evaluate_halting_cv.py
+```
+
+This performs grouped cross-validation for the halting classifier.
+
+The current evaluation uses question-level grouping rather than independently splitting trajectory rows from the same original question across folds.
 
 ---
 
@@ -705,24 +894,31 @@ Current limitations include:
 3. PDF extraction and chunking can sometimes introduce neighboring or unrelated policy text into retrieved context.
 4. Gemini availability prevented a defensible matched monetary API-cost comparison.
 5. Reported latency focuses on the local retrieval loop and excludes final Gemini generation.
-6. A faithful TASR reproduction is not claimed.
-7. Additional stopping-method baselines and broader independent evaluation would strengthen the study.
+6. The 3-Attempt Budget baseline represents an **up-to-three-attempt retrieval budget**, rather than an unconditional three-attempt execution when the query rewrite produces no change.
+7. A faithful TASR reproduction is not claimed.
+8. Additional stopping-method baselines and broader independent evaluation would strengthen the study.
 
 ---
 
 # 🧠 Research Contribution
 
-The project investigates an adaptive RAG architecture where retrieval effort is controlled by a learned halting policy rather than relying exclusively on a fixed retrieval budget.
+The project investigates an adaptive RAG architecture in which retrieval effort is controlled by a learned halting policy rather than relying exclusively on a fixed retrieval budget.
 
-The current VIT evaluation demonstrates:
+On the evaluated 100-question VIT dataset, the experiment reports:
 
 ```text
-23.30% lower average retrieval attempts
-with
-the same 75.00% critic-defined success rate
+3-Attempt Budget : 1.7600 average retrieval attempts
+Learned Halting  : 1.3500 average retrieval attempts
+
+Reduction        : 23.30%
 ```
 
-on the evaluated 100-question set.
+with:
+
+```text
+3-Attempt Budget : 75.00% critic-defined success
+Learned Halting  : 75.00% critic-defined success
+```
 
 The result should be interpreted as evidence of reduced retrieval effort under the project's critic-defined evaluation procedure, rather than as independent proof of answer accuracy.
 
@@ -734,6 +930,7 @@ Please follow these practices:
 
 - Never commit `.env`
 - Never commit API keys
+- Never expose JWT secrets
 - Keep secrets on the server side
 - Use authenticated APIs in production
 - Validate user input
@@ -743,36 +940,39 @@ Please follow these practices:
 
 ---
 
-# 🛠️ Development Notes
+# 🛠️ Development & Repository Organization
 
-The repository contains some earlier development implementations retained for historical reference.
-
-Examples include:
+Earlier development implementations have been preserved under:
 
 ```text
-critic.py
-query_rewriter.py
-self_correcting_rag.py
-retrieve.py
+legacy/
 ```
 
-The canonical application path is:
+This keeps the repository history while making the root directory focused on the current implementation.
+
+The current canonical application components are:
 
 ```text
 app.py
-  ↓
-local_self_correcting_rag.py
-  ↓
-local_critic.py
-  ↓
-local_query_rewriter.py
-  ↓
-halting_policy.py
-  ↓
+auth.py
+auth_api.py
 gemini_answer.py
+halting_policy.py
+local_critic.py
+local_query_rewriter.py
+local_self_correcting_rag.py
+trajectory_logger.py
 ```
 
-Earlier files should be treated as legacy/development artifacts until final repository cleanup is completed.
+Current automated tests:
+
+```text
+test_critic.py
+test_halting_policy.py
+test_local_critic.py
+test_query_rewriter.py
+test_trajectory_logger.py
+```
 
 ---
 
@@ -783,15 +983,79 @@ Earlier files should be treated as legacy/development artifacts until final repo
 | Real VIT corpus | ✅ Completed |
 | 100-question evaluation | ✅ Completed |
 | Learned halting policy | ✅ Completed |
-| Fixed-3 comparison | ✅ Completed |
+| 3-Attempt Budget comparison | ✅ Completed |
+| Grouped halting cross-validation | ✅ Completed |
 | Latency analysis | ✅ Completed |
 | CPU analysis | ✅ Completed |
 | Operational work proxy | ✅ Completed |
 | Pareto analysis | ✅ Completed |
 | API usage logging | ✅ Completed |
+| Pytest suite | ✅ 5 passed |
 | Matched API monetary-cost comparison | ⚠️ Not established |
 | Full independent human validation | ⚠️ Not completed |
-| Final repository cleanup | 🔄 Pending |
+| Repository cleanup | ✅ Completed |
+
+---
+
+# 📁 Important Research Files
+
+### Main Evaluation
+
+```text
+research/vit_v1/advanced_research_analysis.py
+```
+
+### Main Summary
+
+```text
+research/vit_v1/advanced_summary_v2.txt
+```
+
+### Question-Level Results
+
+```text
+research/vit_v1/advanced_question_results_v2.csv
+```
+
+### Pareto Analysis
+
+```text
+research/vit_v1/pareto_results_v2.csv
+research/vit_v1/pareto_frontier_v2.csv
+```
+
+### Evaluation Questions
+
+```text
+research/vit_v1/questions/evaluation_questions_100.txt
+```
+
+---
+
+# 🌟 Key Result at a Glance
+
+```text
+              3-Attempt       Learned
+               Budget         Halting
+               -------        -------
+
+Attempts       1.7600         1.3500
+
+Success        75.00%         75.00%
+
+Wall Time      0.1263 s       0.0958 s
+
+CPU Time       0.7473 s       0.5695 s
+
+Attempt
+Reduction                     23.30%
+
+Wall-Time
+Reduction                     24.12%
+
+CPU-Time
+Reduction                     23.79%
+```
 
 ---
 
@@ -810,8 +1074,8 @@ This project builds upon the ecosystem of:
 - 🤗 SentenceTransformers
 - 🗄️ ChromaDB
 - ⚡ FastAPI
-- 🧠 Google Gemini
 - 🐍 Python
+- 🧠 Google Gemini
 
 Special thanks to the academic guidance and research feedback that supported the development and evaluation of this project.
 
