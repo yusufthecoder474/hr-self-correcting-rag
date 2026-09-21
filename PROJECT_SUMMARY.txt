@@ -49,138 +49,315 @@ Top-k retrieval:
 3 chunks
 
 
+LOCAL RETRIEVAL CRITIC
+----------------------
+The current local critic combines:
+
+- semantic similarity
+- keyword overlap
+
+Current combined score:
+
+0.6 * semantic similarity
++
+0.4 * keyword overlap
+
+Current decision threshold:
+
+score >= 0.75:
+SUFFICIENT
+
+score < 0.75:
+INSUFFICIENT
+
+IMPORTANT:
+The critic-defined decision is a retrieval-quality proxy.
+It is NOT equivalent to independently verified answer-level accuracy.
+
+
+QUERY REWRITING
+---------------
+The current local query rewriter converts insufficient
+queries into more retrieval-focused VIT HR policy queries.
+
+Covered topic areas include:
+
+- Casual Leave
+- Earned Leave
+- Medical Leave
+- Maternity Leave
+- Sabbatical Leave
+- Long Leave
+- Compensatory Off
+- Leave on Duty
+- Service Certificate
+- Exit Interview
+- Resignation
+- Vacation
+
+
 LEARNED HALTING POLICY
 ----------------------
 Classifier:
 Logistic Regression
 
 Current VIT model:
-halting_policy_vit_v3.pkl
 
-Features used by the current VIT model:
+research/vit_v1/halting_policy_vit_v3.pkl
+
+Features used by the final VIT model:
 
 - attempt
 - score
 - best_score
 - score_delta
 
-chunk_overlap was removed from the final VIT model as part of
-the feature ablation.
+chunk_overlap was removed from the final VIT model during
+feature ablation.
 
 
-HALTING POLICY EVALUATION
--------------------------
-The halting policy was evaluated using grouped question-level
-cross-validation so trajectory rows belonging to the same original
-question are kept in the same fold.
+HALTING POLICY DATA
+-------------------
+Total trajectory rows:
+113
+
+Unique questions:
+89
+
+STOP samples:
+99
+
+CONTINUE samples:
+14
 
 Class balancing:
 class_weight = balanced
 
 
+HALTING POLICY CROSS-VALIDATION
+--------------------------------
+Grouped 5-fold cross-validation was used so trajectory rows
+belonging to the same original question remain in the same fold.
+
+Average cross-validation metrics:
+
+Accuracy:
+0.689
+
+Macro Precision:
+0.648
+
+Macro Recall:
+0.823
+
+Macro F1:
+0.617
+
+These metrics evaluate the halting classifier itself and should
+not be interpreted as answer-level accuracy.
+
+
+HALTING POLICY TRAINING
+-----------------------
+Training dataset:
+
+113 trajectory rows
+89 unique questions
+
+Question-level split:
+
+Training questions:
+66
+
+Testing questions:
+23
+
+Held-out test accuracy:
+
+0.71
+
+Held-out classification report:
+
+CONTINUE:
+Precision 0.31
+Recall    1.00
+F1        0.47
+
+STOP:
+Precision 1.00
+Recall    0.67
+F1        0.80
+
+Macro averages:
+
+Precision:
+0.65
+
+Recall:
+0.83
+
+F1:
+0.64
+
+Final model:
+
+research/vit_v1/halting_policy_vit_v3.pkl
+
+
 PRIMARY EVALUATION
 ------------------
 Evaluation corpus:
+
 VIT HR Conditions of Service
 
 Evaluation questions:
+
 100
 
 Baseline:
-Fixed-3 retrieval policy
 
-Proposed:
-Learned halting policy
+3-Attempt Budget
+
+Proposed method:
+
+Learned Halting
+
+
+BASELINE DEFINITION
+-------------------
+The baseline is an up-to-three-attempt retrieval budget.
+
+The implementation allows fewer than three attempts when the
+query rewrite produces no change.
+
+Therefore the baseline is described as:
+
+"3-Attempt Budget"
+
+and not as an unconditional fixed three-iteration execution.
 
 
 MAIN RESULTS
 ------------
-Fixed-3 average retrieval attempts:
+3-Attempt Budget average retrieval attempts:
+
 1.7600
 
 Learned average retrieval attempts:
+
 1.3500
 
 Retrieval-attempt reduction:
+
 23.30%
 
 
 CRITIC-DEFINED RETRIEVAL SUCCESS
 ---------------------------------
-Fixed-3:
+3-Attempt Budget:
+
 75.00%
 
 Learned:
+
 75.00%
 
 Difference:
+
 0.00 percentage points
 
 IMPORTANT:
-This is critic-defined retrieval success based on the local critic
-threshold. It is NOT equivalent to independently verified
-answer-level accuracy.
+
+Both methods use the BEST OBSERVED critic score for the
+critic-defined success calculation.
+
+This makes the success metric symmetric between methods.
+
+This is still critic-defined retrieval success and is NOT
+equivalent to independently verified answer-level accuracy.
 
 
 LOCAL RETRIEVAL-LOOP LATENCY
 ----------------------------
 Measurements were performed after embedding-model warm-up.
 
-Mean wall-clock time:
+These measurements cover:
 
-Fixed-3:
-0.1923 s
+retrieval + critic + halting
+
+They exclude final Gemini answer-generation latency.
+
+
+MEAN WALL-CLOCK TIME
+--------------------
+3-Attempt Budget:
+
+0.1263 s
 
 Learned:
-0.1463 s
+
+0.0958 s
 
 Measured reduction:
-23.92%
+
+24.12%
 
 
-Median wall-clock time:
+MEDIAN WALL-CLOCK TIME
+----------------------
+3-Attempt Budget:
 
-Fixed-3:
-0.2134 s
-
-Learned:
-0.1147 s
-
-
-95th percentile wall-clock time:
-
-Fixed-3:
-0.2386 s
+0.1368 s
 
 Learned:
-0.2312 s
+
+0.0758 s
+
+
+95TH PERCENTILE WALL-CLOCK TIME
+-------------------------------
+3-Attempt Budget:
+
+0.1628 s
+
+Learned:
+
+0.1573 s
 
 
 CPU TIME
 ---------
 Mean CPU time:
 
-Fixed-3:
-1.0897 s
+3-Attempt Budget:
+
+0.7473 s
 
 Learned:
-0.8344 s
+
+0.5695 s
 
 Measured CPU-time reduction:
-23.43%
+
+23.79%
 
 
 IMPORTANT LATENCY NOTE
 ----------------------
-These timings measure the local retrieval/critic/halting loop.
+These timings measure only the local retrieval/critic/halting
+loop.
 
-They exclude final Gemini answer-generation latency.
+They exclude:
+
+- Gemini answer-generation latency
+- complete end-to-end network latency
+- user-visible final response latency
 
 Therefore they should be reported as:
 
 "local retrieval-loop latency"
 
-and NOT as complete end-to-end user-visible latency.
+and NOT as complete end-to-end application latency.
 
 
 OPERATIONAL WORK PROXY
@@ -189,9 +366,10 @@ Average retrieval attempts are used as a retrieval/critic
 work proxy.
 
 Attempt-based reduction:
+
 23.30%
 
-This is a compute/work proxy.
+This represents an operational compute/work proxy.
 
 It is NOT a monetary API cost estimate.
 
@@ -200,9 +378,10 @@ PARETO ANALYSIS
 ---------------
 A true stop-probability threshold sweep was performed.
 
-Files:
+Generated files:
 
 research/vit_v1/pareto_results_v2.csv
+
 research/vit_v1/pareto_frontier_v2.csv
 
 Axes:
@@ -210,6 +389,9 @@ Axes:
 Average retrieval attempts
 vs.
 Critic-defined retrieval success rate
+
+The threshold sweep evaluates different learned halting
+operating points.
 
 
 API COST MEASUREMENT
@@ -223,6 +405,7 @@ research/vit_v1/gemini_api_usage.csv
 Tracked information includes:
 
 - prompt/input tokens
+- cached tokens
 - output tokens
 - thinking tokens
 - total tokens
@@ -230,34 +413,43 @@ Tracked information includes:
 - estimated output cost
 - estimated total cost
 - API status
+- errors
 
 
 API COST LIMITATION
 -------------------
-A small Normal-RAG vs Learned-RAG API-cost pilot was attempted.
+A small Normal-RAG vs Learned-RAG monetary-cost pilot was attempted.
 
 Gemini service availability was unstable and repeatedly returned
 503/unavailable responses.
 
-Therefore the pilot did NOT produce sufficiently matched successful
-measurements for a defensible monetary-cost comparison.
+Therefore the pilot did NOT produce sufficiently matched
+successful measurements for a defensible monetary-cost comparison.
 
-No API monetary-cost reduction is claimed from the pilot.
+No monetary API-cost reduction is claimed from the pilot.
 
-The available API measurements are treated as instrumentation and
-preliminary evidence only.
+The API measurements are retained as instrumentation for future
+controlled experiments.
 
 
 HUMAN VALIDATION
 ----------------
-Human validation materials were prepared for independent checking
+Human-validation materials were prepared for independent checking
 against the VIT source.
 
-The current research state does not claim complete independent
+The current research state does NOT claim complete independent
 100-question human validation.
 
-Therefore critic-defined success and human answer correctness must
-be reported as separate concepts.
+Therefore the following concepts must remain separate:
+
+Critic-defined retrieval success
+
+versus
+
+Independent answer correctness
+
+Any human-validation subset or flagged-case review should be
+reported separately from the automated critic-defined metric.
 
 
 SELF-CORRECTING RAG PIPELINE
@@ -299,14 +491,35 @@ Learned Halting Policy
 CANONICAL APPLICATION FILES
 ----------------------------
 app.py
-local_self_correcting_rag.py
+auth.py
+auth_api.py
+gemini_answer.py
+halting_policy.py
 local_critic.py
 local_query_rewriter.py
-halting_policy.py
-gemini_answer.py
+local_self_correcting_rag.py
+trajectory_logger.py
 
-These are the current application components used by the VIT-based
-self-correcting RAG system.
+These are the current application components.
+
+The main VIT application path is:
+
+app.py
+  |
+  v
+auth_api.py
+  |
+  v
+local_self_correcting_rag.py
+  |
+  +--> local_critic.py
+  |
+  +--> local_query_rewriter.py
+  |
+  +--> halting_policy.py
+  |
+  v
+gemini_answer.py
 
 
 CANONICAL RESEARCH FILES
@@ -323,60 +536,144 @@ research/vit_v1/pareto_frontier_v2.csv
 
 research/vit_v1/questions/evaluation_questions_100.txt
 
+evaluate_halting_cv.py
+
+train_halting_policy.py
+
+
+GENERATED / LOCAL MODEL FILE
+----------------------------
+research/vit_v1/halting_policy_vit_v3.pkl
+
+This trained model is generated locally and is excluded from
+Git tracking through .gitignore.
+
+
+TEST SUITE
+----------
+The repository now contains a real pytest-based test suite.
+
+Tests:
+
+test_critic.py
+test_halting_policy.py
+test_local_critic.py
+test_query_rewriter.py
+test_trajectory_logger.py
+
+Verified result:
+
+5 passed
+
+The tests validate:
+
+- local critic sufficiency behavior
+- local critic insufficiency behavior
+- halting-policy output validity
+- VIT query rewriting behavior
+- trajectory logging behavior
+
 
 PRESERVED BASELINE
 ------------------
 The original synthetic NexaCore HR policy and earlier baseline
-results are preserved for historical comparison.
+experiments are preserved for historical comparison.
 
-They should not be interpreted as the final VIT evaluation.
+They should NOT be interpreted as the final VIT evaluation.
 
 
 LEGACY / DEVELOPMENT FILES
----------------------------
-Some earlier scripts and duplicate implementations remain in the
-repository from development.
+--------------------------
+Earlier development and experimental implementations were moved
+into:
 
-These include earlier retrieval, critic, query-rewriter, and
-self-correcting RAG implementations.
+legacy/
 
-They should be treated as legacy/development artifacts until the
-repository cleanup is completed.
+The legacy directory preserves historical code without keeping
+duplicate application implementations in the repository root.
 
-The canonical VIT application path is documented above.
+Examples include:
+
+- critic.py
+- query_rewriter.py
+- self_correcting_rag.py
+- retrieve.py
+- rag_answer.py
+- final_rag.py
+- batch_test.py
+- challenging_batch.py
+- correction_batch.py
+- hard_batch.py
+- final_policy_comparison.py
+- evaluate_llm_call_savings.py
+
+These files are retained for development history and reference.
 
 
 CURRENT RESEARCH CONCLUSION
 ---------------------------
-On the 100-question VIT HR evaluation set, the learned halting policy
-reduced average retrieval attempts from 1.7600 to 1.3500, corresponding
-to a 23.30% reduction in retrieval work.
+On the 100-question VIT HR evaluation set, the learned halting
+policy reduced average retrieval attempts from:
 
-The same 75.00% critic-defined retrieval success rate was observed for
-both Fixed-3 and Learned Halting.
+1.7600
+to
+1.3500
 
-The learned policy also produced lower measured local retrieval-loop
-wall-clock and CPU time.
+corresponding to:
 
-These results demonstrate adaptive retrieval effort reduction while
-preserving the same critic-defined retrieval success on this evaluation
-set.
+23.30%
+
+lower average retrieval attempts.
+
+The same critic-defined retrieval success rate was observed for
+both methods:
+
+75.00%
+
+The learned policy also produced lower measured local
+retrieval-loop wall-clock time and CPU time.
+
+Observed local-loop reductions:
+
+Wall-clock:
+24.12%
+
+CPU time:
+23.79%
+
+These results support the observation that the learned halting
+policy can reduce retrieval effort under the project's
+critic-defined evaluation procedure.
+
+They do NOT constitute independent proof of answer-level accuracy.
 
 
 IMPORTANT LIMITATIONS
 ---------------------
-1. The evaluation contains 100 questions.
-2. Critic-defined success is not independent answer-level accuracy.
-3. Independent human validation is not complete for the full
-   evaluation set.
-4. Some retrieved contexts can contain unrelated neighboring policy
-   text because of PDF extraction/chunking behavior.
-5. Gemini API availability prevented a valid matched monetary-cost
-   comparison.
-6. Local-loop latency excludes final Gemini answer-generation latency.
-7. A faithful TASR reproduction is not claimed.
-8. Additional comparison with other stopping methods and broader
-   independent evaluation would strengthen the research.
+1. The main evaluation contains 100 questions.
+
+2. Critic-defined success is a retrieval-quality proxy rather
+   than independently verified answer-level accuracy.
+
+3. Full independent human validation has not been completed for
+   the complete 100-question set.
+
+4. Some retrieved contexts can contain unrelated neighboring
+   policy text due to PDF extraction and chunking behavior.
+
+5. Gemini API instability prevented a defensible matched
+   monetary-cost comparison.
+
+6. Local-loop latency excludes final Gemini answer-generation
+   latency.
+
+7. The 3-Attempt Budget baseline is an up-to-three-attempt budget
+   and can stop earlier if the query rewrite produces no change.
+
+8. A faithful TASR reproduction is not claimed.
+
+9. Additional stopping-method baselines and broader independent
+   evaluation would strengthen the research.
 
 
 TASR NOTE
@@ -391,7 +688,7 @@ local retrieval critic
 +
 query rewriting
 +
-learned Logistic Regression halting.
+learned Logistic Regression halting
 
 A faithful TASR reproduction is not claimed because the current
 implementation does not expose the same calibrated LLM logit-based
@@ -401,24 +698,53 @@ signal required by that method.
 DEPLOYMENT
 ----------
 Backend:
+
 FastAPI + Uvicorn
 
 Frontend:
+
 static/index.html
 
 Main API:
+
 POST /ask
 
 Health endpoint:
+
 GET /health
 
 Swagger:
+
 GET /docs
+
+
+REPRODUCIBILITY
+---------------
+Main 100-question experiment:
+
+python research\vit_v1\advanced_research_analysis.py --questions-file "research\vit_v1\questions\evaluation_questions_100.txt"
+
+Halting cross-validation:
+
+python evaluate_halting_cv.py
+
+Halting-policy training:
+
+python train_halting_policy.py
+
+Pytest suite:
+
+python -m pytest -q --disable-warnings
 
 
 PRIMARY RESEARCH RESULT FILE
 ----------------------------
 research/vit_v1/advanced_summary_v2.txt
+
+
+QUESTION-LEVEL RESULT FILE
+---------------------------
+research/vit_v1/advanced_question_results_v2.csv
 
 
 RESEARCH STATUS
@@ -432,7 +758,13 @@ COMPLETED
 Learned halting:
 COMPLETED
 
-Fixed-3 comparison:
+3-Attempt Budget comparison:
+COMPLETED
+
+Grouped halting cross-validation:
+COMPLETED
+
+Halting-policy training:
 COMPLETED
 
 Latency analysis:
@@ -450,11 +782,55 @@ COMPLETED
 API usage logging:
 COMPLETED
 
+Pytest test suite:
+COMPLETED
+
+Legacy repository cleanup:
+COMPLETED
+
 Matched API monetary-cost comparison:
 NOT YET ESTABLISHED
 
 Independent full human validation:
 NOT YET COMPLETED
 
-Final repository cleanup:
-PENDING
+
+FINAL RESEARCH POSITION
+-----------------------
+The current repository contains a VIT-based self-correcting RAG
+implementation with semantic retrieval, local retrieval critique,
+query rewriting, and learned halting.
+
+The primary 100-question experiment reports:
+
+3-Attempt Budget:
+1.7600 average retrieval attempts
+
+Learned Halting:
+1.3500 average retrieval attempts
+
+Attempt reduction:
+23.30%
+
+Critic-defined success:
+
+3-Attempt Budget:
+75.00%
+
+Learned Halting:
+75.00%
+
+Difference:
+0.00 percentage points
+
+Local retrieval-loop measurements:
+
+Wall-clock reduction:
+24.12%
+
+CPU-time reduction:
+23.79%
+
+These metrics should be presented with the stated scope and
+limitations rather than as independent answer-accuracy or
+monetary-cost claims.
