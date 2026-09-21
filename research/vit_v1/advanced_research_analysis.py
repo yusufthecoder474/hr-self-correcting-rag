@@ -2,8 +2,15 @@ import argparse
 import csv
 import math
 import statistics
+import sys
 import time
 from pathlib import Path
+
+
+REPO_ROOT = Path(__file__).resolve().parents[2]
+
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
 
 import chromadb
 from sentence_transformers import SentenceTransformer
@@ -302,7 +309,7 @@ def main():
 
         print(f"\n[{qid}/{len(questions)}] {question}")
         print(
-            f"  Fixed-3: mean_attempts={fixed_mean_attempts:.2f}, "
+            f"  3-Attempt Budget: mean_attempts={fixed_mean_attempts:.2f}, "
             f"mean_wall={fixed_mean_wall:.3f}s, "
             f"success={fixed_success_rate:.2f}"
         )
@@ -374,7 +381,7 @@ def main():
 
     # Fixed point uses the corrected best-observed success definition.
     pareto_rows.append({
-        "method": "Fixed-3",
+        "method": "3-Attempt Budget",
         "stop_threshold": "",
         "avg_attempts": round(fixed_avg_attempts, 6),
         "success_rate": round(fixed_success_rate, 6),
@@ -399,30 +406,30 @@ Questions: {len(questions)}
 Latency repetitions: {REPEATS}
 
 IMPORTANT METRIC DEFINITION
-Both Fixed-3 and Learned use BEST OBSERVED critic score for
+Both 3-Attempt Budget and Learned use BEST OBSERVED critic score for
 critic-defined retrieval success. This makes the two methods symmetric.
 
 PRIMARY RETRIEVAL EFFICIENCY
-Fixed-3 average attempts: {fixed_avg_attempts:.4f}
+3-Attempt Budget average attempts: {fixed_avg_attempts:.4f}
 Learned average attempts: {learned_avg_attempts:.4f}
 Attempt reduction: {attempt_reduction * 100:.2f}%
 
 CRITIC-DEFINED SUCCESS
-Fixed-3 success rate: {fixed_success_rate * 100:.2f}%
+3-Attempt Budget success rate: {fixed_success_rate * 100:.2f}%
 Learned success rate: {learned_success_rate * 100:.2f}%
 Difference: {(learned_success_rate - fixed_success_rate) * 100:.2f} percentage points
 
 LATENCY - LOCAL RAG LOOP ONLY
-Fixed mean wall-clock: {statistics.mean(fixed_wall):.4f} s
+3-Attempt Budget mean wall-clock: {statistics.mean(fixed_wall):.4f} s
 Learned mean wall-clock: {statistics.mean(learned_wall):.4f} s
-Fixed median wall-clock: {statistics.median(fixed_wall):.4f} s
+3-Attempt Budget median wall-clock: {statistics.median(fixed_wall):.4f} s
 Learned median wall-clock: {statistics.median(learned_wall):.4f} s
-Fixed p95 wall-clock: {percentile(fixed_wall, 0.95):.4f} s
+3-Attempt Budget p95 wall-clock: {percentile(fixed_wall, 0.95):.4f} s
 Learned p95 wall-clock: {percentile(learned_wall, 0.95):.4f} s
 Measured local-loop wall-clock reduction: {wall_reduction * 100:.2f}%
 
 CPU TIME
-Fixed mean CPU time: {statistics.mean(fixed_cpu):.4f} s
+3-Attempt Budget mean CPU time: {statistics.mean(fixed_cpu):.4f} s
 Learned mean CPU time: {statistics.mean(learned_cpu):.4f} s
 Measured CPU-time reduction: {cpu_reduction * 100:.2f}%
 

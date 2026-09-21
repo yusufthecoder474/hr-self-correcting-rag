@@ -18,18 +18,18 @@ Learned success rate: 75.00%
 Difference: 0.00 percentage points
 
 LATENCY - LOCAL RAG LOOP ONLY
-Fixed mean wall-clock: 0.1923 s
-Learned mean wall-clock: 0.1463 s
-Fixed median wall-clock: 0.2134 s
-Learned median wall-clock: 0.1147 s
-Fixed p95 wall-clock: 0.2386 s
-Learned p95 wall-clock: 0.2312 s
-Measured local-loop wall-clock reduction: 23.92%
+Fixed mean wall-clock: 0.1263 s
+Learned mean wall-clock: 0.0958 s
+Fixed median wall-clock: 0.1368 s
+Learned median wall-clock: 0.0758 s
+Fixed p95 wall-clock: 0.1628 s
+Learned p95 wall-clock: 0.1573 s
+Measured local-loop wall-clock reduction: 24.12%
 
 CPU TIME
-Fixed mean CPU time: 1.0897 s
-Learned mean CPU time: 0.8344 s
-Measured CPU-time reduction: 23.43%
+Fixed mean CPU time: 0.7473 s
+Learned mean CPU time: 0.5695 s
+Measured CPU-time reduction: 23.79%
 
 OPERATIONAL COST PROXY
 Average attempts are used as a retrieval/critic work proxy.
