@@ -1,13 +1,12 @@
-from query_rewriter import rewrite_query
+from local_query_rewriter import rewrite_query
 
-question = "leave after joining?"
 
-context = """
-The retrieved information only describes attendance
-and working hours. It does not explain leave eligibility.
-"""
+def test_leave_on_duty_query_is_rewritten():
+    question = "What are the requirements for Leave on Duty?"
 
-rewritten = rewrite_query(question, context)
+    rewritten = rewrite_query(question)
 
-print("Original Query:", question)
-print("Rewritten Query:", rewritten)
+    assert rewritten != question
+    assert "Leave on Duty" in rewritten
+    assert "15-day entitlement" in rewritten
+    assert "prior written permission" in rewritten

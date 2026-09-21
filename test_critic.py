@@ -1,13 +1,22 @@
-from critic import evaluate_retrieval
+from local_critic import evaluate_retrieval
 
-question = "How many annual leave days do employees get?"
 
-context = """
-Permanent employees receive 18 days of annual leave per calendar year.
-Up to 10 unused annual leave days may be carried forward.
-"""
+def test_casual_leave_context_is_sufficient():
+    question = "How many days of Casual Leave are allowed in an academic year?"
 
-score, decision = evaluate_retrieval(question, context)
+    context = """
+    Casual Leave (C.L.)
 
-print("Critic Score:", score)
-print("Critic Decision:", decision)
+    An employee is entitled to avail 10 days of Casual Leave
+    in an academic year. The academic year is from 1st June
+    to 31st May. Unused Casual Leave shall lapse and cannot
+    be carried forward.
+    """
+
+    score, decision = evaluate_retrieval(
+        question,
+        context
+    )
+
+    assert decision == "SUFFICIENT"
+    assert 0.0 <= score <= 1.0
