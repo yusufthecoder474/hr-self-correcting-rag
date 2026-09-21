@@ -1,9 +1,16 @@
 HR SELF-CORRECTING RAG ASSISTANT
 ================================
 
+PROJECT TITLE
+-------------
+Enterprise HR Knowledge Assistant
+Self-Correcting RAG with Learned Halting
+
+
 PROJECT OVERVIEW
 ----------------
-A retrieval-augmented HR policy assistant with:
+A retrieval-augmented HR policy assistant that combines:
+
 1. Semantic retrieval using SentenceTransformers.
 2. ChromaDB vector storage.
 3. Local retrieval critic.
@@ -11,7 +18,24 @@ A retrieval-augmented HR policy assistant with:
 5. Learned STOP/CONTINUE halting policy.
 6. FastAPI backend.
 7. Browser-based frontend.
-8. Gemini-based answer generation with local fallback.
+8. Gemini-based final answer generation with local fallback.
+
+
+CURRENT CORPUS
+--------------
+Primary evaluation corpus:
+
+VIT HR Conditions of Service
+HR Manual 2019 Ver-005
+
+Secondary/generalization corpus:
+
+IIMA HR Policy Manual 2023
+
+Preserved baseline corpus:
+
+NexaCore synthetic HR policy
+
 
 MODEL / RETRIEVAL
 -----------------
@@ -21,107 +45,358 @@ all-MiniLM-L6-v2
 Vector database:
 ChromaDB
 
-HALTING POLICY
---------------
+Top-k retrieval:
+3 chunks
+
+
+LEARNED HALTING POLICY
+----------------------
 Classifier:
 Logistic Regression
 
-Features:
+Current VIT model:
+halting_policy_vit_v3.pkl
+
+Features used by the current VIT model:
+
 - attempt
 - score
 - best_score
 - score_delta
-- chunk_overlap
 
-Question-level 5-fold cross-validation:
-Average Accuracy: 0.704
-Average Macro Precision: 0.637
-Average Macro Recall: 0.836
-Average Macro F1: 0.610
+chunk_overlap was removed from the final VIT model as part of
+the feature ablation.
 
-FINAL POLICY COMPARISON
------------------------
-Evaluation questions: 23
 
-Fixed-3 average attempts:
-1.217
+HALTING POLICY EVALUATION
+-------------------------
+The halting policy was evaluated using grouped question-level
+cross-validation so trajectory rows belonging to the same original
+question are kept in the same fold.
 
-Learned-policy average attempts:
-1.217
+Class balancing:
+class_weight = balanced
 
-Average attempts saved:
-0.0
 
-Fixed successful retrievals:
-19/23 (82.6%)
+PRIMARY EVALUATION
+------------------
+Evaluation corpus:
+VIT HR Conditions of Service
 
-Learned successful retrievals:
-19/23 (82.6%)
+Evaluation questions:
+100
 
-Fixed proxy calls:
-37
+Baseline:
+Fixed-3 retrieval policy
 
-Learned proxy calls:
-34
+Proposed:
+Learned halting policy
 
-Proxy calls saved:
-3
 
-Proxy call reduction:
-8.11%
-
-LEARNED POLICY RUNTIME AUDIT
------------------------------
-CONTINUE decisions:
-6
-
-CONTINUE decisions with successful query rewrite:
-5
-
-CONTINUE decisions with failed rewrite:
-1
-
-Useful CONTINUE rate:
-83.3%
-
-DEMO EXAMPLE
+MAIN RESULTS
 ------------
-Question:
-leave after joining
+Fixed-3 average retrieval attempts:
+1.7600
 
-Attempt 1:
-Critic score: 0.57
-Critic decision: INSUFFICIENT
-Halting decision: CONTINUE
-STOP probability: 0.37
+Learned average retrieval attempts:
+1.3500
 
-Rewritten query:
-What is the leave eligibility and approval process
-for employees during probation?
+Retrieval-attempt reduction:
+23.30%
 
-Attempt 2:
-Critic score: 0.78
-Critic decision: SUFFICIENT
-Halting decision: STOP
 
-RESULT
-------
-The system demonstrates:
-weak retrieval
--> learned CONTINUE
--> query rewriting
--> improved retrieval
--> learned STOP
+CRITIC-DEFINED RETRIEVAL SUCCESS
+---------------------------------
+Fixed-3:
+75.00%
+
+Learned:
+75.00%
+
+Difference:
+0.00 percentage points
+
+IMPORTANT:
+This is critic-defined retrieval success based on the local critic
+threshold. It is NOT equivalent to independently verified
+answer-level accuracy.
+
+
+LOCAL RETRIEVAL-LOOP LATENCY
+----------------------------
+Measurements were performed after embedding-model warm-up.
+
+Mean wall-clock time:
+
+Fixed-3:
+0.1923 s
+
+Learned:
+0.1463 s
+
+Measured reduction:
+23.92%
+
+
+Median wall-clock time:
+
+Fixed-3:
+0.2134 s
+
+Learned:
+0.1147 s
+
+
+95th percentile wall-clock time:
+
+Fixed-3:
+0.2386 s
+
+Learned:
+0.2312 s
+
+
+CPU TIME
+---------
+Mean CPU time:
+
+Fixed-3:
+1.0897 s
+
+Learned:
+0.8344 s
+
+Measured CPU-time reduction:
+23.43%
+
+
+IMPORTANT LATENCY NOTE
+----------------------
+These timings measure the local retrieval/critic/halting loop.
+
+They exclude final Gemini answer-generation latency.
+
+Therefore they should be reported as:
+
+"local retrieval-loop latency"
+
+and NOT as complete end-to-end user-visible latency.
+
+
+OPERATIONAL WORK PROXY
+----------------------
+Average retrieval attempts are used as a retrieval/critic
+work proxy.
+
+Attempt-based reduction:
+23.30%
+
+This is a compute/work proxy.
+
+It is NOT a monetary API cost estimate.
+
+
+PARETO ANALYSIS
+---------------
+A true stop-probability threshold sweep was performed.
+
+Files:
+
+research/vit_v1/pareto_results_v2.csv
+research/vit_v1/pareto_frontier_v2.csv
+
+Axes:
+
+Average retrieval attempts
+vs.
+Critic-defined retrieval success rate
+
+
+API COST MEASUREMENT
+--------------------
+Gemini API token/cost logging has been implemented.
+
+Usage log:
+
+research/vit_v1/gemini_api_usage.csv
+
+Tracked information includes:
+
+- prompt/input tokens
+- output tokens
+- thinking tokens
+- total tokens
+- estimated input cost
+- estimated output cost
+- estimated total cost
+- API status
+
+
+API COST LIMITATION
+-------------------
+A small Normal-RAG vs Learned-RAG API-cost pilot was attempted.
+
+Gemini service availability was unstable and repeatedly returned
+503/unavailable responses.
+
+Therefore the pilot did NOT produce sufficiently matched successful
+measurements for a defensible monetary-cost comparison.
+
+No API monetary-cost reduction is claimed from the pilot.
+
+The available API measurements are treated as instrumentation and
+preliminary evidence only.
+
+
+HUMAN VALIDATION
+----------------
+Human validation materials were prepared for independent checking
+against the VIT source.
+
+The current research state does not claim complete independent
+100-question human validation.
+
+Therefore critic-defined success and human answer correctness must
+be reported as separate concepts.
+
+
+SELF-CORRECTING RAG PIPELINE
+----------------------------
+Current application path:
+
+User Question
+      |
+      v
+SentenceTransformer Retrieval
+      |
+      v
+Local Retrieval Critic
+      |
+      v
+Learned Halting Policy
+      |
+   +--+--+
+   |     |
+ STOP  CONTINUE
+   |     |
+   |     v
+   |  Query Rewriting
+   |     |
+   |     v
+   |  Re-retrieval
+   |     |
+   |     v
+   |  Critic
+   |
+   +-----------> Final Answer Generation
+                         |
+                         v
+                       Gemini
+                         |
+                  local fallback if unavailable
+
+
+CANONICAL APPLICATION FILES
+----------------------------
+app.py
+local_self_correcting_rag.py
+local_critic.py
+local_query_rewriter.py
+halting_policy.py
+gemini_answer.py
+
+These are the current application components used by the VIT-based
+self-correcting RAG system.
+
+
+CANONICAL RESEARCH FILES
+------------------------
+research/vit_v1/advanced_research_analysis.py
+
+research/vit_v1/advanced_summary_v2.txt
+
+research/vit_v1/advanced_question_results_v2.csv
+
+research/vit_v1/pareto_results_v2.csv
+
+research/vit_v1/pareto_frontier_v2.csv
+
+research/vit_v1/questions/evaluation_questions_100.txt
+
+
+PRESERVED BASELINE
+------------------
+The original synthetic NexaCore HR policy and earlier baseline
+results are preserved for historical comparison.
+
+They should not be interpreted as the final VIT evaluation.
+
+
+LEGACY / DEVELOPMENT FILES
+---------------------------
+Some earlier scripts and duplicate implementations remain in the
+repository from development.
+
+These include earlier retrieval, critic, query-rewriter, and
+self-correcting RAG implementations.
+
+They should be treated as legacy/development artifacts until the
+repository cleanup is completed.
+
+The canonical VIT application path is documented above.
+
+
+CURRENT RESEARCH CONCLUSION
+---------------------------
+On the 100-question VIT HR evaluation set, the learned halting policy
+reduced average retrieval attempts from 1.7600 to 1.3500, corresponding
+to a 23.30% reduction in retrieval work.
+
+The same 75.00% critic-defined retrieval success rate was observed for
+both Fixed-3 and Learned Halting.
+
+The learned policy also produced lower measured local retrieval-loop
+wall-clock and CPU time.
+
+These results demonstrate adaptive retrieval effort reduction while
+preserving the same critic-defined retrieval success on this evaluation
+set.
+
 
 IMPORTANT LIMITATIONS
 ---------------------
-1. The halting dataset is relatively small.
-2. STOP and CONTINUE classes are imbalanced.
-3. The learned policy has only preliminary generalization performance.
-4. Current efficiency measurements use local critic/rewriter proxy calls.
-5. Gemini answer generation may be limited by free-tier quota.
-6. The 8.11% reduction is a proxy workload reduction, not a measured
-   billing-cost reduction.
+1. The evaluation contains 100 questions.
+2. Critic-defined success is not independent answer-level accuracy.
+3. Independent human validation is not complete for the full
+   evaluation set.
+4. Some retrieved contexts can contain unrelated neighboring policy
+   text because of PDF extraction/chunking behavior.
+5. Gemini API availability prevented a valid matched monetary-cost
+   comparison.
+6. Local-loop latency excludes final Gemini answer-generation latency.
+7. A faithful TASR reproduction is not claimed.
+8. Additional comparison with other stopping methods and broader
+   independent evaluation would strengthen the research.
+
+
+TASR NOTE
+---------
+TASR is treated as related work rather than a reproduced baseline.
+
+The current system uses:
+
+SentenceTransformer retrieval
++
+local retrieval critic
++
+query rewriting
++
+learned Logistic Regression halting.
+
+A faithful TASR reproduction is not claimed because the current
+implementation does not expose the same calibrated LLM logit-based
+signal required by that method.
+
 
 DEPLOYMENT
 ----------
@@ -140,6 +415,46 @@ GET /health
 Swagger:
 GET /docs
 
-RESULT FILE
------------
-final_results.csv
+
+PRIMARY RESEARCH RESULT FILE
+----------------------------
+research/vit_v1/advanced_summary_v2.txt
+
+
+RESEARCH STATUS
+---------------
+Real VIT corpus:
+COMPLETED
+
+100-question evaluation:
+COMPLETED
+
+Learned halting:
+COMPLETED
+
+Fixed-3 comparison:
+COMPLETED
+
+Latency analysis:
+COMPLETED
+
+CPU analysis:
+COMPLETED
+
+Operational work proxy:
+COMPLETED
+
+Pareto analysis:
+COMPLETED
+
+API usage logging:
+COMPLETED
+
+Matched API monetary-cost comparison:
+NOT YET ESTABLISHED
+
+Independent full human validation:
+NOT YET COMPLETED
+
+Final repository cleanup:
+PENDING
