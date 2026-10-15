@@ -1,0 +1,56 @@
+# Python
+**/.venv/
+**/venv/
+**/__pycache__/
+*.pyc
+.pytest_cache/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+**/jwt.secret
+
+# Local runtime and authentication
+**/runtime/
+**/users.db
+**/users.db-*
+**/database_before_restore/
+
+# Local generated files
+*.log
+.DS_Store
+Thumbs.db
+
+# Node dependencies
+**/node_modules/
+
+# Local development artifacts
+**/dist/
+**/build/
+**/.coverage/
+
+# Windows shortcuts
+*.lnk
+
+# Old backup source files
+*.backup
+*.before_*
+
+# Local development databases
+**/runtime/
+**/users.db
+**/database_before_restore/
+
+# Local secrets
+.env
+.env.*
+!.env.example
+**/jwt.secret
+*.lnk
+application/documents/IIM/
+application/documents/vit/
+evaluation/blind_packets/COORDINATOR_ONLY_mapping.csv
+backup/UI_before_redesign.zip

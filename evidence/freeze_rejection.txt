@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/workspace/scratch/5c88b1849950/finalization/HR_RAG_Review3_Final_Complete_Package/application/research/review3/finalization/workflow.py", line 56, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/workspace/scratch/5c88b1849950/finalization/HR_RAG_Review3_Final_Complete_Package/application/research/review3/finalization/workflow.py", line 50, in main
+    approve_and_freeze()
+  File "/workspace/scratch/5c88b1849950/finalization/HR_RAG_Review3_Final_Complete_Package/application/research/review3/finalization/freeze_dataset.py", line 19, in approve_and_freeze
+    if any(not a.get(k,'').strip() for k in ['reviewer_name','reviewed_utc','source_support_notes','overlap_resolution']):raise ValueError('Named reviewer, date, support and overlap resolution required for '+r['question_id'])
+                                                                                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Named reviewer, date, support and overlap resolution required for NEW001

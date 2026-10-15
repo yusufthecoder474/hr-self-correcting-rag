@@ -1,0 +1,11 @@
+question_id,method,status,api_requests,input_tokens,cached_input_tokens,output_tokens,thinking_tokens,total_reported_tokens,retry_requests,estimated_input_cost_usd,estimated_output_cost_usd,estimated_total_cost_usd,outcome,end_to_end_seconds,human_correct
+1,Normal-RAG,no_usage_record,,,,,,,,,,,unknown,9.858716800001275,
+1,Learned-Self-Correcting-RAG,success,1,370,,82,664,1116,,0.00027749999999999997,0.0027975,0.003075,answer_unvalidated,9.206952199994703,
+2,Normal-RAG,success,1,236,,82,1071,1389,,0.000177,0.0043237499999999995,0.0045007499999999995,answer_unvalidated,11.848570900001505,
+2,Learned-Self-Correcting-RAG,no_usage_record,,,,,,,,,,,unknown,2.8303795000028913,
+3,Normal-RAG,no_usage_record,,,,,,,,,,,unknown,2.9234959999957937,
+3,Learned-Self-Correcting-RAG,no_usage_record,,,,,,,,,,,unknown,3.332270199993218,
+4,Normal-RAG,no_usage_record,,,,,,,,,,,unknown,3.8015440000017406,
+4,Learned-Self-Correcting-RAG,no_usage_record,,,,,,,,,,,unknown,3.423888299999817,
+5,Normal-RAG,no_usage_record,,,,,,,,,,,unknown,3.1058752999961143,
+5,Learned-Self-Correcting-RAG,no_usage_record,,,,,,,,,,,unknown,2.5261707000026945,

@@ -1,0 +1,11 @@
+original_question,attempt,query,score,best_score,score_delta,chunk_overlap,decision,halting_decision,stop_probability,runtime_action,rewritten_query
+Can an employee on probation take leave?,1,Can an employee on probation take leave?,0.91,0.91,0.0,0.0,SUFFICIENT,STOP,,STOP,
+Can an employee on probation take leave?,1,Can an employee on probation take leave?,0.91,0.91,0.0,0.0,SUFFICIENT,STOP,,STOP,
+leave after joining,1,leave after joining,0.57,0.57,0.0,0.0,INSUFFICIENT,CONTINUE,0.37,CONTINUE,What is the leave eligibility and approval process for employees during probation?
+leave after joining,2,What is the leave eligibility and approval process for employees during probation?,0.78,0.78,0.21000000000000008,0.0,SUFFICIENT,STOP,,STOP,
+leave after joining,1,leave after joining,0.57,0.57,0.0,0.0,INSUFFICIENT,CONTINUE,0.37,CONTINUE,What is the leave eligibility and approval process for employees during probation?
+leave after joining,2,What is the leave eligibility and approval process for employees during probation?,0.78,0.78,0.21000000000000008,0.0,SUFFICIENT,STOP,,STOP,
+leave after joining,1,leave after joining,0.57,0.57,0.0,0.0,INSUFFICIENT,CONTINUE,0.37,CONTINUE,What is the leave eligibility and approval process for employees during probation?
+leave after joining,2,What is the leave eligibility and approval process for employees during probation?,0.78,0.78,0.21000000000000008,0.0,SUFFICIENT,STOP,,STOP,
+leave after joining,1,leave after joining,0.57,0.57,0.0,0.0,INSUFFICIENT,CONTINUE,0.37,CONTINUE,What is the leave eligibility and approval process for employees during probation?
+leave after joining,2,What is the leave eligibility and approval process for employees during probation?,0.78,0.78,0.21000000000000008,0.0,SUFFICIENT,STOP,,STOP,

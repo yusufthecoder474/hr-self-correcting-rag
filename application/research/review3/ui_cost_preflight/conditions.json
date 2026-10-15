@@ -1,0 +1,37 @@
+{
+  "pricing": {
+    "model": "gemini-3.6-flash",
+    "provider": "Gemini Developer API",
+    "tier": "Standard paid, text; estimated list-price scenario, actual account tier unverified",
+    "verified_date": "2026-10-13",
+    "valid_through": "2026-12-31",
+    "source": "https://ai.google.dev/gemini-api/docs/pricing#gemini-3.6-flash",
+    "input_per_million_usd": 0.75,
+    "cached_input_per_million_usd": 0.075,
+    "output_including_thinking_per_million_usd": 3.75,
+    "assumptions": "No tools, batch, priority, explicit cache storage, audio or image requests. Cache-storage charges excluded because no explicit cache is created. Taxes excluded. Free-tier billing must be reported separately."
+  },
+  "settings": {
+    "temperature": 0,
+    "max_output_tokens": 2048
+  },
+  "prompt_sha256": "c54e57d3841bf76684bf25f335fc4d23d60df496393669f164cbe2fc8521680c",
+  "question_file_sha256": "796446a8235462862ce97c4ca9b29f81f3a9da6a1a23e97a5e00a8f9e8458776",
+  "corpus_sha256": "a002cf552a24fc9fdf418b3dd6d165cccaa7ecebc24b3cde44a0134ce665adbc",
+  "methods": [
+    "standard",
+    "review2",
+    "review2_acronym",
+    "review2_gate",
+    "review3_delta",
+    "review3_critic",
+    "review3_budget",
+    "review3"
+  ],
+  "live": false,
+  "questions": 5,
+  "commit": "a1196476591c796b106a0f4459669d10a16ade4f",
+  "code_status": "working tree; see delivered patch",
+  "retry_policy": "one request; SDK retries disabled",
+  "human_validation": "pending"
+}

@@ -1,0 +1,14 @@
+{
+  "checked_date": "2026-10-14",
+  "references": [
+    "[1] A. Asai, Z. Wu, Y. Wang, A. Sil, and H. Hajishirzi, \u201cSelf-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection,\u201d ICLR, 2024. https://proceedings.iclr.cc/paper_files/paper/2024/hash/25f7be9694d7b32d5cc670927b8091e1-Abstract-Conference.html",
+    "[2] S.-Q. Yan, J.-C. Gu, Y. Zhu, and Z.-H. Ling, \u201cCorrective Retrieval Augmented Generation,\u201d arXiv:2401.15884v3, 2024. https://arxiv.org/abs/2401.15884 (preprint record; no conference acceptance asserted here).",
+    "[3] S. Jeong, J. Baek, S. Cho, S. J. Hwang, and J. Park, \u201cAdaptive-RAG: Learning to Adapt Retrieval-Augmented Large Language Models through Question Complexity,\u201d NAACL, pp. 7036\u20137050, 2024. doi:10.18653/v1/2024.naacl-long.389.",
+    "[4] J. Park, S. Cho, and J.-Y. Lee, \u201cStop-RAG: Value-Based Retrieval Control for Iterative RAG,\u201d arXiv:2510.14337v1, 2025. https://arxiv.org/abs/2510.14337v1. The record notes the NeurIPS 2025 MTI-LLM Workshop, not a main-conference paper.",
+    "[5] A. Kieback, U. P. Amadasun, A. Chadha, and A. Elkins, \u201cTASR: Training-Free Adaptive Stopping for Iterative Retrieval,\u201d arXiv:2606.13814v3, 23 June 2026. https://arxiv.org/abs/2606.13814v3. The record reports Agent4IR Workshop acceptance; independent proceedings confirmation was not completed.",
+    "[6] Google, \u201cGemini Developer API pricing,\u201d verified 14 October 2026. https://ai.google.dev/gemini-api/docs/pricing#gemini-3.6-flash.",
+    "[7] VIT, \u201cIntellectual Property Rights and Technology Transfer Policy and Guidelines,\u201d document 03-IPR-D001, amendment 16 April 2024, especially pp. 12\u201314. https://vit.ac.in/files/IPR-and-Technology-Transfer-Policy.pdf; accessed 14 October 2026.",
+    "[8] VIT, HR Manual 2019, version 005, Chapter 5, Conditions of Service. Supplied 12-page extract, SHA256 a002cf552a24fc9fdf418b3dd6d165cccaa7ecebc24b3cde44a0134ce665adbc. This is the project corpus, not a claim about current law or policy."
+  ],
+  "scope": "Primary records for bibliography used in the new manuscript; prior 20-entry audit preserved separately."
+}

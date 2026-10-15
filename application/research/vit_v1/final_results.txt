@@ -1,0 +1,35 @@
+VIT HR SELF-CORRECTING RAG - FINAL RESULTS
+
+Evaluation dataset:
+23 VIT HR policy questions
+
+Baseline:
+Fixed-3 retrieval policy
+
+Proposed method:
+Learned halting policy
+
+Results:
+Fixed-3 average attempts: 1.957
+Learned-policy average attempts: 1.565
+Average attempts saved: 0.391 per question
+Approximate retrieval-attempt reduction: 20%
+
+Fixed-3 successful retrievals: 17/23
+Learned-policy successful retrievals: 17/23
+
+Fixed-3 success rate: 73.9%
+Learned-policy success rate: 73.9%
+
+Main finding:
+The learned halting policy reduced the average number of retrieval
+attempts while maintaining the same critic-defined retrieval success
+rate on the 23-question VIT evaluation set.
+
+Important limitation:
+Success is based on the local critic threshold and has not yet been
+fully validated using human answer-level ground truth.
+
+Evaluation limitation:
+The current evaluation contains 23 questions, so it should be
+described as a pilot/small evaluation rather than a large benchmark.

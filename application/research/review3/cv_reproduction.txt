@@ -1,0 +1,55 @@
+Total rows: 113
+Unique questions: 89
+STOP: 99
+CONTINUE: 14
+
+Fold 1
+Accuracy: 0.739
+Macro Precision: 0.667
+Macro Recall: 0.85
+Macro F1: 0.662
+Confusion Matrix:
+[[ 3  0]
+ [ 6 14]]
+
+Fold 2
+Accuracy: 0.609
+Macro Precision: 0.625
+Macro Recall: 0.775
+Macro F1: 0.555
+Confusion Matrix:
+[[ 3  0]
+ [ 9 11]]
+
+Fold 3
+Accuracy: 0.652
+Macro Precision: 0.636
+Macro Recall: 0.8
+Macro F1: 0.589
+Confusion Matrix:
+[[ 3  0]
+ [ 8 12]]
+
+Fold 4
+Accuracy: 0.826
+Macro Precision: 0.714
+Macro Recall: 0.9
+Macro F1: 0.744
+Confusion Matrix:
+[[ 3  0]
+ [ 4 16]]
+
+Fold 5
+Accuracy: 0.619
+Macro Precision: 0.6
+Macro Recall: 0.789
+Macro F1: 0.533
+Confusion Matrix:
+[[ 2  0]
+ [ 8 11]]
+
+===== CROSS-VALIDATION SUMMARY =====
+Average Accuracy: 0.689
+Average Macro Precision: 0.648
+Average Macro Recall: 0.823
+Average Macro F1: 0.617

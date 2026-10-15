@@ -1,0 +1,14 @@
+method,stop_threshold,avg_attempts,success_rate
+Learned-threshold-sweep,0.3,1,0.434783
+Learned-threshold-sweep,0.35,1,0.434783
+Learned-threshold-sweep,0.4,1.086957,0.478261
+Learned-threshold-sweep,0.45,1.304348,0.565217
+Learned-threshold-sweep,0.5,1.565217,0.73913
+Learned-threshold-sweep,0.55,1.565217,0.73913
+Learned-threshold-sweep,0.6,1.565217,0.73913
+Learned-threshold-sweep,0.65,1.565217,0.73913
+Learned-threshold-sweep,0.7,1.565217,0.73913
+Learned-threshold-sweep,0.75,1.565217,0.73913
+Learned-threshold-sweep,0.8,1.565217,0.73913
+Learned-threshold-sweep,0.85,1.565217,0.73913
+Learned-threshold-sweep,0.9,1.565217,0.73913

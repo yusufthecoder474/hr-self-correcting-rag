@@ -1,0 +1,39 @@
+1. Opening: This is a working capstone prototype with evidence-bounded research. The independent pilot and live monetary comparison are not complete. Do not introduce the project as production ready.
+
+2. Explain the difference between relevant text and complete policy support. A confident classifier can end retrieval while an answer still needs to abstain.
+
+3. State hypotheses as questions, not conclusions. The cost question is architectural: local loops do not necessarily incur Gemini requests.
+
+4. The diagram is a logical path. Authentication precedes the request. A local source validator can authorize its narrow answer separately from the generic critic. Gemini is final generation, not a critic call every iteration.
+
+5. The supplied saved classifier is preserved byte for byte. Delta is current score minus prior best, not always current minus immediately previous score. Threshold 0.75 belongs to the critic, not the Logistic Regression probability.
+
+6. Use CL as the example: the model can predict STOP with an insufficient critic. The existing narrow source validator supplies the answer only when exact supporting section evidence is present.
+
+7. This is an actual authenticated browser capture, not a generated mockup. Explain source status, source reference and query submission.
+
+8. Real CL response: first critic .57 CONTINUE, second .71 STOP with P(STOP) .842. Source-specific rule verifies the answer. The classifier is not credited for proving the policy.
+
+9. Provenance: advanced_question_results_v2.csv and verified_metrics.json. Historical baseline is not the new strict three-call control. The 75% number is critic-defined retrieval success, not human answer accuracy.
+
+10. Questions were authored from source without querying the system. Category quotas are six each. Source excerpts and drafts need review. High-similarity flags and broad family overlaps are distinct and not disjoint counts.
+
+11. Critic and learned preserve the no-rewrite guard. Strict budget deliberately repeats unchanged queries to make three actual retrieval calls. This is documented, not silently patched into the application.
+
+12. Four previously used questions, three repetitions, 48 observations. Repetitions measure timing variation, not independent samples. No candidate was run. Do not use this graph to claim generalization.
+
+13. This is failure evidence worth showing. The critic is computed on each final rewritten query. It does not imply that budget answers are all wrong, because source rules may still support a narrow response.
+
+14. The development benchmark makes no API calls by design. Never report that as a measured zero-dollar cost advantage. Existing pilot has zero matched successes. Account tier is unverified. Official pricing record is in the package.
+
+15. Source validators on/off can be assessed on identical stored contexts. No generalized quality benefit is measured. Separate section-aware indexing is pending because the existing database must remain protected.
+
+16. 89 tests comprise the original 80 Review 3 tests, two roots and seven benchmark tests. Browser tests used real model and copied database with temporary account. Credentials are excluded from package.
+
+17. Primary sources verified 14 October 2026. Self-RAG ICLR 2024, Adaptive-RAG NAACL 2024. CRAG cited as arXiv v3, not an unverified conference acceptance. Stop-RAG v1 and TASR v3 are workshop-related records, not main-conference novelty evidence.
+
+18. Explain that the freeze guard checks content hashes and recorded named approvals but cannot verify a human identity by itself. Supervisory verification remains necessary. Blank ratings are intentional.
+
+19. Preliminary discussion, not legal advice. Official VIT IPR policy amendment 16 April 2024 describes disclosure and professional review. Existing public repository history must be disclosed to the advisor/counsel; no patentability guarantee.
+
+20. Close honestly. Deliverables are in START_HERE. Do not claim the pending independent study is finished. Suggested viva questions and complete bibliography are in documents.

@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/workspace/scratch/5c88b1849950/repo/research/vit_v1/advanced_research_analysis.py", line 15, in <module>
+    import chromadb
+ModuleNotFoundError: No module named 'chromadb'

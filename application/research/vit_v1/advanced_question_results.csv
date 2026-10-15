@@ -1,0 +1,24 @@
+question_id,question,fixed_attempts,learned_attempts,fixed_best_score,learned_final_score,fixed_success,learned_success,fixed_wall_seconds,learned_wall_seconds,fixed_cpu_seconds,learned_cpu_seconds
+1,How many days of Casual Leave can an employee avail in an academic year?,2,1,0.9,0.9,0,1,0.216398,0.074658,1.21875,0.296875
+2,Can unused Casual Leave be carried forward?,2,2,0.74,0.61,0,0,0.151842,0.153054,0.921875,0.734375
+3,What is the maximum number of Casual Leave days that can be taken at one time?,2,1,0.82,0.82,0,1,0.153692,0.062154,0.9375,0.375
+4,What are the eligibility conditions for Medical Leave at VIT?,2,2,0.82,0.82,1,1,0.151854,0.152158,0.9375,0.90625
+5,What is the maximum accumulation limit for Medical Leave?,2,1,0.82,0.82,1,1,0.155542,0.077674,0.9375,0.46875
+6,What medical certificate is required for Medical Leave?,2,1,0.82,0.78,1,1,0.165818,0.063805,0.921875,0.375
+7,What are the requirements when Medical Leave treatment is taken outside the VIT Health Centre?,2,1,0.84,0.84,1,1,0.158925,0.070047,1.015625,0.375
+8,What is the deadline for submitting documents for a long period of Medical Leave?,2,2,0.82,0.82,1,1,0.15627,0.16441,0.9375,0.890625
+9,What are the rules for extending Medical Leave beyond one month?,2,2,0.82,0.82,1,1,0.154795,0.151933,0.84375,0.84375
+10,What are the eligibility requirements for Maternity Leave?,2,2,0.73,0.73,0,0,0.140062,0.152734,0.75,0.953125
+11,What restrictions apply to Maternity Leave based on the number of children?,2,2,0.73,0.73,0,0,0.151454,0.155833,0.84375,0.921875
+12,What documents are required for Maternity Leave?,2,2,0.74,0.73,0,0,0.146597,0.136737,0.84375,0.75
+13,What are the conditions for claiming vacation salary?,2,2,0.81,0.81,1,1,0.146483,0.146842,0.84375,0.84375
+14,Can vacation be combined with another type of leave?,2,1,0.81,0.77,1,1,0.149239,0.080426,0.84375,0.375
+15,What are the requirements for Leave on Duty?,2,2,0.75,0.75,1,1,0.159514,0.165491,0.921875,0.890625
+16,How many days of Leave on Duty are permitted in an academic year?,2,1,0.92,0.92,1,1,0.159812,0.077141,1.0,0.390625
+17,What approval is required before proceeding on Leave on Duty?,2,2,0.75,0.75,1,1,0.149931,0.154187,0.828125,0.921875
+18,What are the eligibility and duration requirements for Sabbatical Leave?,2,2,0.73,0.73,0,0,0.148266,0.143359,0.8125,0.8125
+19,What are the conditions for Compensatory Off or Compensatory Leave?,2,1,0.91,0.91,0,1,0.150032,0.071798,0.84375,0.453125
+20,What is the purpose of the Exit Interview?,2,2,0.78,0.78,1,1,0.141604,0.136261,0.828125,0.84375
+21,When can a resigning employee attend the Exit Interview?,2,1,0.84,0.84,1,1,0.140696,0.065635,0.765625,0.375
+22,What are the requirements for obtaining a Service Certificate?,2,2,0.73,0.73,0,0,0.148682,0.138948,0.765625,0.84375
+23,What are the notice and relieving requirements when an employee resigns from VIT?,1,1,0.87,0.87,1,1,0.078006,0.073607,0.453125,0.46875

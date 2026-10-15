@@ -1,0 +1,40 @@
+{
+  "source_commit": "a1196476591c796b106a0f4459669d10a16ade4f",
+  "source_csv": "research/vit_v1/advanced_question_results_v2.csv",
+  "source_sha256": "a7fbfefd1a33ad1a5e44c75da4627f089e1372ad1a668e5363285b00b3c40d4b",
+  "questions": 100,
+  "status": "historical CSV reaggregation; not a fresh retrieval run",
+  "training_rows": 113,
+  "training_questions": 89,
+  "labels": {
+    "1": 99,
+    "0": 14
+  },
+  "train_evaluation_overlap": 89,
+  "question_file_matches": true,
+  "evaluation_exact_duplicates": 0,
+  "api_cost_conclusion": "not established; zero matched successful historical pilot pairs",
+  "human_correctness": null,
+  "fixed": {
+    "mean_attempts": 1.76,
+    "success_rate": 0.75,
+    "mean_wall_seconds": 0.12628335,
+    "mean_cpu_seconds": 0.7472917,
+    "median_wall_seconds": 0.139583,
+    "p95_wall_seconds": 0.15818954999999998
+  },
+  "learned": {
+    "mean_attempts": 1.35,
+    "success_rate": 0.75,
+    "mean_wall_seconds": 0.09582345,
+    "mean_cpu_seconds": 0.5694792,
+    "median_wall_seconds": 0.0739975,
+    "p95_wall_seconds": 0.15634875
+  },
+  "reductions_percent": {
+    "mean_attempts": 23.29545454545454,
+    "mean_wall_seconds": 24.120281889892837,
+    "mean_cpu_seconds": 23.79425597795346
+  }
+}
+{"questions": 5, "method_observations": 10, "successful_observations": 2, "missing_usage_observations": 8, "matched_successful_pairs": 0, "cost_reduction_percent": null, "failed_usage_cost": "unknown, not zero", "new_live_run": "blocked: no GEMINI_API_KEY in execution environment"}

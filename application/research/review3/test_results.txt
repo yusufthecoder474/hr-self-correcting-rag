@@ -1,0 +1,7 @@
+Prior-session result captured on 13 October 2026 (transcribed from tool output):
+66 passed, 1 warning in 0.91s
+Warning: Starlette TestClient httpx deprecation.
+
+14 October packaging recheck: both current python3 and /usr/bin/python3 lack pytest.
+The runtime dependencies did not persist across the session. No fresh test pass is claimed.
+Two subsequent edits: health retrieval_ready false -> null (unknown); threat-model CORS test wording corrected.

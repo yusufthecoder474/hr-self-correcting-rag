@@ -1,0 +1,31 @@
+HUMAN ANSWER VALIDATION - VIT HR RAG
+
+Q2  Can unused Casual Leave be carried forward?
+Answer correct: YES
+Evidence present in VIT source: YES
+Notes: Answer correctly states that unused Casual Leave cannot be carried forward and lapses.
+
+Q10 What are the eligibility requirements for Maternity Leave?
+Answer correct: YES
+Evidence present in VIT source: YES
+Notes: Answer correctly states the 80-day work requirement in the preceding 12 months and the stated 180-day maximum leave period.
+
+Q11 What restrictions apply to Maternity Leave based on the number of children?
+Answer correct: NO
+Evidence present in VIT source: YES
+Notes: The answer incorrectly stated that there were no restrictions. The policy contains a restriction based on the number of living children.
+
+Q12 What documents are required for Maternity Leave?
+Answer correct: NO
+Evidence present in VIT source: YES
+Notes: The answer did not clearly identify the required doctor's certificate and instead returned an incomplete/contaminated section.
+
+Q18 What are the eligibility and duration requirements for Sabbatical Leave?
+Answer correct: YES
+Evidence present in VIT source: YES
+Notes: Answer correctly states that faculty members with 6 years of continuous service may be sanctioned 1 year of Sabbatical Leave with full pay and allowances. Extra unrelated maternity text was also included.
+
+Q22 What are the requirements for obtaining a Service Certificate?
+Answer correct: YES
+Evidence present in VIT source: YES
+Notes: Answer correctly explains the request/application and issuance of the Service Certificate for eligible departing employees.

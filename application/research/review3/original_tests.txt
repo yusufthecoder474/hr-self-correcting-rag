@@ -1,0 +1,44 @@
+
+==================================== ERRORS ====================================
+____________________ ERROR collecting legacy/batch_test.py _____________________
+ImportError while importing test module '/workspace/scratch/5c88b1849950/repo/legacy/batch_test.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+legacy/batch_test.py:1: in <module>
+    from local_self_correcting_rag import local_self_correcting_rag
+local_self_correcting_rag.py:5: in <module>
+    import chromadb
+E   ModuleNotFoundError: No module named 'chromadb'
+_______________________ ERROR collecting test_critic.py ________________________
+ImportError while importing test module '/workspace/scratch/5c88b1849950/repo/test_critic.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+test_critic.py:1: in <module>
+    from local_critic import evaluate_retrieval
+local_critic.py:1: in <module>
+    from sentence_transformers import SentenceTransformer
+E   ModuleNotFoundError: No module named 'sentence_transformers'
+____________________ ERROR collecting test_local_critic.py _____________________
+ImportError while importing test module '/workspace/scratch/5c88b1849950/repo/test_local_critic.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+test_local_critic.py:1: in <module>
+    from local_critic import evaluate_retrieval
+local_critic.py:1: in <module>
+    from sentence_transformers import SentenceTransformer
+E   ModuleNotFoundError: No module named 'sentence_transformers'
+=========================== short test summary info ============================
+ERROR legacy/batch_test.py
+ERROR test_critic.py
+ERROR test_local_critic.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 3 errors during collection !!!!!!!!!!!!!!!!!!!!
+3 errors in 0.25s

@@ -1,0 +1,9 @@
+{
+  "research/vit_v1/halting_policy_vit_v3.pkl": "fd135eb63fd061a3354380a912ea330f05a46f572a8cfdb407ed60e4ec63a2b5",
+  "documents/vit/VIT_HR_Conditions_of_Service.pdf": "a002cf552a24fc9fdf418b3dd6d165cccaa7ecebc24b3cde44a0134ce665adbc",
+  "chroma_db/0c73be9f-4489-4b14-b818-22812be2d793/data_level0.bin": "ea9ac6972cb4666769a17755f17c5727f676f11a742e9553bf3a21119ab54394",
+  "chroma_db/0c73be9f-4489-4b14-b818-22812be2d793/header.bin": "a0e81c3b22454233bc12d0762f06dcca48261a75231cf87c79b75e69a6c00150",
+  "chroma_db/0c73be9f-4489-4b14-b818-22812be2d793/length.bin": "dc8b858e22e04f0f71f453edb32d411b28bfe2dbb2800dab8dc98dcc3dafc6de",
+  "chroma_db/0c73be9f-4489-4b14-b818-22812be2d793/link_lists.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "chroma_db/chroma.sqlite3": "053db79b36dbca43cf3aece350f419670adc5995a4f09e715df61b95004a56e8"
+}

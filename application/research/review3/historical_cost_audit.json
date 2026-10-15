@@ -1,0 +1,10 @@
+{
+  "questions": 5,
+  "method_observations": 10,
+  "successful_observations": 2,
+  "missing_usage_observations": 8,
+  "matched_successful_pairs": 0,
+  "cost_reduction_percent": null,
+  "failed_usage_cost": "unknown, not zero",
+  "new_live_run": "blocked: no GEMINI_API_KEY in execution environment"
+}

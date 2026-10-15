@@ -1,0 +1,52 @@
+# Virtual environment
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Environment files
+.env
+
+# API keys / secrets
+*.key
+
+# Authentication database
+users.db
+
+# Local vector database
+chroma_db/
+
+# Runtime trajectory files
+trajectory_runtime.csv
+
+# Local generated datasets
+halting_dataset.csv
+training_halting_dataset.csv
+training_trajectory_dataset.csv
+trajectory_dataset.csv
+
+# Model files
+*.pkl
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Local backup files
+*_backup.py
+*_backup/
+
+# Review 3 private runtime and credentials
+.venv/
+.env.*
+!.env.example
+runtime/
+*.db
+*.sqlite*
+*.pem
+*.log
+.pytest_cache/
+research/review3/live_runs/
+frontend/node_modules/
+frontend/dist/

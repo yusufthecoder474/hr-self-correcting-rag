@@ -1,0 +1,230 @@
+{
+  "type": "mocked API UI tests; no answer quality measurement",
+  "browser": "153.0.8010.0",
+  "results": [
+    {
+      "ui": "static",
+      "version": "before",
+      "width": 1440,
+      "scenario": "acronym",
+      "overflow": false,
+      "fixture": true
+    },
+    {
+      "ui": "static",
+      "version": "before",
+      "width": 1440,
+      "scenario": "insufficient",
+      "overflow": false,
+      "fixture": true
+    },
+    {
+      "ui": "static",
+      "version": "after",
+      "width": 1440,
+      "scenario": "acronym",
+      "overflow": false,
+      "fixture": true
+    },
+    {
+      "ui": "static",
+      "version": "after",
+      "width": 1440,
+      "scenario": "insufficient",
+      "overflow": false,
+      "fixture": true
+    },
+    {
+      "ui": "static",
+      "width": 1440,
+      "scenario": "http_401",
+      "passed": true
+    },
+    {
+      "ui": "static",
+      "width": 1440,
+      "scenario": "http_429",
+      "passed": true
+    },
+    {
+      "ui": "static",
+      "width": 1440,
+      "scenario": "http_503",
+      "passed": true
+    },
+    {
+      "ui": "static",
+      "width": 1440,
+      "scenario": "http_0",
+      "passed": true
+    },
+    {
+      "ui": "react",
+      "version": "before",
+      "width": 1440,
+      "scenario": "acronym",
+      "overflow": false,
+      "fixture": true
+    },
+    {
+      "ui": "react",
+      "version": "before",
+      "width": 1440,
+      "scenario": "insufficient",
+      "overflow": false,
+      "fixture": true
+    },
+    {
+      "ui": "react",
+      "version": "after",
+      "width": 1440,
+      "scenario": "acronym",
+      "overflow": false,
+      "fixture": true
+    },
+    {
+      "ui": "react",
+      "version": "after",
+      "width": 1440,
+      "scenario": "insufficient",
+      "overflow": false,
+      "fixture": true
+    },
+    {
+      "ui": "react",
+      "width": 1440,
+      "scenario": "http_401",
+      "passed": true
+    },
+    {
+      "ui": "react",
+      "width": 1440,
+      "scenario": "http_429",
+      "passed": true
+    },
+    {
+      "ui": "react",
+      "width": 1440,
+      "scenario": "http_503",
+      "passed": true
+    },
+    {
+      "ui": "react",
+      "width": 1440,
+      "scenario": "http_0",
+      "passed": true
+    },
+    {
+      "ui": "static",
+      "version": "before",
+      "width": 390,
+      "scenario": "acronym",
+      "overflow": false,
+      "fixture": true
+    },
+    {
+      "ui": "static",
+      "version": "before",
+      "width": 390,
+      "scenario": "insufficient",
+      "overflow": false,
+      "fixture": true
+    },
+    {
+      "ui": "static",
+      "version": "after",
+      "width": 390,
+      "scenario": "acronym",
+      "overflow": false,
+      "fixture": true
+    },
+    {
+      "ui": "static",
+      "version": "after",
+      "width": 390,
+      "scenario": "insufficient",
+      "overflow": false,
+      "fixture": true
+    },
+    {
+      "ui": "static",
+      "width": 390,
+      "scenario": "http_401",
+      "passed": true
+    },
+    {
+      "ui": "static",
+      "width": 390,
+      "scenario": "http_429",
+      "passed": true
+    },
+    {
+      "ui": "static",
+      "width": 390,
+      "scenario": "http_503",
+      "passed": true
+    },
+    {
+      "ui": "static",
+      "width": 390,
+      "scenario": "http_0",
+      "passed": true
+    },
+    {
+      "ui": "react",
+      "version": "before",
+      "width": 390,
+      "scenario": "acronym",
+      "overflow": false,
+      "fixture": true
+    },
+    {
+      "ui": "react",
+      "version": "before",
+      "width": 390,
+      "scenario": "insufficient",
+      "overflow": false,
+      "fixture": true
+    },
+    {
+      "ui": "react",
+      "version": "after",
+      "width": 390,
+      "scenario": "acronym",
+      "overflow": false,
+      "fixture": true
+    },
+    {
+      "ui": "react",
+      "version": "after",
+      "width": 390,
+      "scenario": "insufficient",
+      "overflow": false,
+      "fixture": true
+    },
+    {
+      "ui": "react",
+      "width": 390,
+      "scenario": "http_401",
+      "passed": true
+    },
+    {
+      "ui": "react",
+      "width": 390,
+      "scenario": "http_429",
+      "passed": true
+    },
+    {
+      "ui": "react",
+      "width": 390,
+      "scenario": "http_503",
+      "passed": true
+    },
+    {
+      "ui": "react",
+      "width": 390,
+      "scenario": "http_0",
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "candidates": 30,
+  "reference_unique_questions": 214,
+  "semantic_status": "COMPLETE",
+  "semantic_error_type": null,
+  "embedding_model": "all-MiniLM-L6-v2",
+  "lexical_high_threshold": 0.82,
+  "semantic_high_threshold": 0.85,
+  "semantic_review_threshold": 0.72,
+  "high_risk": 2,
+  "family_overlap": 23,
+  "reviewer_approved": 0,
+  "independent_questions_established": 0,
+  "dataset_sha256": "6684f315e953ffde2310185e717433b9a58b1967de56df16e889f46ef7cba011",
+  "candidate_clusters": [],
+  "claim": "Thresholds are screening heuristics; family overlap can remain despite low similarity."
+}

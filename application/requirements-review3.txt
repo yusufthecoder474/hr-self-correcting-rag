@@ -1,0 +1,18 @@
+# Versions exercised in the Linux validation environment; Windows must validate locally.
+fastapi==0.143.0
+uvicorn==0.54.0
+pydantic==2.13.5
+chromadb==1.5.9
+sentence-transformers==6.1.0
+scikit-learn==1.9.1
+joblib==1.5.3
+google-genai==2.30.1
+python-dotenv==1.2.4
+PyJWT==2.15.1
+pwdlib==0.3.1
+argon2-cffi==25.1.0
+email-validator==2.3.0
+httpx==0.28.1
+socksio==1.0.0
+pypdf==6.10.0
+pytest==9.1.1

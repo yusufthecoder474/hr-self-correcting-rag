@@ -1,0 +1,84 @@
+{
+  "execution": "real authenticated HTTP; supplied model, corpus and database copy; no API key",
+  "results": [
+    {
+      "id": "maternity",
+      "http_status": 200,
+      "question": "What are the maternity leave eligibility conditions?",
+      "answer": "According to Section 5.5.4 of the VIT HR Manual, maternity leave may be granted to a woman employee who has worked for at least 80 days during the 12 months immediately preceding the expected delivery date.",
+      "source": "VIT_HR_Conditions_of_Service.pdf, Section 5.5.4",
+      "trajectory": [
+        {
+          "attempt": 1,
+          "query": "What are the maternity leave eligibility conditions?",
+          "decision": "SUFFICIENT",
+          "chunk_overlap": 0,
+          "score": 0.8,
+          "best_score": 0.8,
+          "score_delta": 0,
+          "critic_decision": "SUFFICIENT",
+          "halting_decision": "STOP",
+          "stop_probability": 0.533,
+          "runtime_action": "STOP"
+        }
+      ],
+      "outcome": "local_verified_policy",
+      "evidence_status": "SOURCE_VERIFIED",
+      "acronym_entries": []
+    },
+    {
+      "id": "casual",
+      "http_status": 200,
+      "question": "Explain CL carry forward rules.",
+      "answer": "According to Section 5.5.1 of the VIT HR Manual, unused Casual Leave cannot be carried forward to the next academic year. Casual Leave must be used by 31 May, and any unavailed balance lapses.",
+      "source": "VIT_HR_Conditions_of_Service.pdf, Section 5.5.1",
+      "trajectory": [
+        {
+          "attempt": 1,
+          "query": "Explain Casual Leave carry forward rules.",
+          "decision": "INSUFFICIENT",
+          "chunk_overlap": 0,
+          "score": 0.57,
+          "best_score": 0.57,
+          "score_delta": 0,
+          "critic_decision": "INSUFFICIENT",
+          "halting_decision": "CONTINUE",
+          "stop_probability": 0.319,
+          "runtime_action": "CONTINUE"
+        },
+        {
+          "attempt": 2,
+          "query": "Can unused Casual Leave (C.L.) be carried forward to the next academic year at VIT? What does Section 5.5.1 state about the 31 May deadline and lapsing of unused leave?",
+          "decision": "INSUFFICIENT",
+          "chunk_overlap": 0.2,
+          "score": 0.71,
+          "best_score": 0.71,
+          "score_delta": 0.14,
+          "critic_decision": "INSUFFICIENT",
+          "halting_decision": "STOP",
+          "stop_probability": 0.842,
+          "runtime_action": "STOP"
+        }
+      ],
+      "outcome": "local_verified_policy",
+      "evidence_status": "SOURCE_VERIFIED",
+      "acronym_entries": [
+        {
+          "aliases": [
+            "CL"
+          ],
+          "full_form": "Casual Leave",
+          "section": "5.5.1",
+          "source": "VIT_HR_Conditions_of_Service.pdf",
+          "pdf_page": 3,
+          "printed_page": 28,
+          "source_sha256": "a002cf552a24fc9fdf418b3dd6d165cccaa7ecebc24b3cde44a0134ce665adbc",
+          "verification": "Exact expansion checked against PDF page 3 section 5.5; independent human review pending",
+          "supporting_text": "Casual Leave (C.L)"
+        }
+      ]
+    }
+  ],
+  "console_errors": [],
+  "mobile_horizontal_overflow": false
+}

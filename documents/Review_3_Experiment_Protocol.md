@@ -1,0 +1,9 @@
+# Controlled evaluation protocol
+
+Freeze before final evaluation. Primary unit: question/family, never trajectory row or timing repeat. Compare learned, critic, single and strict budget under identical corpus/model/critic/rewrite settings. Score original-question source support separately from final-query critic sufficiency. Record actual stop reason and repeated-query calls. Use per-question averaged timing before paired analysis; for a sufficiently sized approved pilot, bootstrap question/family units and report descriptive intervals, not a power claim.
+
+Separate experiments: (1) acronym resolver on/off, verified abbreviation subset; (2) context selector on/off with unchanged index; (3) learned vs critic/single/budget; (4) gate and narrow validators on/off on identical stored contexts. Unsafe gate-off answers must remain offline research artifacts. Section-aware reindexing requires a new corpus/index manifest and separate experiment. No candidate-guided threshold selection, feature selection or retraining is allowed.
+
+Human review: two independent reviewers, randomized per-question method labels, reference-source access, blank identities and ratings until actual work. Rate correctness, completeness, source support, citation accuracy and appropriate abstention; retain disagreements, adjudicate separately and calculate agreement only on genuine paired scores. Local deterministic policy answers are outcomes of source rules and cannot be attributed to the classifier.
+
+Cost: same matched questions/model/prompt/settings and dated official tier-specific prices. Record request/token categories, failures, retries, fallback, local/end-to-end time and human correctness. Failure with missing usage is unknown cost. Gate-induced abstention is not equivalent to a correct answer. Report matched-success counts and coverage together. No fresh final experiment has been run in this package.

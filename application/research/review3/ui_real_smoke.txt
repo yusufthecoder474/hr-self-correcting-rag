@@ -1,0 +1,1 @@
+Real authenticated FastAPI browser smoke passed at desktop and mobile sizes.

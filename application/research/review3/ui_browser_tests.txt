@@ -1,0 +1,1 @@
+32 UI scenarios passed; 16 before/after screenshots generated.

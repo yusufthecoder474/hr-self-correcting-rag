@@ -1,0 +1,24 @@
+question_id,question,fixed_attempts,learned_attempts,fixed_score,learned_score,fixed_decision,learned_decision,fixed_proxy_calls,learned_proxy_calls,learned_stop_decisions,learned_continue_decisions
+1,How many annual leave days do permanent employees get?,1,1,0.82,0.82,SUFFICIENT,SUFFICIENT,1,1,1,0
+2,Can employees on probation take leave?,1,1,0.91,0.91,SUFFICIENT,SUFFICIENT,1,1,1,0
+3,How many sick leave days are available?,1,1,0.82,0.82,SUFFICIENT,SUFFICIENT,1,1,1,0
+4,How many personal leave days are available?,1,1,0.82,0.82,SUFFICIENT,SUFFICIENT,1,1,1,0
+5,How many days can annual leave be carried forward?,1,1,0.91,0.91,SUFFICIENT,SUFFICIENT,1,1,1,0
+6,How many remote working days are allowed per week?,1,1,0.84,0.84,SUFFICIENT,SUFFICIENT,1,1,1,0
+7,What is the home internet reimbursement amount?,1,1,0.77,0.77,SUFFICIENT,SUFFICIENT,1,1,1,0
+8,What is the standard probation period?,1,1,0.89,0.89,SUFFICIENT,SUFFICIENT,1,1,1,0
+9,What is the standard notice period?,1,1,0.91,0.91,SUFFICIENT,SUFFICIENT,1,1,1,0
+10,What is the maternity leave entitlement?,1,1,0.72,0.72,INSUFFICIENT,INSUFFICIENT,2,2,0,1
+11,What leave can a probation employee request and what approval is needed?,1,1,0.84,0.84,SUFFICIENT,SUFFICIENT,1,1,1,0
+12,What are the rules for taking leave during probation?,1,1,0.75,0.75,SUFFICIENT,SUFFICIENT,1,1,1,0
+13,What is the leave policy for a newly joined employee?,2,2,0.84,0.84,SUFFICIENT,SUFFICIENT,3,3,1,1
+14,Can an employee work from home during probation?,1,1,0.88,0.88,SUFFICIENT,SUFFICIENT,1,1,1,0
+15,What is the difference between remote work and leave?,2,2,0.77,0.77,SUFFICIENT,SUFFICIENT,3,3,1,1
+16,How much can an employee claim for home internet?,1,1,0.78,0.78,SUFFICIENT,SUFFICIENT,1,1,1,0
+17,What is the learning reimbursement after probation?,1,1,0.91,0.91,SUFFICIENT,SUFFICIENT,1,1,1,0
+18,What happens if probation is extended?,2,2,0.65,0.65,INSUFFICIENT,INSUFFICIENT,4,3,1,1
+19,What are the requirements for employee confirmation after probation?,1,1,0.82,0.82,SUFFICIENT,SUFFICIENT,1,1,1,0
+20,What should an employee do during an emergency absence?,2,2,0.62,0.62,INSUFFICIENT,INSUFFICIENT,4,3,1,1
+21,What is the difference between annual leave and personal leave?,2,2,0.74,0.74,INSUFFICIENT,INSUFFICIENT,4,3,1,1
+22,Can sick leave be carried forward?,1,1,0.9,0.9,SUFFICIENT,SUFFICIENT,1,1,1,0
+23,What are the hybrid work eligibility requirements?,1,1,0.89,0.89,SUFFICIENT,SUFFICIENT,1,1,1,0

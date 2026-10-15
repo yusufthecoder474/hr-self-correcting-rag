@@ -1,0 +1,1 @@
+{"index_chunks": 59, "model_features": 4, "gemini_key_present": false, "assets_match": true}

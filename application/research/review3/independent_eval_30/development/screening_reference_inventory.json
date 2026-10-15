@@ -1,0 +1,2411 @@
+[
+  {
+    "question": "leave after joining",
+    "sources": [
+      "hard_questions.txt",
+      "research/baseline_v0/trajectory_runtime_v0.csv",
+      "research/baseline_v0/trajectory_runtime_v0.csv",
+      "research/baseline_v0/trajectory_runtime_v0.csv",
+      "research/baseline_v0/trajectory_runtime_v0.csv",
+      "research/baseline_v0/trajectory_runtime_v0.csv",
+      "research/baseline_v0/trajectory_runtime_v0.csv",
+      "research/baseline_v0/trajectory_runtime_v0.csv",
+      "research/baseline_v0/trajectory_runtime_v0.csv"
+    ]
+  },
+  {
+    "question": "leave eligibility for newly joined employees",
+    "sources": [
+      "hard_questions.txt"
+    ]
+  },
+  {
+    "question": "what leave can a probation employee request",
+    "sources": [
+      "hard_questions.txt"
+    ]
+  },
+  {
+    "question": "rules for taking leave during probation",
+    "sources": [
+      "hard_questions.txt"
+    ]
+  },
+  {
+    "question": "leave policy for a newly joined employee",
+    "sources": [
+      "hard_questions.txt"
+    ]
+  },
+  {
+    "question": "work from home during probation",
+    "sources": [
+      "hard_questions.txt"
+    ]
+  },
+  {
+    "question": "difference between remote work and leave",
+    "sources": [
+      "hard_questions.txt"
+    ]
+  },
+  {
+    "question": "home internet",
+    "sources": [
+      "hard_questions.txt"
+    ]
+  },
+  {
+    "question": "learning reimbursement after probation",
+    "sources": [
+      "hard_questions.txt"
+    ]
+  },
+  {
+    "question": "probation is extended",
+    "sources": [
+      "hard_questions.txt"
+    ]
+  },
+  {
+    "question": "employee confirmation after probation",
+    "sources": [
+      "hard_questions.txt"
+    ]
+  },
+  {
+    "question": "annual leave and personal leave",
+    "sources": [
+      "hard_questions.txt"
+    ]
+  },
+  {
+    "question": "difference between annual leave and personal leave",
+    "sources": [
+      "hard_questions.txt"
+    ]
+  },
+  {
+    "question": "sick leave be carried forward",
+    "sources": [
+      "hard_questions.txt"
+    ]
+  },
+  {
+    "question": "hybrid work eligibility",
+    "sources": [
+      "hard_questions.txt"
+    ]
+  },
+  {
+    "question": "Can I take time off after I join?",
+    "sources": [
+      "correction_questions.txt"
+    ]
+  },
+  {
+    "question": "What leave can I take after joining?",
+    "sources": [
+      "correction_questions.txt"
+    ]
+  },
+  {
+    "question": "I just joined. Can I request leave?",
+    "sources": [
+      "correction_questions.txt"
+    ]
+  },
+  {
+    "question": "Is leave possible for a newly hired employee?",
+    "sources": [
+      "correction_questions.txt"
+    ]
+  },
+  {
+    "question": "Can someone in probation take time off?",
+    "sources": [
+      "correction_questions.txt"
+    ]
+  },
+  {
+    "question": "I am on probation. Am I allowed to take leave?",
+    "sources": [
+      "correction_questions.txt"
+    ]
+  },
+  {
+    "question": "Does probation prevent me from taking leave?",
+    "sources": [
+      "correction_questions.txt"
+    ]
+  },
+  {
+    "question": "Can I request leave while still on probation?",
+    "sources": [
+      "correction_questions.txt"
+    ]
+  },
+  {
+    "question": "Is leave allowed before confirmation?",
+    "sources": [
+      "correction_questions.txt"
+    ]
+  },
+  {
+    "question": "Is working remotely the same as taking leave?",
+    "sources": [
+      "correction_questions.txt"
+    ]
+  },
+  {
+    "question": "Does working from home count as leave?",
+    "sources": [
+      "correction_questions.txt"
+    ]
+  },
+  {
+    "question": "Is remote work treated as absence from work?",
+    "sources": [
+      "correction_questions.txt"
+    ]
+  },
+  {
+    "question": "What is the difference between being remote and being on leave?",
+    "sources": [
+      "correction_questions.txt"
+    ]
+  },
+  {
+    "question": "If I work from home, is that considered leave?",
+    "sources": [
+      "correction_questions.txt"
+    ]
+  },
+  {
+    "question": "How many annual leave days do permanent employees get?",
+    "sources": [
+      "test_questions.txt",
+      "final_results.csv",
+      "research/baseline_v0/final_results_v0.csv"
+    ]
+  },
+  {
+    "question": "Can employees on probation take leave?",
+    "sources": [
+      "test_questions.txt",
+      "final_results.csv",
+      "research/baseline_v0/final_results_v0.csv"
+    ]
+  },
+  {
+    "question": "How many sick leave days are available?",
+    "sources": [
+      "test_questions.txt",
+      "final_results.csv",
+      "research/baseline_v0/final_results_v0.csv"
+    ]
+  },
+  {
+    "question": "How many personal leave days are available?",
+    "sources": [
+      "test_questions.txt",
+      "final_results.csv",
+      "research/baseline_v0/final_results_v0.csv"
+    ]
+  },
+  {
+    "question": "How many days can annual leave be carried forward?",
+    "sources": [
+      "test_questions.txt",
+      "final_results.csv",
+      "research/baseline_v0/final_results_v0.csv"
+    ]
+  },
+  {
+    "question": "How many remote working days are allowed per week?",
+    "sources": [
+      "test_questions.txt",
+      "final_results.csv",
+      "research/baseline_v0/final_results_v0.csv"
+    ]
+  },
+  {
+    "question": "What is the home internet reimbursement amount?",
+    "sources": [
+      "test_questions.txt",
+      "final_results.csv",
+      "research/baseline_v0/final_results_v0.csv"
+    ]
+  },
+  {
+    "question": "What is the standard probation period?",
+    "sources": [
+      "test_questions.txt",
+      "final_results.csv",
+      "research/baseline_v0/final_results_v0.csv"
+    ]
+  },
+  {
+    "question": "What is the standard notice period?",
+    "sources": [
+      "test_questions.txt",
+      "final_results.csv",
+      "research/baseline_v0/final_results_v0.csv"
+    ]
+  },
+  {
+    "question": "What is the maternity leave entitlement?",
+    "sources": [
+      "test_questions.txt",
+      "final_results.csv",
+      "research/baseline_v0/final_results_v0.csv",
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v2.csv",
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/questions/test_questions_vit.txt",
+      "research/vit_v1/questions/evaluation_questions_base.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "What leave can a probation employee request and what approval is needed?",
+    "sources": [
+      "final_results.csv",
+      "challenging_questions.txt",
+      "research/baseline_v0/final_results_v0.csv"
+    ]
+  },
+  {
+    "question": "What are the rules for taking leave during probation?",
+    "sources": [
+      "final_results.csv",
+      "challenging_questions.txt",
+      "research/baseline_v0/final_results_v0.csv"
+    ]
+  },
+  {
+    "question": "What is the leave policy for a newly joined employee?",
+    "sources": [
+      "final_results.csv",
+      "challenging_questions.txt",
+      "research/baseline_v0/final_results_v0.csv"
+    ]
+  },
+  {
+    "question": "Can an employee work from home during probation?",
+    "sources": [
+      "final_results.csv",
+      "challenging_questions.txt",
+      "research/baseline_v0/final_results_v0.csv"
+    ]
+  },
+  {
+    "question": "What is the difference between remote work and leave?",
+    "sources": [
+      "final_results.csv",
+      "challenging_questions.txt",
+      "research/baseline_v0/final_results_v0.csv"
+    ]
+  },
+  {
+    "question": "How much can an employee claim for home internet?",
+    "sources": [
+      "final_results.csv",
+      "challenging_questions.txt",
+      "research/baseline_v0/final_results_v0.csv"
+    ]
+  },
+  {
+    "question": "What is the learning reimbursement after probation?",
+    "sources": [
+      "final_results.csv",
+      "challenging_questions.txt",
+      "research/baseline_v0/final_results_v0.csv"
+    ]
+  },
+  {
+    "question": "What happens if probation is extended?",
+    "sources": [
+      "final_results.csv",
+      "challenging_questions.txt",
+      "research/baseline_v0/final_results_v0.csv"
+    ]
+  },
+  {
+    "question": "What are the requirements for employee confirmation after probation?",
+    "sources": [
+      "final_results.csv",
+      "challenging_questions.txt",
+      "research/baseline_v0/final_results_v0.csv"
+    ]
+  },
+  {
+    "question": "What should an employee do during an emergency absence?",
+    "sources": [
+      "final_results.csv",
+      "challenging_questions.txt",
+      "research/baseline_v0/final_results_v0.csv"
+    ]
+  },
+  {
+    "question": "What is the difference between annual leave and personal leave?",
+    "sources": [
+      "final_results.csv",
+      "challenging_questions.txt",
+      "research/baseline_v0/final_results_v0.csv"
+    ]
+  },
+  {
+    "question": "Can sick leave be carried forward?",
+    "sources": [
+      "final_results.csv",
+      "challenging_questions.txt",
+      "research/baseline_v0/final_results_v0.csv"
+    ]
+  },
+  {
+    "question": "What are the hybrid work eligibility requirements?",
+    "sources": [
+      "final_results.csv",
+      "challenging_questions.txt",
+      "research/baseline_v0/final_results_v0.csv"
+    ]
+  },
+  {
+    "question": "How many days of annual leave can be carried forward?",
+    "sources": [
+      "challenging_questions.txt"
+    ]
+  },
+  {
+    "question": "What is the notice period for a permanent employee?",
+    "sources": [
+      "challenging_questions.txt"
+    ]
+  },
+  {
+    "question": "Can an employee on probation take leave?",
+    "sources": [
+      "research/baseline_v0/trajectory_runtime_v0.csv",
+      "research/baseline_v0/trajectory_runtime_v0.csv"
+    ]
+  },
+  {
+    "question": "How many days of Casual Leave can an employee avail in an academic year?",
+    "sources": [
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/api_cost_pilot_results.csv",
+      "research/vit_v1/api_cost_pilot_results.csv",
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v2.csv",
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/human_validation_23.csv",
+      "research/vit_v1/gemini_api_usage.csv",
+      "research/vit_v1/gemini_api_usage.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/advanced_question_results.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/questions/test_questions_vit.txt",
+      "research/vit_v1/questions/evaluation_questions_base.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "Who is eligible for Casual Leave at VIT?",
+    "sources": [
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v2.csv",
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/questions/test_questions_vit.txt",
+      "research/vit_v1/questions/evaluation_questions_base.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "Can unused Casual Leave be carried forward?",
+    "sources": [
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v2.csv",
+      "research/vit_v1/training_trajectory_dataset_v2.csv",
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/human_validation_23.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/advanced_question_results.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/questions/test_questions_vit.txt",
+      "research/vit_v1/questions/evaluation_questions_base.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "What is the maximum number of Casual Leave days that can be taken at one time?",
+    "sources": [
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v2.csv",
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/human_validation_23.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/advanced_question_results.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/questions/test_questions_vit.txt",
+      "research/vit_v1/questions/evaluation_questions_base.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "What is the procedure for applying for leave at VIT?",
+    "sources": [
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v2.csv",
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/questions/test_questions_vit.txt",
+      "research/vit_v1/questions/evaluation_questions_base.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "Who can sanction leave for an employee?",
+    "sources": [
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v2.csv",
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/questions/test_questions_vit.txt",
+      "research/vit_v1/questions/evaluation_questions_base.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "What is Medical Leave at VIT?",
+    "sources": [
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v2.csv",
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/questions/test_questions_vit.txt",
+      "research/vit_v1/questions/evaluation_questions_base.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "How many days of Medical Leave can be accumulated?",
+    "sources": [
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v2.csv",
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/questions/test_questions_vit.txt",
+      "research/vit_v1/questions/evaluation_questions_base.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "What certificate is required for Medical Leave?",
+    "sources": [
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v2.csv",
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/questions/test_questions_vit.txt",
+      "research/vit_v1/questions/evaluation_questions_base.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "What is the purpose of the Exit Interview System?",
+    "sources": [
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v2.csv",
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/questions/test_questions_vit.txt",
+      "research/vit_v1/questions/evaluation_questions_base.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "When is a service certificate issued?",
+    "sources": [
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v2.csv",
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/questions/test_questions_vit.txt",
+      "research/vit_v1/questions/evaluation_questions_base.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "What are the rules for VIT holidays?",
+    "sources": [
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v2.csv",
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/questions/test_questions_vit.txt",
+      "research/vit_v1/questions/evaluation_questions_base.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "Who is eligible for Earned Leave?",
+    "sources": [
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v2.csv",
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/questions/test_questions_vit.txt",
+      "research/vit_v1/questions/evaluation_questions_base.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "How is Earned Leave calculated for staff?",
+    "sources": [
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v2.csv",
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/questions/test_questions_vit.txt",
+      "research/vit_v1/questions/evaluation_questions_base.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "How is Earned Leave calculated for faculty?",
+    "sources": [
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v2.csv",
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/questions/test_questions_vit.txt",
+      "research/vit_v1/questions/evaluation_questions_base.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "What is Compensatory Off?",
+    "sources": [
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v2.csv",
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/questions/test_questions_vit.txt",
+      "research/vit_v1/questions/evaluation_questions_base.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "What is the purpose of the Exit Interview?",
+    "sources": [
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v2.csv",
+      "research/vit_v1/training_trajectory_dataset_v2.csv",
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/human_validation_23.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/advanced_question_results.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/questions/test_questions_vit.txt",
+      "research/vit_v1/questions/evaluation_questions_base.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "What happens when an employee resigns?",
+    "sources": [
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v2.csv",
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/questions/test_questions_vit.txt",
+      "research/vit_v1/questions/evaluation_questions_base.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "What is the notice period for resignation?",
+    "sources": [
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v2.csv",
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/questions/test_questions_vit.txt",
+      "research/vit_v1/questions/evaluation_questions_base.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "What is Sabbatical Leave?",
+    "sources": [
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v2.csv",
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/questions/test_questions_vit.txt",
+      "research/vit_v1/questions/evaluation_questions_base.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "What is Long Leave on Loss of Pay?",
+    "sources": [
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v2.csv",
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/questions/test_questions_vit.txt",
+      "research/vit_v1/questions/evaluation_questions_base.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "What is Leave on Duty?",
+    "sources": [
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v2.csv",
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/questions/test_questions_vit.txt",
+      "research/vit_v1/questions/evaluation_questions_base.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "Can employees avail vacation?",
+    "sources": [
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v2.csv",
+      "research/vit_v1/training_trajectory_dataset_v2.csv",
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/questions/test_questions_vit.txt",
+      "research/vit_v1/questions/evaluation_questions_base.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "What is vacation salary?",
+    "sources": [
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v2.csv",
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/questions/test_questions_vit.txt",
+      "research/vit_v1/questions/evaluation_questions_base.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "What are the eligibility conditions, duration, and documentation requirements for Medical Leave?",
+    "sources": [
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v2.csv",
+      "research/vit_v1/training_trajectory_dataset_v2.csv",
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/questions/challenging_questions_vit.txt",
+      "research/vit_v1/questions/evaluation_questions_base.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "What are the rules for extending Medical Leave for more than one month?",
+    "sources": [
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v2.csv",
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/questions/challenging_questions_vit.txt",
+      "research/vit_v1/questions/evaluation_questions_base.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "How does the Casual Leave policy differ from the Earned Leave policy?",
+    "sources": [
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v2.csv",
+      "research/vit_v1/training_trajectory_dataset_v2.csv",
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/questions/challenging_questions_vit.txt",
+      "research/vit_v1/questions/evaluation_questions_base.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "What are the eligibility conditions and duration for maternity leave?",
+    "sources": [
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v2.csv",
+      "research/vit_v1/training_trajectory_dataset_v2.csv",
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/questions/challenging_questions_vit.txt",
+      "research/vit_v1/questions/evaluation_questions_base.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "What are the rules governing vacation and vacation salary?",
+    "sources": [
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v2.csv",
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/questions/challenging_questions_vit.txt",
+      "research/vit_v1/questions/evaluation_questions_base.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "What is the procedure for applying for leave and obtaining approval?",
+    "sources": [
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v2.csv",
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/questions/challenging_questions_vit.txt",
+      "research/vit_v1/questions/evaluation_questions_base.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "What are the requirements for obtaining a service certificate?",
+    "sources": [
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/api_cost_pilot_results.csv",
+      "research/vit_v1/api_cost_pilot_results.csv",
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v2.csv",
+      "research/vit_v1/training_trajectory_dataset_v2.csv",
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/human_validation_23.csv",
+      "research/vit_v1/gemini_api_usage.csv",
+      "research/vit_v1/gemini_api_usage.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/advanced_question_results.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/questions/challenging_questions_vit.txt",
+      "research/vit_v1/questions/evaluation_questions_base.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "What are the conditions associated with resignation and relieving an employee?",
+    "sources": [
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v2.csv",
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/questions/challenging_questions_vit.txt",
+      "research/vit_v1/questions/evaluation_questions_base.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "What are the rules for Compensatory Off for faculty and staff?",
+    "sources": [
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v2.csv",
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/questions/challenging_questions_vit.txt",
+      "research/vit_v1/questions/evaluation_questions_base.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "What conditions apply when an employee is unable to resume work after leave?",
+    "sources": [
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v2.csv",
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/questions/challenging_questions_vit.txt",
+      "research/vit_v1/questions/evaluation_questions_base.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "What are the rules for Leave on Duty?",
+    "sources": [
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v2.csv",
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/questions/challenging_questions_vit.txt",
+      "research/vit_v1/questions/evaluation_questions_base.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "What are the conditions for Sabbatical Leave?",
+    "sources": [
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v2.csv",
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/questions/challenging_questions_vit.txt",
+      "research/vit_v1/questions/evaluation_questions_base.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "What are the eligibility requirements for Earned Leave?",
+    "sources": [
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v2.csv",
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/questions/challenging_questions_vit.txt",
+      "research/vit_v1/questions/evaluation_questions_base.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "What happens when leave is taken without prior sanction?",
+    "sources": [
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v2.csv",
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/questions/challenging_questions_vit.txt",
+      "research/vit_v1/questions/evaluation_questions_base.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "What are the rules governing leave during the first year of service?",
+    "sources": [
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v2.csv",
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/questions/challenging_questions_vit.txt",
+      "research/vit_v1/questions/evaluation_questions_base.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "What are the documentation requirements for Medical Leave taken outside the VIT Health Centre?",
+    "sources": [
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v2.csv",
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/questions/challenging_questions_vit.txt",
+      "research/vit_v1/questions/evaluation_questions_base.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "What are the rules for extending a Medical Leave?",
+    "sources": [
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v2.csv",
+      "research/vit_v1/training_trajectory_dataset_v2.csv",
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/questions/challenging_questions_vit.txt",
+      "research/vit_v1/questions/evaluation_questions_base.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "What are the conditions for maternity leave and what documentation is required?",
+    "sources": [
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v2.csv",
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/questions/challenging_questions_vit.txt",
+      "research/vit_v1/questions/evaluation_questions_base.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "What are the rules for resignation and the Exit Interview System?",
+    "sources": [
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v2.csv",
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/questions/challenging_questions_vit.txt",
+      "research/vit_v1/questions/evaluation_questions_base.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "How do leave approval and medical certification requirements interact?",
+    "sources": [
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v2.csv",
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/questions/challenging_questions_vit.txt",
+      "research/vit_v1/questions/evaluation_questions_base.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "Can an employee take Casual Leave and combine it with another type of leave?",
+    "sources": [
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v2.csv",
+      "research/vit_v1/training_trajectory_dataset_v2.csv",
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/questions/hard_questions_vit.txt",
+      "research/vit_v1/questions/evaluation_questions_base.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "What happens if an employee applies for leave without obtaining prior sanction?",
+    "sources": [
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v2.csv",
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/questions/hard_questions_vit.txt",
+      "research/vit_v1/questions/evaluation_questions_base.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "Can unused Casual Leave be carried forward to the next academic year?",
+    "sources": [
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v2.csv",
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/questions/hard_questions_vit.txt",
+      "research/vit_v1/questions/evaluation_questions_base.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "What happens if Medical Leave continues for more than one month?",
+    "sources": [
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v2.csv",
+      "research/vit_v1/training_trajectory_dataset_v2.csv",
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/questions/hard_questions_vit.txt",
+      "research/vit_v1/questions/evaluation_questions_base.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "Can Medical Leave be taken without the required medical certificate?",
+    "sources": [
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v2.csv",
+      "research/vit_v1/training_trajectory_dataset_v2.csv",
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/questions/hard_questions_vit.txt",
+      "research/vit_v1/questions/evaluation_questions_base.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "What conditions apply when Medical Leave is taken outside the VIT Health Centre?",
+    "sources": [
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v2.csv",
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/questions/hard_questions_vit.txt",
+      "research/vit_v1/questions/evaluation_questions_base.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "Can an employee claim Medical Leave during the first year of service?",
+    "sources": [
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v2.csv",
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/questions/hard_questions_vit.txt",
+      "research/vit_v1/questions/evaluation_questions_base.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "What happens if an employee does not submit the required medical certificate within the prescribed time?",
+    "sources": [
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v2.csv",
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/questions/hard_questions_vit.txt",
+      "research/vit_v1/questions/evaluation_questions_base.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "What are the differences between faculty and staff for Compensatory Off?",
+    "sources": [
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v2.csv",
+      "research/vit_v1/training_trajectory_dataset_v2.csv",
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/questions/hard_questions_vit.txt",
+      "research/vit_v1/questions/evaluation_questions_base.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "Can an employee resume work after a leave period without following the prescribed procedure?",
+    "sources": [
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v2.csv",
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/questions/hard_questions_vit.txt",
+      "research/vit_v1/questions/evaluation_questions_base.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "What happens when an employee resigns voluntarily from VIT?",
+    "sources": [
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v2.csv",
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/questions/hard_questions_vit.txt",
+      "research/vit_v1/questions/evaluation_questions_base.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "What are the conditions for obtaining a service certificate after resignation?",
+    "sources": [
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v2.csv",
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/questions/hard_questions_vit.txt",
+      "research/vit_v1/questions/evaluation_questions_base.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "What is the relationship between resignation notice and the Exit Interview?",
+    "sources": [
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v2.csv",
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/questions/hard_questions_vit.txt",
+      "research/vit_v1/questions/evaluation_questions_base.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "Can an employee avail vacation without satisfying the required conditions?",
+    "sources": [
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v2.csv",
+      "research/vit_v1/training_trajectory_dataset_v2.csv",
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/questions/hard_questions_vit.txt",
+      "research/vit_v1/questions/evaluation_questions_base.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "What happens when an employee is laid off during a stoppage of work?",
+    "sources": [
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v2.csv",
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/questions/hard_questions_vit.txt",
+      "research/vit_v1/questions/evaluation_questions_base.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "What are the conditions for reinstatement after lay-off?",
+    "sources": [
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v2.csv",
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/questions/hard_questions_vit.txt",
+      "research/vit_v1/questions/evaluation_questions_base.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "What are the rules for combining different types of leave?",
+    "sources": [
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v2.csv",
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/questions/hard_questions_vit.txt",
+      "research/vit_v1/questions/evaluation_questions_base.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "What are the restrictions on maternity leave?",
+    "sources": [
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v2.csv",
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/questions/hard_questions_vit.txt",
+      "research/vit_v1/questions/evaluation_questions_base.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "What documentation is required for maternity leave?",
+    "sources": [
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v2.csv",
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/questions/hard_questions_vit.txt",
+      "research/vit_v1/questions/evaluation_questions_base.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "What are the conditions for Sabbatical Leave and its extension?",
+    "sources": [
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v2.csv",
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/questions/hard_questions_vit.txt",
+      "research/vit_v1/questions/evaluation_questions_base.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "What are all the conditions, approvals, and documents required for Medical Leave beyond one month?",
+    "sources": [
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/questions/correction_questions_vit.txt",
+      "research/vit_v1/questions/evaluation_questions_base.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "What are the rules for Medical Leave when treatment is taken outside the VIT Health Centre?",
+    "sources": [
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/questions/correction_questions_vit.txt",
+      "research/vit_v1/questions/evaluation_questions_base.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "What service requirement must an employee satisfy before becoming eligible for Medical Leave?",
+    "sources": [
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/questions/correction_questions_vit.txt",
+      "research/vit_v1/questions/evaluation_questions_base.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "What are the Medical Leave accumulation limits and the conditions for using accumulated leave?",
+    "sources": [
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/questions/correction_questions_vit.txt",
+      "research/vit_v1/questions/evaluation_questions_base.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "What is the complete procedure for extending Medical Leave and rejoining duty?",
+    "sources": [
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/questions/correction_questions_vit.txt",
+      "research/vit_v1/questions/evaluation_questions_base.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "What are the eligibility, duration, and documentation requirements for Maternity Leave?",
+    "sources": [
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/questions/correction_questions_vit.txt",
+      "research/vit_v1/questions/evaluation_questions_base.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "What restrictions apply to Maternity Leave based on the number of living children?",
+    "sources": [
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/questions/correction_questions_vit.txt",
+      "research/vit_v1/questions/evaluation_questions_base.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "What service requirement applies to Maternity Leave eligibility?",
+    "sources": [
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/questions/correction_questions_vit.txt",
+      "research/vit_v1/questions/evaluation_questions_base.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "What are the conditions for claiming vacation salary and who is eligible?",
+    "sources": [
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/questions/correction_questions_vit.txt",
+      "research/vit_v1/questions/evaluation_questions_base.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "What restrictions apply when vacation is combined with other leave?",
+    "sources": [
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/questions/correction_questions_vit.txt",
+      "research/vit_v1/questions/evaluation_questions_base.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "What are the rules for taking vacation and the conditions for remaining eligible for vacation salary?",
+    "sources": [
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/questions/correction_questions_vit.txt",
+      "research/vit_v1/questions/evaluation_questions_base.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "What is the complete process for obtaining a Service Certificate after resignation or retirement?",
+    "sources": [
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/questions/correction_questions_vit.txt",
+      "research/vit_v1/questions/evaluation_questions_base.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "When can a resigning employee attend an Exit Interview and what is its purpose?",
+    "sources": [
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/questions/correction_questions_vit.txt",
+      "research/vit_v1/questions/evaluation_questions_base.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "What notice and relieving requirements apply when an employee resigns from VIT?",
+    "sources": [
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/questions/correction_questions_vit.txt",
+      "research/vit_v1/questions/evaluation_questions_base.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "What are the eligibility and approval conditions for Leave on Duty?",
+    "sources": [
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/questions/correction_questions_vit.txt",
+      "research/vit_v1/questions/evaluation_questions_base.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "What are the eligibility and duration conditions for Sabbatical Leave?",
+    "sources": [
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/questions/correction_questions_vit.txt",
+      "research/vit_v1/questions/evaluation_questions_base.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "What are the differences between Compensatory Off rules for faculty and staff?",
+    "sources": [
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/questions/correction_questions_vit.txt",
+      "research/vit_v1/questions/evaluation_questions_base.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "What conditions must be satisfied before Compensatory Off can be granted?",
+    "sources": [
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/questions/correction_questions_vit.txt",
+      "research/vit_v1/questions/evaluation_questions_base.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "What are the rules for combining different forms of leave at VIT?",
+    "sources": [
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/questions/correction_questions_vit.txt",
+      "research/vit_v1/questions/evaluation_questions_base.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "What happens when an employee is absent without proper leave approval?",
+    "sources": [
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/questions/correction_questions_vit.txt",
+      "research/vit_v1/questions/evaluation_questions_base.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "What are the conditions for resuming work after an extended leave?",
+    "sources": [
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/questions/correction_questions_vit.txt",
+      "research/vit_v1/questions/evaluation_questions_base.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "What are the conditions for resignation, relieving, and obtaining a Service Certificate?",
+    "sources": [
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/questions/correction_questions_vit.txt",
+      "research/vit_v1/questions/evaluation_questions_base.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "What are the complete rules governing leave approval, medical certification, and leave extension?",
+    "sources": [
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/questions/correction_questions_vit.txt",
+      "research/vit_v1/questions/evaluation_questions_base.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "What are the conditions governing holidays, leave, and employee eligibility at VIT?",
+    "sources": [
+      "research/vit_v1/training_trajectory_final_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_vit.csv",
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/training_halting_final_v1.csv",
+      "research/vit_v1/training_halting_dataset_vit.csv",
+      "research/vit_v1/questions/correction_questions_vit.txt",
+      "research/vit_v1/questions/evaluation_questions_base.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "What are the eligibility conditions for Medical Leave at VIT?",
+    "sources": [
+      "research/vit_v1/api_cost_pilot_results.csv",
+      "research/vit_v1/api_cost_pilot_results.csv",
+      "research/vit_v1/human_validation_23.csv",
+      "research/vit_v1/gemini_api_usage.csv",
+      "research/vit_v1/gemini_api_usage.csv",
+      "research/vit_v1/advanced_question_results.csv"
+    ]
+  },
+  {
+    "question": "What are the eligibility requirements for Maternity Leave?",
+    "sources": [
+      "research/vit_v1/api_cost_pilot_results.csv",
+      "research/vit_v1/api_cost_pilot_results.csv",
+      "research/vit_v1/human_validation_23.csv",
+      "research/vit_v1/gemini_api_usage.csv",
+      "research/vit_v1/gemini_api_usage.csv",
+      "research/vit_v1/advanced_question_results.csv"
+    ]
+  },
+  {
+    "question": "What are the requirements for Leave on Duty?",
+    "sources": [
+      "research/vit_v1/api_cost_pilot_results.csv",
+      "research/vit_v1/api_cost_pilot_results.csv",
+      "research/vit_v1/training_trajectory_dataset_v2.csv",
+      "research/vit_v1/training_trajectory_dataset_v2.csv",
+      "research/vit_v1/human_validation_23.csv",
+      "research/vit_v1/gemini_api_usage.csv",
+      "research/vit_v1/gemini_api_usage.csv",
+      "research/vit_v1/gemini_api_usage.csv",
+      "research/vit_v1/gemini_api_usage.csv",
+      "research/vit_v1/advanced_question_results.csv"
+    ]
+  },
+  {
+    "question": "Can an employee take 20 days of Casual Leave in one academic year?",
+    "sources": [
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv"
+    ]
+  },
+  {
+    "question": "Can an employee take Casual Leave without prior sanction?",
+    "sources": [
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv"
+    ]
+  },
+  {
+    "question": "Can an employee take Medical Leave immediately after joining VIT?",
+    "sources": [
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv"
+    ]
+  },
+  {
+    "question": "Can Medical Leave be taken without a medical certificate?",
+    "sources": [
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv"
+    ]
+  },
+  {
+    "question": "Can an employee submit the medical certificate several weeks after the leave begins?",
+    "sources": [
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv"
+    ]
+  },
+  {
+    "question": "Can faculty members claim Compensatory Off under exactly the same conditions as staff?",
+    "sources": [
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv"
+    ]
+  },
+  {
+    "question": "Can every employee automatically claim vacation salary?",
+    "sources": [
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv"
+    ]
+  },
+  {
+    "question": "Can an employee resign without serving the required notice period?",
+    "sources": [
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv"
+    ]
+  },
+  {
+    "question": "Can an employee obtain a service certificate before the required stage of separation?",
+    "sources": [
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv"
+    ]
+  },
+  {
+    "question": "Can an employee combine vacation with another leave type?",
+    "sources": [
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv"
+    ]
+  },
+  {
+    "question": "Can an employee take maternity leave without satisfying the service requirement?",
+    "sources": [
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv"
+    ]
+  },
+  {
+    "question": "Can an employee take Medical Leave beyond the permitted accumulation limit?",
+    "sources": [
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv"
+    ]
+  },
+  {
+    "question": "Can an employee return from extended leave without obtaining the required approval?",
+    "sources": [
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv"
+    ]
+  },
+  {
+    "question": "Is every holiday automatically available to every employee without notification?",
+    "sources": [
+      "research/vit_v1/training_halting_dataset_v1.csv",
+      "research/vit_v1/training_trajectory_dataset_v1.csv"
+    ]
+  },
+  {
+    "question": "What are all the conditions that must be satisfied before Medical Leave can be extended?",
+    "sources": [
+      "research/vit_v1/training_trajectory_dataset_v2.csv",
+      "research/vit_v1/training_trajectory_dataset_v2.csv"
+    ]
+  },
+  {
+    "question": "What are the requirements for Medical Leave when treatment is taken outside the VIT Health Centre?",
+    "sources": [
+      "research/vit_v1/training_trajectory_dataset_v2.csv"
+    ]
+  },
+  {
+    "question": "What are the conditions for Medical Leave during the first year of service?",
+    "sources": [
+      "research/vit_v1/training_trajectory_dataset_v2.csv"
+    ]
+  },
+  {
+    "question": "What is the procedure and deadline for submitting documents for a long period of Medical Leave?",
+    "sources": [
+      "research/vit_v1/training_trajectory_dataset_v2.csv",
+      "research/vit_v1/training_trajectory_dataset_v2.csv"
+    ]
+  },
+  {
+    "question": "What are the eligibility and accumulation rules for Medical Leave?",
+    "sources": [
+      "research/vit_v1/training_trajectory_dataset_v2.csv",
+      "research/vit_v1/training_trajectory_dataset_v2.csv"
+    ]
+  },
+  {
+    "question": "What are the rules for Maternity Leave regarding previous service and number of children?",
+    "sources": [
+      "research/vit_v1/training_trajectory_dataset_v2.csv",
+      "research/vit_v1/training_trajectory_dataset_v2.csv"
+    ]
+  },
+  {
+    "question": "What documents are required when applying for Maternity Leave?",
+    "sources": [
+      "research/vit_v1/training_trajectory_dataset_v2.csv",
+      "research/vit_v1/training_trajectory_dataset_v2.csv"
+    ]
+  },
+  {
+    "question": "What are the conditions and approval requirements for Sabbatical Leave?",
+    "sources": [
+      "research/vit_v1/training_trajectory_dataset_v2.csv"
+    ]
+  },
+  {
+    "question": "What are the duration and service conditions associated with Sabbatical Leave?",
+    "sources": [
+      "research/vit_v1/training_trajectory_dataset_v2.csv"
+    ]
+  },
+  {
+    "question": "What are the differences between faculty and staff regarding Compensatory Off?",
+    "sources": [
+      "research/vit_v1/training_trajectory_dataset_v2.csv",
+      "research/vit_v1/training_trajectory_dataset_v2.csv"
+    ]
+  },
+  {
+    "question": "What are the conditions for claiming Compensatory Off after working on a non-working day?",
+    "sources": [
+      "research/vit_v1/training_trajectory_dataset_v2.csv"
+    ]
+  },
+  {
+    "question": "What are the rules for obtaining a Service Certificate after resignation or retirement?",
+    "sources": [
+      "research/vit_v1/training_trajectory_dataset_v2.csv"
+    ]
+  },
+  {
+    "question": "When can a resigning employee attend the Exit Interview and why is it conducted?",
+    "sources": [
+      "research/vit_v1/training_trajectory_dataset_v2.csv",
+      "research/vit_v1/training_trajectory_dataset_v2.csv"
+    ]
+  },
+  {
+    "question": "What are the notice and relieving requirements when an employee resigns from VIT?",
+    "sources": [
+      "research/vit_v1/training_trajectory_dataset_v2.csv",
+      "research/vit_v1/human_validation_23.csv",
+      "research/vit_v1/advanced_question_results.csv"
+    ]
+  },
+  {
+    "question": "What happens when work stops because of an emergency or other event beyond VIT's control?",
+    "sources": [
+      "research/vit_v1/training_trajectory_dataset_v2.csv"
+    ]
+  },
+  {
+    "question": "What rights do employees have during a temporary stoppage of work?",
+    "sources": [
+      "research/vit_v1/training_trajectory_dataset_v2.csv"
+    ]
+  },
+  {
+    "question": "What are the rules for returning to work after a stoppage or lay-off?",
+    "sources": [
+      "research/vit_v1/training_trajectory_dataset_v2.csv"
+    ]
+  },
+  {
+    "question": "What are the conditions for taking vacation and receiving vacation salary?",
+    "sources": [
+      "research/vit_v1/training_trajectory_dataset_v2.csv",
+      "research/vit_v1/training_trajectory_dataset_v2.csv"
+    ]
+  },
+  {
+    "question": "What restrictions apply when combining vacation with another type of leave?",
+    "sources": [
+      "research/vit_v1/training_trajectory_dataset_v2.csv",
+      "research/vit_v1/training_trajectory_dataset_v2.csv"
+    ]
+  },
+  {
+    "question": "What happens if an employee does not follow the required leave approval procedure?",
+    "sources": [
+      "research/vit_v1/training_trajectory_dataset_v2.csv"
+    ]
+  },
+  {
+    "question": "What are the conditions and limitations for Casual Leave?",
+    "sources": [
+      "research/vit_v1/training_trajectory_dataset_v2.csv"
+    ]
+  },
+  {
+    "question": "What are the rules for carrying forward or losing unused leave?",
+    "sources": [
+      "research/vit_v1/training_trajectory_dataset_v2.csv"
+    ]
+  },
+  {
+    "question": "What are the conditions under which an employee can be considered absent without proper leave approval?",
+    "sources": [
+      "research/vit_v1/training_trajectory_dataset_v2.csv"
+    ]
+  },
+  {
+    "question": "What conditions apply to Long Leave on Loss of Pay?",
+    "sources": [
+      "research/vit_v1/training_trajectory_dataset_v2.csv"
+    ]
+  },
+  {
+    "question": "What prior permission is required before an employee avails Casual Leave?",
+    "sources": [
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/questions/evaluation_questions_extra.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "What is the minimum amount of Casual Leave that can be availed at a time?",
+    "sources": [
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/questions/evaluation_questions_extra.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "How should a Medical Certificate from outside the VIT Health Centre be authenticated?",
+    "sources": [
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/questions/evaluation_questions_extra.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "How many times can a woman employee avail Maternity Leave during her entire service?",
+    "sources": [
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/questions/evaluation_questions_extra.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "Can Maternity Leave be debited against the entitlement of another type of leave?",
+    "sources": [
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/questions/evaluation_questions_extra.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "What must the Doctor's certificate state for Maternity Leave?",
+    "sources": [
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/questions/evaluation_questions_extra.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "What payment or compensatory option is available to staff who work on the seventh day after six continuous working days?",
+    "sources": [
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/questions/evaluation_questions_extra.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "Within what period must Compensatory Off or Leave be availed after entitlement?",
+    "sources": [
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/questions/evaluation_questions_extra.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "Are Faculty members eligible for Compensatory Off or Leave?",
+    "sources": [
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/questions/evaluation_questions_extra.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "What document must an employee produce before applying for financial dues and the relieving order?",
+    "sources": [
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/questions/evaluation_questions_extra.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "Can accumulated leave be adjusted against the resignation notice period?",
+    "sources": [
+      "research/vit_v1/advanced_question_results_v2.csv",
+      "research/vit_v1/questions/evaluation_questions_extra.txt",
+      "research/vit_v1/questions/evaluation_questions_100.txt"
+    ]
+  },
+  {
+    "question": "What is the maximum accumulation limit for Medical Leave?",
+    "sources": [
+      "research/vit_v1/human_validation_23.csv",
+      "research/vit_v1/advanced_question_results.csv"
+    ]
+  },
+  {
+    "question": "What medical certificate is required for Medical Leave?",
+    "sources": [
+      "research/vit_v1/human_validation_23.csv",
+      "research/vit_v1/advanced_question_results.csv"
+    ]
+  },
+  {
+    "question": "What are the requirements when Medical Leave treatment is taken outside the VIT Health Centre?",
+    "sources": [
+      "research/vit_v1/human_validation_23.csv",
+      "research/vit_v1/advanced_question_results.csv"
+    ]
+  },
+  {
+    "question": "What is the deadline for submitting documents for a long period of Medical Leave?",
+    "sources": [
+      "research/vit_v1/human_validation_23.csv",
+      "research/vit_v1/advanced_question_results.csv"
+    ]
+  },
+  {
+    "question": "What are the rules for extending Medical Leave beyond one month?",
+    "sources": [
+      "research/vit_v1/human_validation_23.csv",
+      "research/vit_v1/advanced_question_results.csv"
+    ]
+  },
+  {
+    "question": "What restrictions apply to Maternity Leave based on the number of children?",
+    "sources": [
+      "research/vit_v1/human_validation_23.csv",
+      "research/vit_v1/advanced_question_results.csv"
+    ]
+  },
+  {
+    "question": "What documents are required for Maternity Leave?",
+    "sources": [
+      "research/vit_v1/human_validation_23.csv",
+      "research/vit_v1/advanced_question_results.csv"
+    ]
+  },
+  {
+    "question": "What are the conditions for claiming vacation salary?",
+    "sources": [
+      "research/vit_v1/human_validation_23.csv",
+      "research/vit_v1/advanced_question_results.csv"
+    ]
+  },
+  {
+    "question": "Can vacation be combined with another type of leave?",
+    "sources": [
+      "research/vit_v1/human_validation_23.csv",
+      "research/vit_v1/advanced_question_results.csv"
+    ]
+  },
+  {
+    "question": "How many days of Leave on Duty are permitted in an academic year?",
+    "sources": [
+      "research/vit_v1/human_validation_23.csv",
+      "research/vit_v1/advanced_question_results.csv"
+    ]
+  },
+  {
+    "question": "What approval is required before proceeding on Leave on Duty?",
+    "sources": [
+      "research/vit_v1/human_validation_23.csv",
+      "research/vit_v1/advanced_question_results.csv"
+    ]
+  },
+  {
+    "question": "What are the eligibility and duration requirements for Sabbatical Leave?",
+    "sources": [
+      "research/vit_v1/human_validation_23.csv",
+      "research/vit_v1/advanced_question_results.csv"
+    ]
+  },
+  {
+    "question": "What are the conditions for Compensatory Off or Compensatory Leave?",
+    "sources": [
+      "research/vit_v1/human_validation_23.csv",
+      "research/vit_v1/advanced_question_results.csv"
+    ]
+  },
+  {
+    "question": "When can a resigning employee attend the Exit Interview?",
+    "sources": [
+      "research/vit_v1/human_validation_23.csv",
+      "research/vit_v1/advanced_question_results.csv"
+    ]
+  },
+  {
+    "question": "How many days of Casual Leave are allowed in an academic year?",
+    "sources": [
+      "research/vit_v1/gemini_api_usage.csv",
+      "research/vit_v1/gemini_api_usage.csv",
+      "research/vit_v1/gemini_api_usage.csv"
+    ]
+  },
+  {
+    "question": "What are the maternity leave eligibility conditions?",
+    "sources": [
+      "explicit_debugging_question"
+    ]
+  },
+  {
+    "question": "Explain CL carry forward rules.",
+    "sources": [
+      "explicit_debugging_question"
+    ]
+  },
+  {
+    "question": "What does CL stand for?",
+    "sources": [
+      "explicit_debugging_question"
+    ]
+  },
+  {
+    "question": "What is the policy for employee moon travel?",
+    "sources": [
+      "explicit_debugging_question"
+    ]
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "model": "gemini-3.6-flash",
+  "provider": "Gemini Developer API",
+  "tier": "Standard paid, text; estimated list-price scenario, actual account tier unverified",
+  "verified_date": "2026-10-14",
+  "valid_through": "2026-12-31",
+  "source": "https://ai.google.dev/gemini-api/docs/pricing#gemini-3.6-flash",
+  "input_per_million_usd": 0.75,
+  "cached_input_per_million_usd": 0.075,
+  "output_including_thinking_per_million_usd": 3.75,
+  "assumptions": "No tools, batch, priority, explicit cache storage, audio or image requests. Cache-storage charges excluded because no explicit cache is created. Taxes excluded. Free-tier billing must be reported separately."
+}

@@ -1,0 +1,6 @@
+{
+  "status": "not_run",
+  "reason": "--live and locally configured GEMINI_API_KEY required",
+  "successful_pairs": 0,
+  "cost_conclusion": "inconclusive"
+}

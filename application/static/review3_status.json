@@ -1,0 +1,9 @@
+{
+  "candidate_count": 30,
+  "frozen_status": "Pending independent approval",
+  "development_status": "4 known questions \u00b7 48 observations \u00b7 retrieval only",
+  "human_correctness": null,
+  "monetary_cost_reduction": null,
+  "semantic_high_risk": 2,
+  "family_overlap": 23
+}

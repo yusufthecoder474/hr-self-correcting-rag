@@ -1,0 +1,7 @@
+{
+  "type": "visual replay",
+  "ui": "uploaded unchanged static/index.html",
+  "answers": "exact recorded real authenticated responses from real_ui_results.json",
+  "authentication": "fixture for screenshot only; real authentication was separately tested",
+  "new_model_execution": false
+}

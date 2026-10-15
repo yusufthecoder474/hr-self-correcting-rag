@@ -1,0 +1,15 @@
+{
+  "protected_assets_match": true,
+  "credential_pattern_hits": 0,
+  "scan_limit": "Pattern scan of packaged text; not proof of absence and not Git history audit",
+  "excluded": [
+    "node_modules",
+    "Python caches",
+    "runtime",
+    ".venv",
+    ".env",
+    "users.db"
+  ],
+  "windows_execution": "not performed",
+  "live_gemini_calls": 0
+}

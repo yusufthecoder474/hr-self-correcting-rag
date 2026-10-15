@@ -1,0 +1,72 @@
+[
+  {
+    "id": "S01",
+    "category": "simple",
+    "question": "How much casual leave does the VIT manual grant per academic year?",
+    "reference_section": "5.5.1",
+    "annotation_status": "candidate; independent human labels pending"
+  },
+  {
+    "id": "D01",
+    "category": "multi_condition",
+    "question": "For maternity leave, explain the minimum service, maximum duration and certificate requirement together.",
+    "reference_section": "5.5.4",
+    "annotation_status": "candidate; independent human labels pending"
+  },
+  {
+    "id": "A01",
+    "category": "acronym",
+    "question": "Explain C.L. and whether unused days carry forward.",
+    "reference_section": "5.5.1",
+    "annotation_status": "candidate; independent human labels pending"
+  },
+  {
+    "id": "U01",
+    "category": "unanswerable",
+    "question": "What does ABO stand for in this VIT manual?",
+    "reference_section": "not found in checked VIT corpus",
+    "annotation_status": "candidate; independent human labels pending"
+  },
+  {
+    "id": "I01",
+    "category": "irrelevant",
+    "question": "What is the weather forecast for Mars tomorrow?",
+    "reference_section": "outside corpus",
+    "annotation_status": "candidate; independent human labels pending"
+  },
+  {
+    "id": "A02",
+    "category": "acronym",
+    "question": "What is Mat.L.?",
+    "reference_section": "5.5",
+    "annotation_status": "candidate; independent human labels pending"
+  },
+  {
+    "id": "A03",
+    "category": "acronym",
+    "question": "What is E.L.?",
+    "reference_section": "5.5",
+    "annotation_status": "candidate; independent human labels pending"
+  },
+  {
+    "id": "D02",
+    "category": "multi_condition",
+    "question": "Under M.L., which medical certification is needed after treatment outside the University Health Centre?",
+    "reference_section": "5.5.3",
+    "annotation_status": "candidate; independent human labels pending"
+  },
+  {
+    "id": "U02",
+    "category": "unanswerable",
+    "question": "What will my individual salary be after my next appraisal?",
+    "reference_section": "individual data absent",
+    "annotation_status": "candidate; independent human labels pending"
+  },
+  {
+    "id": "S02",
+    "category": "simple",
+    "question": "What does the source say about the exit interview?",
+    "reference_section": "source review pending",
+    "annotation_status": "candidate; independent human labels pending"
+  }
+]

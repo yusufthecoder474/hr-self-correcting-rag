@@ -1,0 +1,20 @@
+{
+  "actual_local_api": true,
+  "gemini_calls": 0,
+  "checks": [
+    {
+      "width": 1440,
+      "login": true,
+      "verified_definition": true,
+      "unknown_abbreviation": true,
+      "logout_blocks": true
+    },
+    {
+      "width": 390,
+      "login": true,
+      "verified_definition": true,
+      "unknown_abbreviation": true,
+      "logout_blocks": true
+    }
+  ]
+}

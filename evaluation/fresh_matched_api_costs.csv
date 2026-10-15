@@ -1,0 +1,1 @@
+question_id,method,status,api_requests,input_tokens,cached_input_tokens,output_tokens,thinking_tokens,total_reported_tokens,retry_requests,estimated_input_cost_usd,estimated_output_cost_usd,estimated_total_cost_usd,outcome,retrieval_seconds,end_to_end_seconds,human_correct

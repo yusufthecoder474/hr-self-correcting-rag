@@ -1,0 +1,80 @@
+[
+  {
+    "aliases": [
+      "CL"
+    ],
+    "full_form": "Casual Leave",
+    "section": "5.5.1",
+    "source": "VIT_HR_Conditions_of_Service.pdf",
+    "pdf_page": 3,
+    "printed_page": 28,
+    "source_sha256": "a002cf552a24fc9fdf418b3dd6d165cccaa7ecebc24b3cde44a0134ce665adbc",
+    "verification": "Exact expansion checked against PDF page 3 section 5.5; independent human review pending",
+    "supporting_text": "Casual Leave (C.L)"
+  },
+  {
+    "aliases": [
+      "EL"
+    ],
+    "full_form": "Earned Leave",
+    "section": "5.5.2",
+    "source": "VIT_HR_Conditions_of_Service.pdf",
+    "pdf_page": 3,
+    "printed_page": 28,
+    "source_sha256": "a002cf552a24fc9fdf418b3dd6d165cccaa7ecebc24b3cde44a0134ce665adbc",
+    "verification": "Exact expansion checked against PDF page 3 section 5.5; independent human review pending",
+    "supporting_text": "Earned Leave (E.L)"
+  },
+  {
+    "aliases": [
+      "ML"
+    ],
+    "full_form": "Medical Leave",
+    "section": "5.5.3",
+    "source": "VIT_HR_Conditions_of_Service.pdf",
+    "pdf_page": 3,
+    "printed_page": 28,
+    "source_sha256": "a002cf552a24fc9fdf418b3dd6d165cccaa7ecebc24b3cde44a0134ce665adbc",
+    "verification": "Exact expansion checked against PDF page 3 section 5.5; independent human review pending",
+    "supporting_text": "Medical Leave (M.L)"
+  },
+  {
+    "aliases": [
+      "MatL"
+    ],
+    "full_form": "Maternity Leave",
+    "section": "5.5.4",
+    "source": "VIT_HR_Conditions_of_Service.pdf",
+    "pdf_page": 3,
+    "printed_page": 28,
+    "source_sha256": "a002cf552a24fc9fdf418b3dd6d165cccaa7ecebc24b3cde44a0134ce665adbc",
+    "verification": "Exact expansion checked against PDF page 3 section 5.5; independent human review pending",
+    "supporting_text": "Maternity Leave (Mat.L)"
+  },
+  {
+    "aliases": [
+      "LLLP"
+    ],
+    "full_form": "Long Leave on Loss of Pay",
+    "section": "5.5.6",
+    "source": "VIT_HR_Conditions_of_Service.pdf",
+    "pdf_page": 3,
+    "printed_page": 28,
+    "source_sha256": "a002cf552a24fc9fdf418b3dd6d165cccaa7ecebc24b3cde44a0134ce665adbc",
+    "verification": "Exact expansion checked against PDF page 3 section 5.5; independent human review pending",
+    "supporting_text": "Long Leave on Loss of Pay (LLLP)"
+  },
+  {
+    "aliases": [
+      "OD"
+    ],
+    "full_form": "Leave on Duty",
+    "section": "5.5.7",
+    "source": "VIT_HR_Conditions_of_Service.pdf",
+    "pdf_page": 3,
+    "printed_page": 28,
+    "source_sha256": "a002cf552a24fc9fdf418b3dd6d165cccaa7ecebc24b3cde44a0134ce665adbc",
+    "verification": "Exact expansion checked against PDF page 3 section 5.5; independent human review pending",
+    "supporting_text": "Leave on Duty (OD)"
+  }
+]
