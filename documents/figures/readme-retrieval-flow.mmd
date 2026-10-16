@@ -1,0 +1,13 @@
+flowchart TD
+    R["Retrieve and select context"] --> C["Critic score and four features"]
+    C --> H{"Learned decision"}
+    H -->|"STOP"| E["Separate evidence authorization"]
+    H -->|"CONTINUE"| B{"Attempt budget remains?"}
+    B -->|"No"| E
+    B -->|"Yes"| Q{"Rewriter changes query?"}
+    Q -->|"Yes"| R
+    Q -->|"No: STOP_NO_REWRITE"| E
+    E --> V{"Supported answer route?"}
+    V -->|"Narrow source rule"| L["Local verified response"]
+    V -->|"Generic checks pass"| G["Gemini generation or fallback"]
+    V -->|"Insufficient or unsafe"| A["Abstain or explain limitation"]

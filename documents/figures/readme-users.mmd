@@ -1,0 +1,8 @@
+flowchart TD
+    HR["Policy owner"] -->|"Approved corpus supplied offline"| CORPUS["Local policy corpus"]
+    ADMIN["Application administrator"] -->|"Setup and first account"| APP["Authenticated HR assistant"]
+    EMP["Employee or faculty member"] -->|"Question"| APP
+    CORPUS --> APP
+    APP -->|"Answer, source and trajectory"| EMP
+    APP -->|"Recorded behavior"| RES["Research evaluator"]
+    RES -->|"Separate benchmark workflow"| EVAL["Evaluation and review materials"]

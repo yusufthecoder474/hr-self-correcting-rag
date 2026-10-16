@@ -1,0 +1,25 @@
+flowchart TD
+    subgraph OFFLINE["Offline corpus preparation — separate from answering"]
+      PDF["Approved policy PDF"] --> INGEST["PyMuPDF text extraction and recursive splitting"]
+      INGEST --> EMB["MiniLM passage embeddings"]
+      EMB --> DB["ChromaDB hr_policies collection"]
+    end
+    subgraph RUNTIME["Authenticated runtime"]
+      UI["React interface"] --> API["FastAPI validation and authentication"]
+      API --> ACR["Safety screening and abbreviation resolver"]
+      ACR -->|"Policy question"| RET["Dense retrieval plus exact policy candidates"]
+      ACR -->|"Definition or clarification"| RESPONSE["Response, evidence status and sources"]
+      DB --> RET
+      RET --> CTX["Deduplicated cumulative context"]
+      CTX --> CRITIC["Local sufficiency critic"]
+      CRITIC --> HALT["Four-feature learned halting policy"]
+      HALT -->|"Continue within budget"| REWRITE["Local rule-based rewriter"]
+      REWRITE -->|"Changed query"| RET
+      HALT -->|"Stop or budget exhausted"| GATE["Evidence authorization and narrow source rules"]
+      REWRITE -->|"No changed query"| GATE
+      GATE -->|"Verified narrow rule"| RESPONSE
+      GATE -->|"Insufficient or unsafe"| RESPONSE
+      GATE -->|"Generic evidence checks pass"| GEN["Gemini final answer or explicit fallback"]
+      GEN --> RESPONSE
+      RESPONSE --> UI
+    end
